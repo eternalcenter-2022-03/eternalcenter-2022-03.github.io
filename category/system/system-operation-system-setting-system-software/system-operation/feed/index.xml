@@ -1,0 +1,2187 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>System Operation (系统操作) &#8211; Eternal Center</title>
+	<atom:link href="https://eternalcenter-2022-03.github.io/category/system/system-operation-system-setting-system-software/system-operation/feed/" rel="self" type="application/rss+xml" />
+	<link>https://eternalcenter-2022-03.github.io/</link>
+	<description></description>
+	<lastBuildDate>Sat, 26 Mar 2022 14:25:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+	<item>
+		<title>[命令] Linux 命令 paster (将多个文件里内容合并，后 1 个文件里的每 1 行内容添加到前 1 个文件里对应每 1 行内容的后面)</title>
+		<link>https://eternalcenter-2022-03.github.io/paster/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 26 Mar 2022 14:24:27 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File (系统文件)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=22444</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code># paste &lt;first file> &lt;second file> ......</code></pre>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] Linux Kdump 的触发 （魔术键版）</title>
+		<link>https://eternalcenter-2022-03.github.io/kdump-trigger-magic-key/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 17 Feb 2022 09:25:43 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System General Log (系统普通日志)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=22041</guid>
+
+					<description><![CDATA[注意： 在触发 Kdump 之前要先开启 Kdump： 正文： 步骤一：在本地登陆系统 （步骤略） 步骤二：强制同步屏幕 同时按下 “Left” 和 “Alt” 和 “Print Screen” 和 “s” 步骤三：触发 Kdump 同时按下 “Left” 和 “Alt” 和 “Print Screen” 和 “c”]]></description>
+										<content:encoded><![CDATA[
+<h2 id="注意">注意：</h2>
+
+
+
+<p>在触发 Kdump 之前要先开启 Kdump：</p>
+
+
+
+<div class="wp-container-624070c0b3f80 wp-block-buttons">
+<div class="wp-block-button aligncenter is-style-outline"><a class="wp-block-button__link no-border-radius" href="https://eternalcenter-2022-03.github.io/kdump/">Linux Kdump 的开启 <br>（用于收集内核崩溃时的信息）</a></div>
+</div>
+
+
+
+<h2 id="正文">正文：</h2>
+
+
+
+<h4 id="步骤一-在本地登陆系统">步骤一：在本地登陆系统</h4>
+
+
+
+<p>（步骤略）</p>
+
+
+
+<h4 id="步骤二-强制同步屏幕">步骤二：强制同步屏幕</h4>
+
+
+
+<p>同时按下 “Left” 和 “Alt” 和 “Print Screen” 和 “s”</p>
+
+
+
+<h4 id="步骤三-触发-kdump">步骤三：触发 Kdump</h4>
+
+
+
+<p>同时按下 “Left” 和 “Alt” 和 “Print Screen” 和 “c”</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 目标网站 SSL 证书的显示 （OpenSSL 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/ssl-display-openssl/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 15 Feb 2022 13:39:10 +0000</pubDate>
+				<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Basic Guidelines for Website building (网站建设基础指南)]]></category>
+		<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Django Service (服务)]]></category>
+		<category><![CDATA[Nginx]]></category>
+		<category><![CDATA[Nginx Security (安全)]]></category>
+		<category><![CDATA[Personal Website Building (个人网站建设)]]></category>
+		<category><![CDATA[Project (项目)]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[Tomcat]]></category>
+		<category><![CDATA[Web Application Firewall (WAF)]]></category>
+		<category><![CDATA[Website Services (网站服务)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21971</guid>
+
+					<description><![CDATA[（补充：这里以查看 eternalcenter.com 的 443 端口的 SSL 证书为例）]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code># openssl s_client -connect eternalcenter.com:443
+CONNECTED(00000003)
+depth=2 C = US, O = Internet Security Research Group, CN = ISRG Root X1
+verify return:1
+depth=1 C = US, O = Let's Encrypt, CN = R3
+verify return:1
+depth=0 CN = eternalcenter.com
+verify return:1
+---
+Certificate chain
+ 0 s:CN = eternalcenter.com
+   i:C = US, O = Let's Encrypt, CN = R3
+ 1 s:C = US, O = Let's Encrypt, CN = R3
+   i:C = US, O = Internet Security Research Group, CN = ISRG Root X1
+ 2 s:C = US, O = Internet Security Research Group, CN = ISRG Root X1
+   i:O = Digital Signature Trust Co., CN = DST Root CA X3
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIFKjCCBBKgAwIBAgISAxDxly99eBiarmHggFEmDJoMMA0GCSqGSIb3DQEBCwUA
+MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+EwJSMzAeFw0yMTEyMTkxMzA4MzJaFw0yMjAzMTkxMzA4MzFaMBwxGjAYBgNVBAMT
+EWV0ZXJuYWxjZW50ZXIuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAtCcCuOqBrWP4eo//VBEXh668EjwrE1eXz2CS4GIN4ddn0rS8LHGFOrB92R8E
+OnaYeTKpZjzNM3NA/AG/Gq5mTRZGTpyTasHEb/phwXdhrtJWdbMtQjGFSg8rXSB8
+cap5NGP/NxAy8FV0MbXftg5t9VgBoCMGUzioSHZTEjefq+/OZwlP7RzxZN3bwj1D
+61gWSw6q1X3bsi8ttwbkkiJfvjXo2KIeGOAnY10X+FPJmVa7jonhOuljrX4CYgnd
+SCxmsfgwGMUzRu27VB1rEbKqvSr6tb9KfwFiqsZd5tTi7RW6WMqA0VbDV7BbDqLP
+OzcturwRtXfzHjJxssy9zhnrQQIDAQABo4ICTjCCAkowDgYDVR0PAQH/BAQDAgWg
+MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0G
+A1UdDgQWBBQMGBCfBuZxTAS8VcBI/13ugqc2RDAfBgNVHSMEGDAWgBQULrMXt1hW
+y65QCUDmH6+dixTCxjBVBggrBgEFBQcBAQRJMEcwIQYIKwYBBQUHMAGGFWh0dHA6
+Ly9yMy5vLmxlbmNyLm9yZzAiBggrBgEFBQcwAoYWaHR0cDovL3IzLmkubGVuY3Iu
+b3JnLzAcBgNVHREEFTATghFldGVybmFsY2VudGVyLmNvbTBMBgNVHSAERTBDMAgG
+BmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIBFhpodHRwOi8vY3Bz
+LmxldHNlbmNyeXB0Lm9yZzCCAQYGCisGAQQB1nkCBAIEgfcEgfQA8gB3AN+lXqto
+gk8fbK3uuF9OPlrqzaISpGpejjsSwCBEXCpzAAABfdMFzUsAAAQDAEgwRgIhAMFF
+1orPZPnpCyhzwX2xZAZjJnOmDGmBjAl0tHnX4nEWAiEAqZTUwjrdwZAL+kDAgpzG
+Me2RnGMseDBY8Oy2sefUgsAAdwBGpVXrdfqRIDC1oolp9PN9ESxBdL79SbiFq/L8
+cP5tRwAAAX3TBc1zAAAEAwBIMEYCIQDLhR0nbVHEIL1uw9hRuv/ZbFjf91W/M4Jp
+od7NTMQZbAIhAKEAAfmdu0nVHklyS2At1VValwQ6vNbqd0NQ85giG606MA0GCSqG
+SIb3DQEBCwUAA4IBAQB/s+rZEaNrlUyBVnbxv5X9NTBd8buBOkR1qVswlS1R2i8B
+pRjeJmgbiMzM2z5Mvx0yTIiCyXXUc3YaqoyxvddaQam9nlLGr0nKX9T5DkE7y0Fh
+Qg0/ievRQF86XnDqQBxDR32jj5A1nKEiJrNCqugCWTAABndW3tvzK5DOsF2BfjJC
+mcjwiKaSCjFVpf+KzLWS3UEW+DRTKOLBucXpenS7QEcQu4K6ShNSL7+K6UOZEbFu
+uCRjOawCJFF7EH5vzRBy696Fu4EmzCV+c4rV8K8EcuCCQQeOTWJ/93Jv6U6kGrmE
+P6wlcHFy1tZhTAmXf/qcpE3sGeH58OlNNiVmNJdH
+-----END CERTIFICATE-----
+subject=CN = eternalcenter.com
+
+issuer=C = US, O = Let's Encrypt, CN = R3
+
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 4695 bytes and written 412 bytes
+Verification: OK
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: D63BC88824810A4D43ACE901AD4FF2D82073BC6F0D8B2DE71F6310CA1C87707F
+    Session-ID-ctx: 
+    Master-Key: A6836430C394B96DDD5552867D49802F94AAC8BF5E882100F0D27185CF5CFD6A946B94D87652E44A6684FC9781D16D90
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - bb be 55 e0 4b 6d c3 08-cd bc 45 6e 79 67 fc eb   ..U.Km....Enyg..
+    0010 - 30 d5 4c 8a 5a c8 f7 13-42 4b 1d 02 ce 94 c0 b8   0.L.Z...BK......
+    0020 - d7 cf f6 f0 ee 9d 49 5b-0a c8 a4 1a 8b dd 8a e0   ......I&#91;........
+    0030 - 66 83 52 9b 31 4d da 9e-d5 05 1a 70 ca e9 86 5e   f.R.1M.....p...^
+    0040 - f5 09 a1 1c 92 6b 64 90-b7 e1 0e ec 30 e2 26 68   .....kd.....0.&amp;h
+    0050 - 49 13 10 9e 3e a5 e0 13-a2 f1 7a 7c c5 ad 99 6c   I...&gt;.....z|...l
+    0060 - e9 f6 1d 46 5f cc f6 f9-c5 f6 05 49 53 78 7e ea   ...F_......ISx~.
+    0070 - 8c 17 eb 8d 96 c3 3f 92-fe e0 f0 f6 86 59 05 c8   ......?......Y..
+    0080 - d2 8c 27 6b 9d 65 38 20-84 d4 23 54 35 70 19 4d   ..'k.e8 ..#T5p.M
+    0090 - db 35 6d f4 44 50 d7 6e-a5 87 2b 32 e5 f8 42 88   .5m.DP.n..+2..B.
+    00a0 - 28 e2 ab 35 e1 2c 06 71-e5 b2 82 cb 3a 75 cc 72   (..5.,.q....:u.r
+    00b0 - ed ae e1 12 ff 82 6c 3a-3a 38 7a 8c 3c 9c f1 10   ......l::8z.&lt;...
+    00c0 - 78 b8 37 87 c3 a2 00 76-01 72 8c ef 3b 20 48 28   x.7....v.r..; H(
+
+    Start Time: 1644931899
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: yes
+---
+closed</code></pre>
+
+
+
+<p>（补充：这里以查看 eternalcenter.com 的 443 端口的 SSL 证书为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 logger （手动向系统日志写入信息）</title>
+		<link>https://eternalcenter-2022-03.github.io/logger/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 15 Feb 2022 13:15:26 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System General Log (系统普通日志)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21966</guid>
+
+					<description><![CDATA[内容一：手动向系统日志写入信息 （补充：这里以往系统日志里写入一条包含 This is test message 内容的信息为例） 内容二：显示手动向系统日志写入信息 （补充：这里在系统里查找一条包含 This is test message 内容的信息为例）]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-手动向系统日志写入信息">内容一：手动向系统日志写入信息</h4>
+
+
+
+<pre class="wp-block-code"><code># logger &#91;This is test message]</code></pre>
+
+
+
+<p>（补充：这里以往系统日志里写入一条包含 This is test message 内容的信息为例）</p>
+
+
+
+<h4 id="内容二-显示手动向系统日志写入信息">内容二：显示手动向系统日志写入信息</h4>
+
+
+
+<pre class="wp-block-code"><code># grep "This is test message" /var/log/messages</code></pre>
+
+
+
+<p>（补充：这里在系统里查找一条包含 This is test message 内容的信息为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 iftop （显示系统联通状态）</title>
+		<link>https://eternalcenter-2022-03.github.io/iftop/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 15 Jan 2022 14:06:51 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21213</guid>
+
+					<description><![CDATA[（补充：此时会不停地显示系统联通状态，按下 “q” 后退出）]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code># iftop</code></pre>
+
+
+
+<p>（补充：此时会不停地显示系统联通状态，按下 “q” 后退出）</p>
+
+
+
+<pre class="wp-block-code"><code># iftop
+interface: eth0
+IP address is: 10.10.10.129
+IPv6 address is: fdb2:2c26:f4e4:0:5940:b748:da58:4f3
+MAC address is: 00:1c:42:c9:3c:81</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 变量替换</title>
+		<link>https://eternalcenter-2022-03.github.io/variable-replacement/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sun, 09 Jan 2022 10:53:51 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Basic (基础)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21157</guid>
+
+					<description><![CDATA[内容目录： 案例一：当要替换的变量未定义或为空时则给予其一个默认值 案例二：当要替换的变量已定义且不为空时则给予其一个默认值 案例三：当要替换的变量已定义且不为空时则替换此变量的前一部分3.1 当要替换的变量已定义且不为空时则替换此变量的前一部分3.2 当要替换的变量已定义且不为空时则替换此变量的某一部分 案例四：当要替换的变量已定义且不为空时则替换此变量去除前一部分的值4.1 去除变量左数第一个某一个符号前面的所有值4.2 去除变量左数最后某一个符号前面的所有值4.3 去除前面一部分值 案例五：当要替换的变量已定义且不为空时则替换此变量去除后一部分的值5.1 去除变量右数第一个某一个符号前面的所有值5.2 去除变量右数最后某一个符号前面的所有值5.3 去除后面一部分值 案例六：当要替换的变量已定义且不为空时则替换此变量替换一部分后的值 具体的内容： 案例一：当要替换的变量未定义或为空时则给予其一个默认值 或者： （补充：这里以当变量 value 存在且为空时则变量 newvalue 的值为 eternalcenter 为例） 案例二：当要替换的变量已定义且不为空时则给予其一个默认值 （补充：这里以当变量 value 存在且不为空时则变量 newvalue 的值为 eternalcenter 为例） 案例三：当要替换的变量已定义且不为空时则替换此变量的前一部分3.1 当要替换的变量已定义且不为空时则替换此变量的前一部分 或者： （补充：这里以当变量 value 存在且不为空时则变量 newvalue 的值为变量 value 前 4 个字符为例） 3.2 当要替换的变量已定义且不为空时则替换此变量的某一部分 （补充：这里以当变量 value 存在且不为空时则变量 newvalue 的值为变量 value 从第 4 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/variable-replacement/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 变量替换"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2>内容目录：</h2>
+
+
+
+<h4>案例一：当要替换的变量未定义或为空时则给予其一个默认值</h4>
+
+
+
+<h4>案例二：当要替换的变量已定义且不为空时则给予其一个默认值</h4>
+
+
+
+<h4>案例三：当要替换的变量已定义且不为空时则替换此变量的前一部分<br>3.1 当要替换的变量已定义且不为空时则替换此变量的前一部分<br>3.2 当要替换的变量已定义且不为空时则替换此变量的某一部分</h4>
+
+
+
+<h4>案例四：当要替换的变量已定义且不为空时则替换此变量去除前一部分的值<br>4.1 去除变量左数第一个某一个符号前面的所有值<br>4.2 去除变量左数最后某一个符号前面的所有值<br>4.3 去除前面一部分值</h4>
+
+
+
+<h4>案例五：当要替换的变量已定义且不为空时则替换此变量去除后一部分的值<br>5.1 去除变量右数第一个某一个符号前面的所有值<br>5.2 去除变量右数最后某一个符号前面的所有值<br>5.3 去除后面一部分值</h4>
+
+
+
+<h4>案例六：当要替换的变量已定义且不为空时则替换此变量替换一部分后的值</h4>
+
+
+
+<h2>具体的内容：</h2>
+
+
+
+<h4>案例一：当要替换的变量未定义或为空时则给予其一个默认值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=
+# newvalue=${value:-eternalcenter}
+# echo $newvalue
+eternalcenter</code></pre>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# newvalue=${value:-eternalcenter}
+# echo $newvalue
+mingyuzhu</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># value=
+# newvalue=${value:=eternalcenter}
+# echo $newvalue
+eternalcenter</code></pre>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# newvalue=${value:=eternalcenter}
+# echo $newvalue
+mingyuzhu</code></pre>
+
+
+
+<p>（补充：这里以当变量 value 存在且为空时则变量 newvalue 的值为 eternalcenter 为例）</p>
+
+
+
+<h4>案例二：当要替换的变量已定义且不为空时则给予其一个默认值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=
+# newvalue=${value:+eternalcenter}
+# echo $newvalue</code></pre>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# newvalue=${value:+eternalcenter}
+# echo $newvalue
+eternalcenter</code></pre>
+
+
+
+<p>（补充：这里以当变量 value 存在且不为空时则变量 newvalue 的值为 eternalcenter 为例）</p>
+
+
+
+<h4>案例三：当要替换的变量已定义且不为空时则替换此变量的前一部分<br>3.1 当要替换的变量已定义且不为空时则替换此变量的前一部分</h4>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# newvalue=${value:offset:4}
+# echo $newvalue
+ming</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# newvalue=${value:0:4}
+# echo $newvalue
+ming</code></pre>
+
+
+
+<p>（补充：这里以当变量 value 存在且不为空时则变量 newvalue 的值为变量 value 前 4 个字符为例）</p>
+
+
+
+<h4>3.2 当要替换的变量已定义且不为空时则替换此变量的某一部分</h4>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# newvalue=${value:4:2}
+# echo $newvalue
+yu</code></pre>
+
+
+
+<p>（补充：这里以当变量 value 存在且不为空时则变量 newvalue 的值为变量 value 从第 4 个字符开始的 2 个字符为例）</p>
+
+
+
+<h4>案例四：当要替换的变量已定义且不为空时则替换此变量去除前一部分的值<br>4.1 去除变量左数第一个某一个符号前面的所有值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=ming:yu:zhu
+# newvalue=${value#*:}
+# echo $newvalue
+yu:zhu</code></pre>
+
+
+
+<p>（补充：这里以去除变量 value 左数第一个冒号 “:” 前面的所有值并赋予给变量 newvalue 为例）</p>
+
+
+
+<h4>4.2 去除变量左数最后某一个符号前面的所有值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=ming:yu:zhu
+# newvalue=${value##*:}
+# echo $newvalue
+zhu</code></pre>
+
+
+
+<p>（补充：这里以去除变量 value 左数最后一个冒号 “:” 前面的所有值并赋予给变量 newvalue 为例）</p>
+
+
+
+<h4>4.3 去除前面一部分值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# novalue=ming
+# newvalue=${value##$novalue}
+# echo $newvalue
+yuzhu</code></pre>
+
+
+
+<p>（补充：这里以去除变量 value 前面的 ming 值并赋予给变量 newvalue 为例）</p>
+
+
+
+<h4>案例五：当要替换的变量已定义且不为空时则替换此变量去除后一部分的值<br>5.1 去除变量右数第一个某一个符号前面的所有值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=ming:yu:zhu
+# newvalue=${value%:*}
+# echo $newvalue
+ming:yu</code></pre>
+
+
+
+<p>（补充：这里以去除变量 value 右数第一个冒号 “:” 前面的所有值并赋予给变量 newvalue 为例）</p>
+
+
+
+<h4>5.2 去除变量右数最后某一个符号前面的所有值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=ming:yu:zhu
+# newvalue=${value%%:*}
+# echo $newvalue
+ming</code></pre>
+
+
+
+<p>（补充：这里以去除变量 value 右数最后一个冒号 “:” 前面的所有并赋予给变量 newvalue 值为例）</p>
+
+
+
+<h4>5.3 去除后面一部分值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# novalue=ming
+# newvalue=${value%%$novalue}
+# echo $newvalue
+mingyu</code></pre>
+
+
+
+<p>（补充：这里以去除变量 value 后面的 zhu 值并赋予给变量 newvalue 为例）</p>
+
+
+
+<h4>案例六：当要替换的变量已定义且不为空时则替换此变量替换一部分后的值</h4>
+
+
+
+<pre class="wp-block-code"><code># value=mingyuzhu
+# noneedvalue=yu
+# needvalue=zhu
+# newvalue=${value/$noneedvalue/$needvalue}
+# echo $newvalue
+mingzhuzhu</code></pre>
+
+
+
+<p>（补充：这里以将变量 value 中的 yu 替换成 zhu 并赋予给变量 newvalue 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 (()) （比较数值文件和字符串）</title>
+		<link>https://eternalcenter-2022-03.github.io/double-parenthese/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 08 Jan 2022 12:26:42 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Basic (基础)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21153</guid>
+
+					<description><![CDATA[内容一：(()) 比较符号1.1 (()) 数值比较符号 1) ==，若两个数值存在且相等，则结果为真2) !=，若两个数值存在且不相等，则结果为真3) &#62;，若两个数值存在且前一个数值大于后一个数值，则结果为真4) &#60;，若两个数值存在且前一个数值小于后一个数值，则结果为真 5) &#62;=，若两个数值存在且前一个数值大于或等于后一个数值，则结果为真6) &#60;=，若两个数值存在且前一个数值小于或等于后一个数值，则结果为真 1.2 (()) 字符串比较符号 ==，若两个字符串存在且一样，则结果为真 内容二：(()) 的数值比较案例2.1 案例一：对整数进行比较 （补充：这里以测试数字 0 是否不等于数字 1 为例） 2.2 案例二：对字符串进行比较 （补充：这里以测试字符串 a 是否等于字符串 a 为例）]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：(()) 比较符号<br>1.1 (()) 数值比较符号</h4>
+
+
+
+<p>1) ==，若两个数值存在且相等，则结果为真<br>2) !=，若两个数值存在且不相等，则结果为真<br>3) &gt;，若两个数值存在且前一个数值大于后一个数值，则结果为真<br>4) &lt;，若两个数值存在且前一个数值小于后一个数值，则结果为真 5) &gt;=，若两个数值存在且前一个数值大于或等于后一个数值，则结果为真<br>6) &lt;=，若两个数值存在且前一个数值小于或等于后一个数值，则结果为真</p>
+
+
+
+<h4>1.2 (()) 字符串比较符号</h4>
+
+
+
+<p>==，若两个字符串存在且一样，则结果为真</p>
+
+
+
+<h4>内容二：(()) 的数值比较案例<br>2.1 案例一：对整数进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># (( 0 -ne 1 ))
+# echo $?
+0</code></pre>
+
+
+
+<p>（补充：这里以测试数字 0 是否不等于数字 1 为例）</p>
+
+
+
+<h4>2.2 案例二：对字符串进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># (( a == a ))
+# echo $?
+0</code></pre>
+
+
+
+<p>（补充：这里以测试字符串 a 是否等于字符串 a 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 [[]] （比较数值、文件、目录、链接、块、特殊文件、字符串）</title>
+		<link>https://eternalcenter-2022-03.github.io/double-square-bracket/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 03 Jan 2022 14:42:23 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Basic (基础)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21112</guid>
+
+					<description><![CDATA[内容一：[[]] 比较符号1.1 [[]] 数值比较符号 1) -eq 或者 ==，若两个数值存在且相等，则结果为真2) -ne 或者 !=，若两个数值存在且不相等，则结果为真3) -gt 或者 &#62;，若两个数值存在且前一个数值大于后一个数值，则结果为真4) -lt 或者 &#60;，若两个数值存在且前一个数值小于后一个数值，则结果为真5) -ge 或者 &#62;=，若两个数值存在且前一个数值大于或等于后一个数值，则结果为真6) -le 或者 &#60;=，若两个数值存在且前一个数值小于或等于后一个数值，则结果为真 1.2 [[]] 字符串比较符号 1) -z，如果字符串为空值，则结果为真2) -n，如果字符串不为空值，则结果为真3) == 或者 =，若两个字符串存在且一样，则结果为真4) !=，若两个字符串存在且不一样，则结果为真5) &#62;，若两个字符串存在且前一个字符串大于后一个字符串（按数字顺序或字母数顺序进行比较，越靠后的值越大），则结果为真6) &#60;，若两个字符串存在且前一个字符串小于后一个字符串（按数字顺序或字母数顺序进行比较，越靠后的值越大），则结果为真 1.3 [[]] 文件、目录、链接、块、特殊文件比较符号 1) -e，若文件或目录或链接存在，则结果为真2) -d，若目录存在，则结果为真3) -f，若文件存在，则结果为真4) -L，若链接存在，则结果为真5) -b，若块文件存在，则结果为真6) -c，若字符型特殊文件存在，则结果为真7) -s，若文件存在且里面有内容，则结果为真8) -r，若文件且可读，则结果为真9) -w，若文件且可写，则结果为真10) -x，若文件且可执行，则结果为真11) -nt，若两个文件存在且前一个文件比后一个文件新，则结果为真12) -ot，若两个文件存在且前一个文件比后一个文件新，则结果为真 1.4 [[]] 逻辑符号 1) &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/double-square-bracket/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 命令 [[]] （比较数值、文件、目录、链接、块、特殊文件、字符串）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：[[]] 比较符号<br>1.1 [[]] 数值比较符号</h4>
+
+
+
+<p>1) -eq 或者 ==，若两个数值存在且相等，则结果为真<br>2) -ne 或者 !=，若两个数值存在且不相等，则结果为真<br>3) -gt 或者 &gt;，若两个数值存在且前一个数值大于后一个数值，则结果为真<br>4) -lt 或者 &lt;，若两个数值存在且前一个数值小于后一个数值，则结果为真<br>5) -ge 或者 &gt;=，若两个数值存在且前一个数值大于或等于后一个数值，则结果为真<br>6) -le 或者 &lt;=，若两个数值存在且前一个数值小于或等于后一个数值，则结果为真</p>
+
+
+
+<h4>1.2 [[]] 字符串比较符号</h4>
+
+
+
+<p>1) -z，如果字符串为空值，则结果为真<br>2) -n，如果字符串不为空值，则结果为真<br>3) == 或者 =，若两个字符串存在且一样，则结果为真<br>4) !=，若两个字符串存在且不一样，则结果为真<br>5) &gt;，若两个字符串存在且前一个字符串大于后一个字符串（按数字顺序或字母数顺序进行比较，越靠后的值越大），则结果为真<br>6) &lt;，若两个字符串存在且前一个字符串小于后一个字符串（按数字顺序或字母数顺序进行比较，越靠后的值越大），则结果为真</p>
+
+
+
+<h4>1.3 [[]] 文件、目录、链接、块、特殊文件比较符号</h4>
+
+
+
+<p>1) -e，若文件或目录或链接存在，则结果为真<br>2) -d，若目录存在，则结果为真<br>3) -f，若文件存在，则结果为真<br>4) -L，若链接存在，则结果为真<br>5) -b，若块文件存在，则结果为真<br>6) -c，若字符型特殊文件存在，则结果为真<br>7) -s，若文件存在且里面有内容，则结果为真<br>8) -r，若文件且可读，则结果为真<br>9) -w，若文件且可写，则结果为真<br>10) -x，若文件且可执行，则结果为真<br>11) -nt，若两个文件存在且前一个文件比后一个文件新，则结果为真<br>12) -ot，若两个文件存在且前一个文件比后一个文件新，则结果为真</p>
+
+
+
+<h4>1.4 [[]] 逻辑符号</h4>
+
+
+
+<p>1) &amp;&amp;，和<br>2) ||，或<br>3) !，非</p>
+
+
+
+<h4>1.5 [[]] 运算符号</h4>
+
+
+
+<p>1) +，若两个数值存在，则相加<br>2) -，若两个数值存在，则相减<br>3) *，若两个数值存在，则相乘<br>4) /，若两个数值存在，则相除<br>5) %，若两个数值存在，则取余</p>
+
+
+
+<h4>1.6 [[]] 其他符号</h4>
+
+
+
+<p>1) =~，两个字符串或数值存在且后一个字符串或数值匹配正则表达式后一样，则结果为真<br>2) [0-9] 等所有 Linux 正则表达式<br>3) * 等所有 Linux 通配符</p>
+
+
+
+<h4>内容二：[[]] 的数值比较案例<br>2.1 案例一：对整数进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># &#91;&#91; 0 -ne 1 ]]
+# echo $?
+0</code></pre>
+
+
+
+<p>（补充：这里以测试数字 0 是否不等于数字 1 为例）</p>
+
+
+
+<h4>2.2 案例二：对字符串进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># &#91;&#91; a == a ]]
+# echo $?
+0</code></pre>
+
+
+
+<p>（补充：这里以测试字符串 a 是否等于字符串 a 为例）</p>
+
+
+
+<h4>2.3 案例三：对文件进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># &#91;&#91; -f test.txt ]]
+# echo $?
+0</code></pre>
+
+
+
+<p>（补充：这里以测试文件 test.txt 是否存在为例）</p>
+
+
+
+<h4>2.4 案例四：对变量进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># a=1
+# &#91;&#91; $a == 1 ]]
+# echo $?
+0</code></pre>
+
+
+
+<p>（补充：这里以测试变量 a 是否等于数字 1 为例）</p>
+
+
+
+<h4>2.5 案例五：对数值运算后进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># a=2
+# b=3
+# c=5
+# &#91;&#91; $a+$b -eq $c ]]
+# echo $?
+0</code></pre>
+
+
+
+<p>（补充：这里以测试变量 a 加变量 b 是否等于变量 c 为例）</p>
+
+
+
+<p>（注意： [[]] 数值运算后需要使用 -eq、-ne、-gt、-lt、-ge、-le 进行比较而不是使用 ==、!=、&gt;、&lt;、&gt;=、&lt;=）</p>
+
+
+
+<h4>2.6 案例六：使用逻辑符号对多个变量进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># a=eternalcenter
+# b=eternalcenter
+# c=eternalcentre
+# &#91;&#91; $a == $b &amp;&amp; $b != $c ]]
+# echo $?
+# 0</code></pre>
+
+
+
+<p>（补充：这里以测试变量 a 是否等于变量 b 且变量 b 是否不等于变量 c 为例）</p>
+
+
+
+<h4>2.7 案例七：使用通配符对字符串进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># &#91;&#91; eternalcenter = eternalcen??? ]]
+# echo $?
+# 0</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># &#91;&#91; eternalcenter = e*r ]]
+# echo $?
+# 0</code></pre>
+
+
+
+<p>（补充：这里以测试字符串 eternalcenter 是否等于字符串加通配符 eternalcen??? 或字符串加通配符 e*r 为例）</p>
+
+
+
+<h4>2.8 案例八：使用正则表达式对字符串进行比较</h4>
+
+
+
+<pre class="wp-block-code"><code># &#91;&#91; 10 =~ &#91;0-9]{2} ]]
+# echo $?
+# 0</code></pre>
+
+
+
+<p>（补充：这里以测试数字 10 是否是每位数是 0 到 9 的两位数为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 ssh （远程登录）</title>
+		<link>https://eternalcenter-2022-03.github.io/ssh/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 26 Nov 2021 15:56:06 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Login Security (系统登录安全)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=19146</guid>
+
+					<description><![CDATA[案例一：脚本中常用的方式 （补充：这里以1) 安静模式2) 打开新端口的模式3) 不检查服务器记录4) 超时时间为 5 秒5) 通过 eternalcenter 用户6) 登录 eternalcenter.com 服务器为例） 案例二：在操作中常用的方式 （补充：这里以1) 带图形的模式2) 通过 eternalcenter 用户3) 登录 eternalcenter.com 服务器为例）]]></description>
+										<content:encoded><![CDATA[
+<h2>案例一：脚本中常用的方式</h2>
+
+
+
+<pre class="wp-block-code"><code># ssh -q -t -t -o StrictHostKeyChecking=no -o ConnectTimeout=5 -l eternalcenter eternalcenter.com</code></pre>
+
+
+
+<p>（<br>补充：这里以<br>1) 安静模式<br>2) 打开新端口的模式<br>3) 不检查服务器记录<br>4) 超时时间为 5 秒<br>5) 通过 eternalcenter 用户<br>6) 登录 eternalcenter.com 服务器<br>为例<br>）</p>
+
+
+
+<h2>案例二：在操作中常用的方式</h2>
+
+
+
+<pre class="wp-block-code"><code># ssh -X eternalcenter@eternalcenter.com</code></pre>
+
+
+
+<p>（<br>补充：这里以<br>1) 带图形的模式<br>2) 通过 eternalcenter 用户<br>3) 登录 eternalcenter.com 服务器<br>为例<br>）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 uniq （文件里字符重复的管理）</title>
+		<link>https://eternalcenter-2022-03.github.io/uniq/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 26 Nov 2021 14:17:52 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File (系统文件)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=19136</guid>
+
+					<description><![CDATA[案例一：uniq 命令去重 （补充：这里以给 test.txt 文件里的字符为例） 案例二：uniq 只显示重复的行 （补充：这里以只显示 test.txt 文件里重复的行为例） 案例三：uniq 只显示不重复的行 （补充：这里以只显示 test.txt 文件里不重复的行为例） 案例四：显示每个字符出现的次数 （补充：这里以显示 test.txt 每个字符出现的次数为例）]]></description>
+										<content:encoded><![CDATA[
+<h4>案例一：uniq 命令去重</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+a1
+b2
+c3
+a1
+d2
+e3
+a1
+c3
+
+# sort test.txt  | uniq
+a1
+b2
+c3
+d2
+e3</code></pre>
+
+
+
+<p>（补充：这里以给 test.txt 文件里的字符为例）</p>
+
+
+
+<h4>案例二：uniq 只显示重复的行</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+a1
+b2
+c3
+a1
+d2
+e3
+a1
+c3
+
+# sort test.txt  | uniq -d
+a1
+c3</code></pre>
+
+
+
+<p>（补充：这里以只显示 test.txt 文件里重复的行为例）</p>
+
+
+
+<h4>案例三：uniq 只显示不重复的行</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+a1
+b2
+c3
+a1
+d2
+e3
+a1
+c3
+
+# sort test.txt  | uniq -u
+b2
+d2
+e3</code></pre>
+
+
+
+<p>（补充：这里以只显示 test.txt 文件里不重复的行为例）</p>
+
+
+
+<h4>案例四：显示每个字符出现的次数</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+a1
+b2
+c3
+a1
+d2
+e3
+a1
+c3
+
+# sort test.txt  | uniq -c
+      3 a1
+      1 b2
+      2 c3
+      1 d2
+      1 e3</code></pre>
+
+
+
+<p>（补充：这里以显示 test.txt 每个字符出现的次数为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 关机或重启记录的显示</title>
+		<link>https://eternalcenter-2022-03.github.io/viewing-of-shutdown-or-restart-records/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 10 Nov 2021 13:09:21 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System General Log (系统普通日志)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=18281</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code># /usr/bin/last -xF | egrep "reboot|shutdown|runlevel|system"</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 进程修正值 （nice 值） 的设置</title>
+		<link>https://eternalcenter-2022-03.github.io/nice/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 04 Nov 2021 15:38:02 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=18158</guid>
+
+					<description><![CDATA[内容目录： 内容一：进程优先级和修正值（nice 值）的关系1.1 进程优先级的作用1.2 进程优先级和修正值（nice 值）的关系1.3 修正值（nice 值）的范围 内容二：修正值（nice 值）的设置2.1 设置修正值（nice 值）的格式2.2 设置修正值（nice 值）的案例 内容三：显示进程的修正值 具体的内容： 内容一：进程优先级和修正值（nice 值）的关系1.1 进程优先级的作用 进程的真正优先级越小，则此进程则越能优先被执行 1.2 进程优先级和修正值（nice 值）的关系 进程的真正优先级 = 进程默认优先级 + 修正值（nice 值） 1.3 修正值（nice 值）的范围 从 -20 到 +19 内容二：修正值（nice 值）的设置2.1 设置修正值（nice 值）的格式 或者： 或者： 2.2 设置修正值（nice 值）的案例 或者： 或者： （注意：这里的 -10 不是指负数 10 而是指正数 10） （补充：这里以修正值为 10 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/nice/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] Linux 进程修正值 （nice 值） 的设置"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-进程优先级和修正值-nice-值-的关系-1-1-进程优先级的作用-1-2-进程优先级和修正值-nice-值-的关系-1-3-修正值-nice-值-的范围">内容一：进程优先级和修正值（nice 值）的关系<br>1.1 进程优先级的作用<br>1.2 进程优先级和修正值（nice 值）的关系<br>1.3 修正值（nice 值）的范围</h4>
+
+
+
+<h4 id="内容二-修正值-nice-值-的设置-2-1-设置修正值-nice-值-的格式-2-2-设置修正值-nice-值-的案例">内容二：修正值（nice 值）的设置<br>2.1 设置修正值（nice 值）的格式<br>2.2 设置修正值（nice 值）的案例</h4>
+
+
+
+<h4 id="内容三-显示进程的修正值">内容三：显示进程的修正值</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-进程优先级和修正值-nice-值-的关系-1-1-进程优先级的作用">内容一：进程优先级和修正值（nice 值）的关系<br>1.1 进程优先级的作用</h4>
+
+
+
+<p>进程的真正优先级越小，则此进程则越能优先被执行</p>
+
+
+
+<h4 id="1-2-进程优先级和修正值-nice-值-的关系">1.2 进程优先级和修正值（nice 值）的关系</h4>
+
+
+
+<p>进程的真正优先级 = 进程默认优先级 + 修正值（nice 值）</p>
+
+
+
+<h4 id="1-3-修正值-nice-值-的范围">1.3 修正值（nice 值）的范围</h4>
+
+
+
+<p>从 -20 到 +19</p>
+
+
+
+<h4 id="内容二-修正值-nice-值-的设置-2-1-设置修正值-nice-值-的格式">内容二：修正值（nice 值）的设置<br>2.1 设置修正值（nice 值）的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># nice -n &lt;correction value&gt; &lt;command&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nice --adjustment=&lt;correction value&gt; &lt;command&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nice -&lt;correction value&gt; &lt;command&gt;</code></pre>
+
+
+
+<h4 id="2-2-设置修正值-nice-值-的案例">2.2 设置修正值（nice 值）的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># nice -n 10 top</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nice --adjustment=10 top</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nice -10 top</code></pre>
+
+
+
+<p>（注意：这里的 -10 不是指负数 10 而是指正数 10）</p>
+
+
+
+<p>（补充：这里以修正值为 10 启动 top 命令为例）</p>
+
+
+
+<h4 id="内容三-显示进程的修正值-1">内容三：显示进程的修正值</h4>
+
+
+
+<pre class="wp-block-code"><code># top</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># ps -ef</code></pre>
+
+
+
+<p>（<br>补充：<br>1) PRI 代表进程默认的优先级<br>2) NI 代表进程的修正值（nice 值）<br>3) 进程的真正优先级 = PRI + NI<br>4) 如果多个进程的真正优先级一样，则 root 用户的进程被优先执行<br>）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 sort（对数字或字母进行排序）</title>
+		<link>https://eternalcenter-2022-03.github.io/sort/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 07 Oct 2021 13:56:39 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File (系统文件)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=18091</guid>
+
+					<description><![CDATA[内容目录： 内容一：sort 命令的选项 内容二：sort 排序的案例2.1 案例一：检查是否已经排序2.2 案例二：sort 排序一列数字2.3 案例三：sort 排序一列字母2.4 案例四：sort 以相反的顺序进行排序2.5 案例五：sort 以 2 列中的第 1 列进行排序2.6 案例六：sort 以 2 列中的第 2 列进行排序2.7 案例七：sort 对 IP 地址进行排序2.8 案例八：sort 以 IP 地址的第三组数字进行排序 具体的内容： 内容一：sort 命令的选项 1) -b 排序时忽略每行前面的空格2) -c 检查是否已排序3) -f 排序时忽略大小写字母4) -n 按照数值到大小进行排序5) -o 将排序结果导入到指定文件6) -r 以相反的顺序进行排序7) -t 指定排序的分隔符8) -k 以指定的列进行排序 内容二：sort 排序的案例2.1 案例一：检查是否已经排序 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/sort/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 命令 sort（对数字或字母进行排序）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2>内容目录：</h2>
+
+
+
+<h4>内容一：sort 命令的选项</h4>
+
+
+
+<h4>内容二：sort 排序的案例<br>2.1 案例一：检查是否已经排序<br>2.2 案例二：sort 排序一列数字<br>2.3 案例三：sort 排序一列字母<br>2.4 案例四：sort 以相反的顺序进行排序<br>2.5 案例五：sort 以 2 列中的第 1 列进行排序<br>2.6 案例六：sort 以 2 列中的第 2 列进行排序<br>2.7 案例七：sort 对 IP 地址进行排序<br>2.8 案例八：sort 以 IP 地址的第三组数字进行排序</h4>
+
+
+
+<h2>具体的内容：</h2>
+
+
+
+<h4>内容一：sort 命令的选项</h4>
+
+
+
+<p>1) -b 排序时忽略每行前面的空格<br>2) -c 检查是否已排序<br>3) -f 排序时忽略大小写字母<br>4) -n 按照数值到大小进行排序<br>5) -o 将排序结果导入到指定文件<br>6) -r 以相反的顺序进行排序<br>7) -t 指定排序的分隔符<br>8) -k 以指定的列进行排序</p>
+
+
+
+<h4>内容二：sort 排序的案例<br>2.1 案例一：检查是否已经排序</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt
+3
+5
+4
+2
+1
+
+# sort -c test.txt 
+sort: test.txt:3: disorder: 4</code></pre>
+
+
+
+<p>（补充：这里以检查 test.txt 文件里的排列为例）</p>
+
+
+
+<h4>2.2 案例二：sort 排序一列数字</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt
+3
+5
+4
+2
+20
+1
+
+# sort -n test.txt 
+1
+2
+3
+4
+5
+20</code></pre>
+
+
+
+<p>（补充：这里以排列 test.txt 文件里的列为例）</p>
+
+
+
+<h4>2.3 案例三：sort 排序一列字母</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+c
+e
+d
+b
+a
+
+# sort test.txt 
+a
+b
+c
+d
+e</code></pre>
+
+
+
+<p>（补充：这里以排列 test.txt 文件里的列为例）</p>
+
+
+
+<h4>2.4 案例四：sort 以相反的顺序进行排序</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+c
+e
+d
+b
+a
+
+# sort -r test.txt 
+e
+d
+c
+b
+a</code></pre>
+
+
+
+<p>（补充：这里以排列 test.txt 文件里的列为例）</p>
+
+
+
+<h4>2.5 案例五：sort 以 2 列中的第 1 列进行排序</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+3 d
+5 c
+4 a
+2 e
+1 b
+
+# sort test.txt 
+1 b
+2 e
+3 d
+4 a
+5 c</code></pre>
+
+
+
+<p>（补充：这里以排列 test.txt 文件里的列为例）</p>
+
+
+
+<h4>2.6 案例六：sort 以 2 列中的第 2 列进行排序</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+3 d
+5 c
+4 a
+2 e
+1 b
+
+# sort -k2 test.txt 
+4 a
+1 b
+5 c
+3 d
+2 e</code></pre>
+
+
+
+<p>（补充：这里以排列 test.txt 文件里的列为例）</p>
+
+
+
+<h4>2.7 案例七：sort 对 IP 地址进行排序</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+10.0.200.10
+172.16.50.10
+192.168.100.1
+192.168.100.10
+172.16.50.1
+10.0.200.1
+
+# sort test.txt
+10.0.200.1
+10.0.200.10
+172.16.50.1
+172.16.50.10
+192.168.100.1
+192.168.100.10</code></pre>
+
+
+
+<p>（补充：这里以排列 test.txt 文件里的列为例）</p>
+
+
+
+<h4>2.8 案例八：sort 以 IP 地址的第三组数字进行排序</h4>
+
+
+
+<pre class="wp-block-code"><code># cat test.txt 
+10.0.200.10
+172.16.50.10
+192.168.100.1
+192.168.100.10
+172.16.50.1
+10.0.200.1
+
+# sort -t'.' -k3n test.txt
+172.16.50.1
+172.16.50.10
+192.168.100.1
+192.168.100.10
+10.0.200.1
+10.0.200.10</code></pre>
+
+
+
+<p>（补充：这里以排列 test.txt 文件里的列为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 输出信息的重定向</title>
+		<link>https://eternalcenter-2022-03.github.io/redirect/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 05 Oct 2021 14:18:59 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File (系统文件)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=18085</guid>
+
+					<description><![CDATA[内容目录： 内容一：以清空原文的方式进行输出信息的重定向1.1 以清空原文的方式将所有的输出信息重定向到某一个文件1.2 以清空原文的方式只将正确的输出信息重定向到某一个文件1.3 以清空原文的方式只将错误的输出信息重定向到某一个文件 内容二：以在原文后面追加的方式进行输出信息的重定向2.1 以在原文后面追加的方式将所有的输出信息重定向到某一个文件2.2 以在原文后面追加的方式只将正确的输出信息重定向到某一个文件2.3 以在原文后面追加的方式只将错误的输出信息重定向到某一个文件 内容三：通过重定向转换输出信息的正误3.1 将错误的输出信息重定向成正确的输出信息3.2 将正确的输出信息重定向成错误的输出信息 内容四：将输出信息重定向到黑洞 具体的内容： 内容一：以清空原文的方式进行输出信息的重定向1.1 以清空原文的方式将所有的输出信息重定向到某一个文件 或者： 1.2 以清空原文的方式只将正确的输出信息重定向到某一个文件 或者： 1.3 以清空原文的方式只将错误的输出信息重定向到某一个文件 内容二：以在原文后面追加的方式进行输出信息的重定向2.1 以在原文后面追加的方式将所有的输出信息重定向到某一个文件 或者： 2.2 以在原文后面追加的方式只将正确的输出信息重定向到某一个文件 或者： 2.3 以在原文后面追加的方式只将错误的输出信息重定向到某一个文件 内容三：通过重定向转换输出信息的正误3.1 将错误的输出信息重定向成正确的输出信息 或者： 3.2 将正确的输出信息重定向成错误的输出信息 或者： 内容四：将输出信息重定向到黑洞 或者： 或者： 或者： 或者： 或者： 或者： 或者： 或者： 或者： 或者： 或者： （补充：通过此种方法输出信息就既不会显示出来也不会被重定向到一个文件里）]]></description>
+										<content:encoded><![CDATA[
+<h2>内容目录：</h2>
+
+
+
+<h4>内容一：以清空原文的方式进行输出信息的重定向<br>1.1 以清空原文的方式将所有的输出信息重定向到某一个文件<br>1.2 以清空原文的方式只将正确的输出信息重定向到某一个文件<br>1.3 以清空原文的方式只将错误的输出信息重定向到某一个文件</h4>
+
+
+
+<h4>内容二：以在原文后面追加的方式进行输出信息的重定向<br>2.1 以在原文后面追加的方式将所有的输出信息重定向到某一个文件<br>2.2 以在原文后面追加的方式只将正确的输出信息重定向到某一个文件<br>2.3 以在原文后面追加的方式只将错误的输出信息重定向到某一个文件</h4>
+
+
+
+<h4>内容三：通过重定向转换输出信息的正误<br>3.1 将错误的输出信息重定向成正确的输出信息<br>3.2 将正确的输出信息重定向成错误的输出信息</h4>
+
+
+
+<h4>内容四：将输出信息重定向到黑洞</h4>
+
+
+
+<h2>具体的内容：</h2>
+
+
+
+<h4>内容一：以清空原文的方式进行输出信息的重定向<br>1.1 以清空原文的方式将所有的输出信息重定向到某一个文件</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &amp;&gt; &lt;file&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &gt;&amp; &lt;file&gt;</code></pre>
+
+
+
+<h4>1.2 以清空原文的方式只将正确的输出信息重定向到某一个文件</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 1&gt; &lt;file&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &gt; &lt;file&gt;</code></pre>
+
+
+
+<h4>1.3 以清空原文的方式只将错误的输出信息重定向到某一个文件</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 2&gt; &lt;file&gt;</code></pre>
+
+
+
+<h4>内容二：以在原文后面追加的方式进行输出信息的重定向<br>2.1 以在原文后面追加的方式将所有的输出信息重定向到某一个文件</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &amp;&gt;&gt; &lt;file&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &gt;&gt;&amp; &lt;file&gt;</code></pre>
+
+
+
+<h4>2.2 以在原文后面追加的方式只将正确的输出信息重定向到某一个文件</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 1&gt;&gt; &lt;file&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &gt;&gt; &lt;file&gt;</code></pre>
+
+
+
+<h4>2.3 以在原文后面追加的方式只将错误的输出信息重定向到某一个文件</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 2&gt;&gt; &lt;file&gt;</code></pre>
+
+
+
+<h4>内容三：通过重定向转换输出信息的正误<br>3.1 将错误的输出信息重定向成正确的输出信息</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 2&amp;&gt;1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 2&gt;&amp;1</code></pre>
+
+
+
+<h4>3.2 将正确的输出信息重定向成错误的输出信息</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 1&amp;&gt;2</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 1&gt;&amp;2</code></pre>
+
+
+
+<h4>内容四：将输出信息重定向到黑洞</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &amp;&gt; /dev/null</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &amp;&gt;&gt; /dev/null</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &gt;&amp; /dev/null</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; &gt;&gt;&amp; /dev/null</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 1&gt; /dev/null 2&gt;&amp;1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 1&gt;&gt; /dev/null 2&gt;&amp;1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 1&gt; /dev/null 2&gt;&gt;&amp;1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 1&gt;&gt; /dev/null 2&gt;&gt;&amp;1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 2&gt; /dev/null 1&gt;&amp;2</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 2&gt;&gt; /dev/null 1&gt;&amp;2</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 2&gt; /dev/null 1&gt;&gt;&amp;2</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;command&gt; 2&gt;&gt; /dev/null 1&gt;&gt;&amp;2</code></pre>
+
+
+
+<p>（补充：通过此种方法输出信息就既不会显示出来也不会被重定向到一个文件里）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 seq （显示数字序列）</title>
+		<link>https://eternalcenter-2022-03.github.io/%e5%91%bd%e4%bb%a4-linux-%e5%91%bd%e4%bb%a4-seq-%ef%bc%88%e6%89%93%e5%8d%b0%e6%95%b0%e5%ad%97%e5%ba%8f%e5%88%97%ef%bc%89/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 04 Oct 2021 09:41:15 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File (系统文件)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17786</guid>
+
+					<description><![CDATA[内容目录： 内容一：seq 命令格式 内容二：seq 命令的选项 内容三：seq 命令的使用案例3.1 案例一：seq 显示普通的数字序列3.1.1 显示从 1 到某个数字到数字序列3.1.2 显示从某个数字开始到某个数字结束的数字序列3.1.3 显示从某个数字开始到某个数字结束有数值差距的数字序列3.2 案例二：seq 显示指定前缀的数字序列3.2.1 显示将某个字符串作为前缀的数字序列3.2.2 显示将某个字符串和几个空格作为前缀的数字序列3.2.3 显示将某个字符串和几个字符作为前缀的数字序列3.3 案例三：seq 显示指定间隔符的数字序列3.3.1 显示没有间隔符的数字序列3.3.2 显示间隔符是空格的数字序列3.3.3 显示间隔符是某一个字符的数字序列3.4 案例四：seq 显示指定宽度的数字序列3.5 案例五：seq 使用变量显示数字序列3.6 案例六：将 seq 显示的数字序列导入到一个文件里 具体的内容： 内容一：seq 命令格式 内容二：seq 命令的选项 1) -f 指定序列的格式2) -s 指定序列的间隔符3) -w 使序列宽度相同4) &#8211;equal-width 使序列宽度相同 内容三：seq 命令的使用案例3.1 案例一：seq 显示普通的数字序列3.1.1 显示从 1 到某个数字到数字序列 （补充：这里以显示 1 到 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/%e5%91%bd%e4%bb%a4-linux-%e5%91%bd%e4%bb%a4-seq-%ef%bc%88%e6%89%93%e5%8d%b0%e6%95%b0%e5%ad%97%e5%ba%8f%e5%88%97%ef%bc%89/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 命令 seq （显示数字序列）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-seq-命令格式">内容一：seq 命令格式</h4>
+
+
+
+<h4 id="内容二-seq-命令的选项">内容二：seq 命令的选项</h4>
+
+
+
+<h4 id="内容三-seq-命令的使用案例-3-1-案例一-seq-显示普通的数字序列-3-1-1-显示从-1-到某个数字到数字序列-3-1-2-显示从某个数字开始到某个数字结束的数字序列-3-1-3-显示从某个数字开始到某个数字结束有数值差距的数字序列-3-2-案例二-seq-显示指定前缀的数字序列-3-2-1-显示将某个字符串作为前缀的数字序列-3-2-2-显示将某个字符串和几个空格作为前缀的数字序列-3-2-3-显示将某个字符串和几个字符作为前缀的数字序列-3-3-案例三-seq-显示指定间隔符的数字序列-3-3-1-显示没有间隔符的数字序列-3-3-2-显示间隔符是空格的数字序列-3-3-3-显示间隔符是某一个字符的数字序列-3-4-案例四-seq-显示指定宽度的数字序列-3-5-案例五-seq-使用变量显示数字序列-3-6-案例六-将-seq-显示的数字序列导入到一个文件里">内容三：seq 命令的使用案例<br>3.1 案例一：seq 显示普通的数字序列<br>3.1.1 显示从 1 到某个数字到数字序列<br>3.1.2 显示从某个数字开始到某个数字结束的数字序列<br>3.1.3 显示从某个数字开始到某个数字结束有数值差距的数字序列<br>3.2 案例二：seq 显示指定前缀的数字序列<br>3.2.1 显示将某个字符串作为前缀的数字序列<br>3.2.2 显示将某个字符串和几个空格作为前缀的数字序列<br>3.2.3 显示将某个字符串和几个字符作为前缀的数字序列<br>3.3 案例三：seq 显示指定间隔符的数字序列<br>3.3.1 显示没有间隔符的数字序列<br>3.3.2 显示间隔符是空格的数字序列<br>3.3.3 显示间隔符是某一个字符的数字序列<br>3.4 案例四：seq 显示指定宽度的数字序列<br>3.5 案例五：seq 使用变量显示数字序列<br>3.6 案例六：将 seq 显示的数字序列导入到一个文件里</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-seq-命令格式">内容一：seq 命令格式</h4>
+
+
+
+<pre class="wp-block-code"><code>1) seq &lt;option&gt; &lt;first number&gt;
+2) seq &lt;option&gt; &lt;first number&gt; &lt;last number&gt;
+3) seq &lt;option&gt; &lt;first number&gt; &lt;increment&gt; &lt;last number&gt;</code></pre>
+
+
+
+<h4 id="内容二-seq-命令的选项">内容二：seq 命令的选项</h4>
+
+
+
+<p>1) -f 指定序列的格式<br>2) -s 指定序列的间隔符<br>3) -w 使序列宽度相同<br>4) &#8211;equal-width 使序列宽度相同</p>
+
+
+
+<h4 id="内容三-seq-命令的使用案例-3-1-案例一-seq-显示普通的数字序列-3-1-1-显示从-1-到某个数字到数字序列">内容三：seq 命令的使用案例<br>3.1 案例一：seq 显示普通的数字序列<br>3.1.1 显示从 1 到某个数字到数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq 5
+1
+2
+3
+4
+5</code></pre>
+
+
+
+<p>（补充：这里以显示 1 到 5 的数字序列为例）</p>
+
+
+
+<h4 id="3-1-2-显示从某个数字开始到某个数字结束的数字序列">3.1.2 显示从某个数字开始到某个数字结束的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq 3 7
+3
+4
+5
+6
+7</code></pre>
+
+
+
+<p>（补充：这里以显示 3 到 7 的数字序列为例）</p>
+
+
+
+<h4 id="3-1-3-显示从某个数字开始到某个数字结束有数值差距的数字序列">3.1.3 显示从某个数字开始到某个数字结束有数值差距的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq 4 2 8
+4
+6
+8</code></pre>
+
+
+
+<p>（补充：这里以显示 4 到 8 数值差距为 2 的数字序列为例）</p>
+
+
+
+<h4 id="3-2-案例二-seq-显示指定前缀的数字序列-3-2-1-显示将某个字符串作为前缀的数字序列">3.2 案例二：seq 显示指定前缀的数字序列<br>3.2.1 显示将某个字符串作为前缀的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq -f "num%g" 5
+num1
+num2
+num3
+num4
+num5</code></pre>
+
+
+
+<p>（补充：这里以显示 1 到 5 并且将 num 作为前缀的数字序列为例）</p>
+
+
+
+<h4 id="3-2-2-显示将某个字符串和几个空格作为前缀的数字序列">3.2.2 显示将某个字符串和几个空格作为前缀的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq -f "num%3g" 5
+num  1
+num  2
+num  3
+num  4
+num  5</code></pre>
+
+
+
+<p>（补充：这里以显示 1 到 5 并且将 num 和 2 个空格作为前缀的数字序列为例）</p>
+
+
+
+<h4 id="3-2-3-显示将某个字符串和几个字符作为前缀的数字序列">3.2.3 显示将某个字符串和几个字符作为前缀的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq -f "num%03g" 5
+num001
+num002
+num003
+num004
+num005</code></pre>
+
+
+
+<p>（补充：这里以显示 1 到 5 并且将 num 和 2 个 0 作为前缀的数字序列为例）</p>
+
+
+
+<h4 id="3-3-案例三-seq-显示指定间隔符的数字序列-3-3-1-显示没有间隔符的数字序列">3.3 案例三：seq 显示指定间隔符的数字序列<br>3.3.1 显示没有间隔符的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq -s '' 5
+12345</code></pre>
+
+
+
+<p>（补充：这里以显示 1 到 5 并且没有间隔符的数字序列为例）</p>
+
+
+
+<h4 id="3-3-2-显示间隔符是空格的数字序列">3.3.2 显示间隔符是空格的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq -s ' ' 5
+1 2 3 4 5</code></pre>
+
+
+
+<p>（补充：这里以显示 1 到 5 并且以空格作为间隔的数字序列为例）</p>
+
+
+
+<h4 id="3-3-3-显示间隔符是某一个字符的数字序列">3.3.3 显示间隔符是某一个字符的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq -s '#' 5
+1#2#3#4#5</code></pre>
+
+
+
+<p>（补充：这里以显示 1 到 5 并且以 # 作为间隔的数字序列为例）</p>
+
+
+
+<h4 id="3-4-案例四-seq-显示指定宽度的数字序列">3.4 案例四：seq 显示指定宽度的数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># seq -w 1 10
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># seq --equal-width 1 10
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10</code></pre>
+
+
+
+<h4 id="3-5-案例五-seq-使用变量显示数字序列">3.5 案例五：seq 使用变量显示数字序列</h4>
+
+
+
+<pre class="wp-block-code"><code># a=5
+# seq $a
+1
+2
+3
+4
+5</code></pre>
+
+
+
+<p>（补充：这里以将变量 a 的值设置为 5 ，并且显示 1 到变量 a 的值的数字变量为例）</p>
+
+
+
+<h4 id="3-6-案例六-将-seq-显示的数字序列导入到一个文件里">3.6 案例六：将 seq 显示的数字序列导入到一个文件里</h4>
+
+
+
+<pre class="wp-block-code"><code># seq 1 5 &gt; test.txt
+# cat test.txt
+1
+2
+3
+4
+5</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># seq 1 5 | xargs -I{} echo {} &gt; test.txt
+
+# cat test.txt
+1
+2
+3
+4
+5</code></pre>
+
+
+
+<p>（补充：这里以显示 1 到 5 的数字序列并导入到 test.txt 文件为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 echo （显示字符串）</title>
+		<link>https://eternalcenter-2022-03.github.io/echo/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 20 Sep 2021 02:26:02 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File (系统文件)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17649</guid>
+
+					<description><![CDATA[内容一：echo 的命令选项 1) -n 输出不换行2) -e 处理某些特殊字符\a 蜂鸣声报警\b 删除前面一个字符\c 在末尾不换行\e 输出 esc\f 换行，同时光标停在原处\n 换行\r 不换行，同时光标停在原处\t tab，水平方向\v tab，垂直方向\ 输出 \\Onnn 输出八进制 ASCII 字符\xHH 输出十六进制 ASCII 字符3) -E 不再转义 内容二：echo 的其他显示选项 1) \033[0m 将所有显示属性关闭2) \033[1m 高亮3) \033[4m 下划线4) \033[5m 闪烁5) \033[7m 反显6) \033[8m 消隐7) \033[37m — \33[0m 设置字体颜色，这里以将字体颜色设置为白色为例8) \033[40m — \33[0m 设置背景颜色，这里以将背景颜色设置为白色为例9) \033[A 将光标向上移 n 行10) \033[B &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/echo/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 命令 echo （显示字符串）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：echo 的命令选项</h4>
+
+
+
+<p>1) -n 输出不换行<br>2) -e 处理某些特殊字符<br>\a 蜂鸣声报警<br>\b 删除前面一个字符<br>\c 在末尾不换行<br>\e 输出 esc<br>\f 换行，同时光标停在原处<br>\n 换行<br>\r 不换行，同时光标停在原处<br>\t tab，水平方向<br>\v tab，垂直方向<br>\ 输出 \<br>\Onnn 输出八进制 ASCII 字符<br>\xHH 输出十六进制 ASCII 字符<br>3) -E 不再转义</p>
+
+
+
+<h4>内容二：echo 的其他显示选项</h4>
+
+
+
+<p>1) \033[0m 将所有显示属性关闭<br>2) \033[1m 高亮<br>3) \033[4m 下划线<br>4) \033[5m 闪烁<br>5) \033[7m 反显<br>6) \033[8m 消隐<br>7) \033[37m — \33[0m 设置字体颜色，这里以将字体颜色设置为白色为例<br>8) \033[40m — \33[0m 设置背景颜色，这里以将背景颜色设置为白色为例<br>9) \033[A 将光标向上移 n 行<br>10) \033[B 将光标向下移 n 行<br>11) \033[C 将光标向右移 n 行<br>12) \033[D 将光标向左移 n 行<br>13) \033[;H 将光标跳转到 x 和 y 位置<br>14) \033[2J 清屏<br>15) \033[K 将光标所在位置到行尾的所有位置全部清除<br>16) \033[s 将光标位置保存<br>17) \033[u 将光标位置恢复<br>18) \033[?25l 将光标隐藏<br>19) \033[?25h 将光标显示</p>
+
+
+
+<h4>内容三：echo 显示不同颜色字体的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># echo -e "\033&#91;30m black characters \033&#91;0m" 
+# echo -e "\033&#91;31m red characters \033&#91;0m"
+# echo -e "\033&#91;32m green characters \033&#91;0m" 
+# echo -e "\033&#91;33m yellow characters \033&#91;0m"
+# echo -e "\033&#91;34m blue characters \033&#91;0m"
+# echo -e "\033&#91;35m purple character \033&#91;0m"
+# echo -e "\033&#91;36m sky blue character \033&#91;0m"
+# echo -e "\033&#91;37m white character \033&#91;0m"</code></pre>
+
+
+
+<h4>内容三：echo 显示不同颜色背景的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># echo -e "\033&#91;40;37m white characters on black background \033&#91;0m"
+# echo -e "\033&#91;41;37m white characters on red background \033&#91;0m"
+# echo -e "\033&#91;42;37m white characters on green background \033&#91;0m"
+# echo -e "\033&#91;43;37m white characters on yellow background \033&#91;0m"
+# echo -e "\033&#91;44;37m white characters on blue background \033&#91;0m"
+# echo -e "\033&#91;45;37m white characters on purple background \033&#91;0m"
+# echo -e "\033&#91;46;37m white characters on sky blue background \033&#91;0m"
+# echo -e "\033&#91;47;30m black characters on white background \033&#91;0m"</code></pre>
+
+
+
+<h4>内容四：echo 的其他案例<br>4.1 案例一：不换行带 tab 输出</h4>
+
+
+
+<pre class="wp-block-code"><code># for month in Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec;do echo -e "$month\t\c";done
+Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</code></pre>
+
+
+
+<p>(补充：这里以不换行带 tab 输出 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 为例)</p>
+
+
+
+<h4>4.2 案例二：先清屏再不换行输出</h4>
+
+
+
+<pre class="wp-block-code"><code># echo -e "\033&#91;2J\033&#91;10A\Eternal Center\c"</code></pre>
+
+
+
+<p>（补充：这里以先清屏再不换行输出 Eternal Center 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 system-analyze （显示服务启动时间）</title>
+		<link>https://eternalcenter-2022-03.github.io/system-analyze/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 03 Aug 2021 06:41:33 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17236</guid>
+
+					<description><![CDATA[内容一：显示所有服务启动的时间 内容二：显示某一个服务启动的时间]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-显示所有服务启动的时间">内容一：显示所有服务启动的时间</h4>
+
+
+
+<pre class="wp-block-code"><code># system-analyze</code></pre>
+
+
+
+<h4 id="内容二-显示某一个服务启动的时间">内容二：显示某一个服务启动的时间</h4>
+
+
+
+<pre class="wp-block-code"><code># system-analyze &lt;service&gt;</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 ifstat （显示网速）</title>
+		<link>https://eternalcenter-2022-03.github.io/ifstat/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 15 Jul 2021 02:35:37 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=16732</guid>
+
+					<description><![CDATA[内容一：显示当前一瞬间的网速 内容二：持续显示网速]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-显示当前一瞬间的网速">内容一：显示当前一瞬间的网速</h4>
+
+
+
+<pre class="wp-block-code"><code># ifstat</code></pre>
+
+
+
+<h4 id="内容二-持续显示网速">内容二：持续显示网速</h4>
+
+
+
+<pre class="wp-block-code"><code># watch ifstat</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] Linux 生成 UUID 的方法 （Python 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/uuid-python/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 26 Jun 2021 14:29:07 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Python Basic (基础)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=16121</guid>
+
+					<description><![CDATA[步骤一：进入 Python 环境 步骤二：导入 UUID 模块 步骤三：生成 UUID 步骤四：生成 UUID 并以十六进制进行显示]]></description>
+										<content:encoded><![CDATA[
+<h2>步骤一：进入 Python 环境</h2>
+
+
+
+<pre class="wp-block-code"><code># python3</code></pre>
+
+
+
+<h2>步骤二：导入 UUID 模块</h2>
+
+
+
+<pre class="wp-block-code"><code>&gt;&gt;&gt; import uuid</code></pre>
+
+
+
+<h2>步骤三：生成 UUID</h2>
+
+
+
+<pre class="wp-block-code"><code>&gt;&gt;&gt; uuid.uuid4()</code></pre>
+
+
+
+<h2>步骤四：生成 UUID 并以十六进制进行显示</h2>
+
+
+
+<pre class="wp-block-code"><code>>>> uuid.uuid4().get_hex()</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 网卡物理 （MAC） 地址的显示</title>
+		<link>https://eternalcenter-2022-03.github.io/mac-view/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 27 May 2021 09:18:36 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=14431</guid>
+
+					<description><![CDATA[内容一：显示本服务器的网卡物理（MAC）地址 内容二：显示本地网络的网卡物理（MAC）地址]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-显示本服务器的网卡物理-mac-地址">内容一：显示本服务器的网卡物理（MAC）地址</h4>
+
+
+
+<pre class="wp-block-code"><code># ifconfig | grep HW</code></pre>
+
+
+
+<h4 id="内容二-显示本地网络的网卡物理-mac-地址">内容二：显示本地网络的网卡物理（MAC）地址</h4>
+
+
+
+<pre class="wp-block-code"><code># arp -n</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

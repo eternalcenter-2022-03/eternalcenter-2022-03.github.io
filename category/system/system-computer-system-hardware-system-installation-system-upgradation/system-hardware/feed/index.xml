@@ -1,0 +1,1514 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>System Hardware (系统硬件) &#8211; Eternal Center</title>
+	<atom:link href="https://eternalcenter-2022-03.github.io/category/system/system-computer-system-hardware-system-installation-system-upgradation/system-hardware/feed/" rel="self" type="application/rss+xml" />
+	<link>https://eternalcenter-2022-03.github.io/</link>
+	<description></description>
+	<lastBuildDate>Thu, 03 Mar 2022 07:39:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+	<item>
+		<title>[排错] Linux 运行时报错 “watchdog: Bug: soft lockup &#8211; CPU&#8230;&#8230;” （CPU 软锁）</title>
+		<link>https://eternalcenter-2022-03.github.io/debug-watchdog-bug-soft-lockup-cpu/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 15 Feb 2022 07:35:47 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21928</guid>
+
+					<description><![CDATA[报错代码： 分析： 当处理器的负载过高时，一个处理器在运行某一个进程时，在内核模式下超过 20 秒没有回应，则看门狗程序会将系统所有 CPU 软锁住，然后会让这些 CPU 显示各自正在运行的进程堆栈跟踪 缓解方法： 延长看门狗等待 CPU 内核模式下的回应时间 方法一：通过 /proc/sys/kernel/watchdog_thresh 文件提高看门狗软所 CPU 的时间 （补充：这里以将看门狗的值提高到为 20 为例，也可以根据自己的需求提高更多，默认值为 10） 方法二：通过新建文件提高看门狗软所 CPU 的时间2.1 通过新建文件提高看门狗软所 CPU 的时间 （补充：这里以将看门狗的值提高到为 20 为例，也可以根据自己的需求提高更多，默认值为 10） 2.2 让新建文件立刻生效 深究方法： 开启 Kdump，等此报错再次发生时分析 Kdump 在内核崩溃时搜集信息 vmcore]]></description>
+										<content:encoded><![CDATA[
+<h2 id="报错代码">报错代码：</h2>
+
+
+
+<pre class="wp-block-code"><code>watchdog: Bug: soft lockup - CPU......</code></pre>
+
+
+
+<h2 id="分析">分析：</h2>
+
+
+
+<p>当处理器的负载过高时，一个处理器在运行某一个进程时，在内核模式下超过 20 秒没有回应，则看门狗程序会将系统所有 CPU 软锁住，然后会让这些 CPU 显示各自正在运行的进程堆栈跟踪</p>
+
+
+
+<h2 id="缓解方法">缓解方法：</h2>
+
+
+
+<p>延长看门狗等待 CPU 内核模式下的回应时间</p>
+
+
+
+<h4 id="方法一-通过-proc-sys-kernel-watchdog-thresh-文件提高看门狗软所-cpu-的时间">方法一：通过 /proc/sys/kernel/watchdog_thresh 文件提高看门狗软所 CPU 的时间</h4>
+
+
+
+<pre class="wp-block-code"><code># echo 20 &gt; /proc/sys/kernel/watchdog_thresh</code></pre>
+
+
+
+<p>（补充：这里以将看门狗的值提高到为 20 为例，也可以根据自己的需求提高更多，默认值为 10）</p>
+
+
+
+<h4 id="方法二-通过新建文件提高看门狗软所-cpu-的时间2-1-通过新建文件提高看门狗软所-cpu-的时间">方法二：通过新建文件提高看门狗软所 CPU 的时间<br>2.1 通过新建文件提高看门狗软所 CPU 的时间</h4>
+
+
+
+<pre class="wp-block-code"><code># echo "kernel.watchdog_thresh=20" &gt; /etc/sysctl.d/99-watchdog_thresh.conf</code></pre>
+
+
+
+<p>（补充：这里以将看门狗的值提高到为 20 为例，也可以根据自己的需求提高更多，默认值为 10）</p>
+
+
+
+<h4 id="2-2-让新建文件立刻生效">2.2 让新建文件立刻生效</h4>
+
+
+
+<pre class="wp-block-code"><code># sysctl -p  /etc/sysctl.d/99-watchdog_thresh.conf</code></pre>
+
+
+
+<h2 id="深究方法">深究方法：</h2>
+
+
+
+<p>开启 Kdump，等此报错再次发生时分析 Kdump 在内核崩溃时搜集信息 vmcore</p>
+
+
+
+<div class="wp-container-624070ca12a9c wp-block-buttons">
+<div class="wp-block-button aligncenter is-style-outline"><a class="wp-block-button__link no-border-radius" href="https://eternalcenter-2022-03.github.io/kdump/">Linux Kdump 的开启 <br>（用于收集内核崩溃时的信息）</a></div>
+
+
+
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://eternalcenter-2022-03.github.io/kdump-analysis/" style="border-radius:0px">Linux Kdump 内核奔溃信息的分析</a></div>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 hdparm （测试硬盘读取速度）</title>
+		<link>https://eternalcenter-2022-03.github.io/hdparm/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 07 Feb 2022 11:22:26 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21888</guid>
+
+					<description><![CDATA[（补充：这里以测试 /dev/sda 硬盘的读取速度为例）]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code> # hdparm -Ttv /dev/sda
+
+/dev/sda:
+ multcount     = 128 (on)
+ IO_support    =  1 (32-bit)
+ readonly      =  0 (off)
+ readahead     = 1024 (on)
+ geometry      = 8354/255/63, sectors = 134217728, start = 0
+ Timing cached reads:   7304 MB in  2.00 seconds = 3658.90 MB/sec
+ Timing buffered disk reads: 612 MB in  3.01 seconds = 203.07 MB/sec</code></pre>
+
+
+
+<p>（补充：这里以测试 /dev/sda 硬盘的读取速度为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 查看处理器温度 （直接查看）</title>
+		<link>https://eternalcenter-2022-03.github.io/processor-temperature/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sun, 06 Feb 2022 10:12:07 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21883</guid>
+
+					<description><![CDATA[内容一：查看某一个处理器的瞬间温度 （补充：1) 这里以查看第一个处理器的瞬间温度为例2) 将显示的数值除以 1000 就是以摄氏为单位的温度3) 如果查看第二个处理器的瞬间温度则将 thermal_zone0 换成 thermal_zone1） 内容二：查看某一个处理器的瞬间温度，并对数值进行处理 （补充：1) 这里以查看第一个处理器的瞬间温度为例2) 如果查看第二个处理器的瞬间温度则将 thermal_zone0 换成 thermal_zone1）]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-查看某一个处理器的瞬间温度">内容一：查看某一个处理器的瞬间温度</h4>
+
+
+
+<pre class="wp-block-code"><code># cat /sys/class/thermal/thermal_zone0/temp</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以查看第一个处理器的瞬间温度为例<br>2) 将显示的数值除以 1000 就是以摄氏为单位的温度<br>3) 如果查看第二个处理器的瞬间温度则将 thermal_zone0 换成 thermal_zone1<br>）</p>
+
+
+
+<h4 id="内容二-查看某一个处理器的瞬间温度-并对数值进行处理">内容二：查看某一个处理器的瞬间温度，并对数值进行处理</h4>
+
+
+
+<pre class="wp-block-code"><code># echo "CPU Temperature: $&#91;$(cat /sys/class/thermal/thermal_zone0/temp)/1000]"</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以查看第一个处理器的瞬间温度为例<br>2) 如果查看第二个处理器的瞬间温度则将 thermal_zone0 换成 thermal_zone1<br>）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 sensors 的使用 （查看系统硬件温度）</title>
+		<link>https://eternalcenter-2022-03.github.io/sensors/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sun, 06 Feb 2022 10:09:17 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21881</guid>
+
+					<description><![CDATA[步骤一：安装 sensors 命令 如果是 RHEL &#38; Rocky Linux： 如果是 openSUSE &#38; SLE： 步骤二：检查温度传感器 步骤三：查看系统硬件温度]]></description>
+										<content:encoded><![CDATA[
+<h4 id="步骤一-安装-sensors-命令">步骤一：安装 sensors 命令</h4>
+
+
+
+<p>如果是 RHEL &amp; Rocky Linux：</p>
+
+
+
+<pre class="wp-block-code"><code># yum install sensors</code></pre>
+
+
+
+<p>如果是 openSUSE &amp; SLE：</p>
+
+
+
+<pre class="wp-block-code"><code># zypper install sensors</code></pre>
+
+
+
+<h4 id="步骤二-检查温度传感器">步骤二：检查温度传感器</h4>
+
+
+
+<pre class="wp-block-code"><code># sensors-detect</code></pre>
+
+
+
+<h4 id="步骤三-查看系统硬件温度">步骤三：查看系统硬件温度</h4>
+
+
+
+<pre class="wp-block-code"><code># sensors</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 常见存储和存储类型介绍</title>
+		<link>https://eternalcenter-2022-03.github.io/introduction-to-linux-common-storage-and-storage-types/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 19 Aug 2021 12:31:20 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[FTP]]></category>
+		<category><![CDATA[HTTP]]></category>
+		<category><![CDATA[Iscsi]]></category>
+		<category><![CDATA[NFS]]></category>
+		<category><![CDATA[Samba]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[Storage Services (存储服务)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Storage (系统存储)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17522</guid>
+
+					<description><![CDATA[内容一：常见的存储 1. DAS（直连存储），就是接在主板上的硬盘2. NAS（网络附加存储），例如：NFS、Samba、FTP、HTTP，优点是管理简单，缺点是单点故障3. SAN（网络块存储），例如：Iscsi4. 分布时云存储，例如：Ceph、Swift 内容二：常见的存储类型 1. Block-based access（基于块存储的访问），对应的是块存储（block），例如：直接接在主板上的硬盘、Iscsi、Ceph2. File-based access（基于文件系统的访问），对应的是文件系统存储（filesystem），例如：NFS、Samba、FTP、HTTP、Ceph3. Object-based access（基于对象的访问），对应的是对象存储（object），例如：Ceph]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：常见的存储</h4>
+
+
+
+<p>1. DAS（直连存储），就是接在主板上的硬盘<br>2. NAS（网络附加存储），例如：NFS、Samba、FTP、HTTP，优点是管理简单，缺点是单点故障<br>3. SAN（网络块存储），例如：Iscsi<br>4. 分布时云存储，例如：Ceph、Swift</p>
+
+
+
+<h4>内容二：常见的存储类型</h4>
+
+
+
+<p>1. Block-based access（基于块存储的访问），对应的是块存储（block），例如：直接接在主板上的硬盘、Iscsi、Ceph<br>2. File-based access（基于文件系统的访问），对应的是文件系统存储（filesystem），例如：NFS、Samba、FTP、HTTP、Ceph<br>3. Object-based access（基于对象的访问），对应的是对象存储（object），例如：Ceph</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 格式化特点</title>
+		<link>https://eternalcenter-2022-03.github.io/linux-formatting-features/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 19 Aug 2021 12:02:18 +0000</pubDate>
+				<category><![CDATA[Ceph]]></category>
+		<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Clusters (集群)]]></category>
+		<category><![CDATA[Distributed Cloud Storage Clusters (分布式云存储集群)]]></category>
+		<category><![CDATA[Load Balancing and High Availability Clusters (负载均衡加高可用集群)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Storage (系统存储)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17520</guid>
+
+					<description><![CDATA[内容一：格式化后会产生的分区 格式化会格式出 inode 区和 block 区 内容二：inode 区和 block 区的作用 inode 区默认一格大小是 512 个字节，存储哪一份数据存在了哪些 block 里以及数据的所属者、权限创建时间等 metadata 元数据block 区默认一格大小是 4k，只存储数据本身 内容三：Linux 文件格式的特点 ext3 和 ext4 的 inode 区每一格较小，而 xfs 的 inode 区每一格更大，可以存储更多种类，例如快照等 metadata 元数据]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：格式化后会产生的分区</h4>
+
+
+
+<p>格式化会格式出 inode 区和 block 区</p>
+
+
+
+<h4>内容二：inode 区和 block 区的作用</h4>
+
+
+
+<p>inode 区默认一格大小是 512 个字节，存储哪一份数据存在了哪些 block 里以及数据的所属者、权限创建时间等 metadata 元数据<br>block 区默认一格大小是 4k，只存储数据本身</p>
+
+
+
+<h4>内容三：Linux 文件格式的特点</h4>
+
+
+
+<p>ext3 和 ext4 的 inode 区每一格较小，而 xfs 的 inode 区每一格更大，可以存储更多种类，例如快照等 metadata 元数据</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 内存机制</title>
+		<link>https://eternalcenter-2022-03.github.io/memory-mechanism/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 20 Apr 2021 07:37:39 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=14027</guid>
+
+					<description><![CDATA[内容一：Linux 显示内存的命令 内容二：Linux 内存机制 1) total 内存的总大小2) used 正在被使用的内存大小3) free 没有被使用的内存大小4) shared 正在被用于共享的内存大小5) buffers/cached 正处于缓存状态的内存大小（当 free 状态的内存不够时，它会自动释放出来）6) available 还可以被应用程序使用的内存大小 （补充：释放处于 shared 状态内存的方法1) # echo 1 &#62; /proc/sys/vm/drop_caches #清除 pagecache2) # echo 2 &#62; /proc/sys/vm/drop_caches #清除 slab3) # echo 3 &#62; /proc/sys/vm/drop_caches #同时清除 pagecache 和 slab）]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-linux-显示内存的命令">内容一：Linux 显示内存的命令</h4>
+
+
+
+<pre class="wp-block-code"><code># free -m</code></pre>
+
+
+
+<h4 id="内容二-linux-内存机制">内容二：Linux 内存机制</h4>
+
+
+
+<p>1) total 内存的总大小<br>2) used 正在被使用的内存大小<br>3) free 没有被使用的内存大小<br>4) shared 正在被用于共享的内存大小<br>5) buffers/cached 正处于缓存状态的内存大小（当 free 状态的内存不够时，它会自动释放出来）<br>6) available 还可以被应用程序使用的内存大小</p>
+
+
+
+<p>（<br>补充：释放处于 shared 状态内存的方法<br>1) # echo 1 &gt; /proc/sys/vm/drop_caches #清除 pagecache<br>2) # echo 2 &gt; /proc/sys/vm/drop_caches #清除 slab<br>3) # echo 3 &gt; /proc/sys/vm/drop_caches #同时清除 pagecache 和 slab<br>）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux BIOS 和 EFI 的区分 （系统安装时启动分区种类的显示）</title>
+		<link>https://eternalcenter-2022-03.github.io/bios-efi/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 04 Mar 2021 08:46:20 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Installation (系统安装)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Storage (系统存储)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=13591</guid>
+
+					<description><![CDATA[内容一：判断 Linux 是 BIOS 还是 EFI 的方法 （补充：如果 /sys/firmware/efi 目录存在，则代表系统是 EFI，否则系统是 BIOS） 内容二：判断 Linux 是 BIOS 还是 EFI 的脚本]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-判断-linux-是-bios-还是-efi-的方法">内容一：判断 Linux 是 BIOS 还是 EFI 的方法</h4>
+
+
+
+<pre class="wp-block-code"><code># ls -ld /sys/firmware/efi</code></pre>
+
+
+
+<p>（补充：如果 /sys/firmware/efi 目录存在，则代表系统是 EFI，否则系统是 BIOS）</p>
+
+
+
+<h4 id="内容二-判断-linux-是-bios-还是-efi-的脚本">内容二：判断 Linux 是 BIOS 还是 EFI 的脚本</h4>
+
+
+
+<pre class="wp-block-code"><code># &#91; -d /sys/firmware/efi ] &amp;&amp; echo UEFI || echo BIOS</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 ipmitool （管理服务器硬件）（转载）</title>
+		<link>https://eternalcenter-2022-03.github.io/ipmitool/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 23 Oct 2020 14:12:26 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=11597</guid>
+
+					<description><![CDATA[注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code>ipmitool安装，常用指令
+
+IPMI: Intelligent Platform Management Interface
+1.下载地址：
+
+https:&#47;&#47;sourceforge.net/projects/ipmitool/
+2.安装步骤
+
+a. tar -xvf ipmitool-1.8.18.tar.bz2
+b. cd ipmitool-1.8.18
+c. ./configure
+d. make
+e.make install
+f.
+modprobe ipmi_si
+modprobe ipmi_devintf
+modprobe ipmi_msghandler
+安装成功（实测Centos7.4）
+3.常用指令
+
+    远程电源控制类 远程电源控制类
+    Ipmitool -I lanplus –H 10.32.228.111 –U username –P Passwordchassis power off
+    Ipmitool -I lanplus –H 10.32.228.111 –U username –P Passwordchassis power on
+    Ipmitool -I lanplus –H 10.32.228.111 –U username –P Passwordchassis power reset
+    Ipmitool -I lanplus –H 10.32.228.111 –U username –P Passwordchassis power cycle
+    (注意power cycle 和power reset的区别在于前者从掉电到上电有１秒钟的间隔，而后者是很快上电)
+    读取系统状态类
+    Ipmitool sensor list 　显示系统所有传感器列表
+    Ipmitool fru list　　　显示系统所有现场可替代器件的列表
+    Ipmitool sdr list　　　显示系统所有SDRRepository设备列表　
+    Ipmitool pef list 　　显示系统平台时间过滤的列表
+    3 系统日志类
+    Ipmitool sel elist　　　显示所有系统事件日志
+    Ipmitool sel clear　　　删除所有系统时间日志
+    Ipmitool sel delete ID 删除第ID条SEL
+    Ipmitool sel time get 　显示当前BMC的时间
+    Ipmitool sel time set XXX 设置当前BMC的时间
+    启动设置类
+    Ipmitool chassis bootdev bios 重启后停在BIOS 菜单
+    Ipmitool chassis bootdev pxe　重启后从PXE启动
+    系统相关的命令
+    Ipmitool mc info 显示BMC版本信息
+    Ipmitool bmc reset cold BMC 热启动
+    Ipmitool bmc reset warmBMC冷启动
+    网络接口相关命令
+    Ipmitool lan print 1 显示channel1的网络配置信息
+    Ipmitool lan set 1ipaddr 10.32.2.2 设置channel1的IP地址
+    Ipmitool lan set 1 netmask 255.255.0.0 设置channel1的netmask
+    Ipmitool lan set 4 defgw ipaddr255.255.0.254 设置channel4的网关
+    Ipmitool lan set 2 defgw macaddr 　设置channel2的网关mac address
+    Ipmitool lan set 2 ipsrc dhcp 设置channel2的ip 源在DHCP
+    Ipmitool lan set 3 ipsrc static 设置channel2的ip是静态获得的
+    通道相关命令
+    Ipmitool channel info　显示系统默认channel
+    Ipmitool channel authcap channel-number privilege 　修改通道的优先级别
+    Ipmitool channel getaccess channel-number user-id　读取用户在通道上的权限
+    Ipmitool channel setacccess channel-number user-id callin=on ipmi=on link=onprivilege=5 // 设置用户在通道上的权限
+    看门狗相关命令
+    Ipmitool mc watchdog get　读取当前看门狗的设置
+    Ipmitool watchdog off 　　关掉看门狗
+    Ipmitool watchdog reset 　　在最近设置的计数器的基础上重启看门狗
+    用户管理相关命令
+    Ipmitool user list chan-id 显示某通道上的所有用户
+    Ipmitool set password &#91;] 修改某用户的密码
+    Ipmitool disable 　　禁止掉某用户
+    ipmitool enable 　　使能某用户
+    ipmitool priv &#91;]　修改某用户在某通道上的权限
+    ipmitool test &lt;16|20>&#91;&lt;password]>　测试用户
+————————————————
+版权声明：本文为CSDN博主「Rudy,Zhao」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_40343504/article/details/82664389</code></pre>
+
+
+
+<p>注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img width="1013" height="191" src="https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-ipmitool-.png" alt="" class="wp-image-11600" srcset="https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-ipmitool-.png 1013w, https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-ipmitool--300x57.png 300w, https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-ipmitool--768x145.png 768w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" /><figcaption>CC 4.0 BY-SA 版权协议网址：https://creativecommons.org/licenses/by-sa/4.0/deed.z</figcaption></figure></div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] Linux 光纤号的显示</title>
+		<link>https://eternalcenter-2022-03.github.io/optical-fiber/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 15 Jul 2020 05:33:29 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10001</guid>
+
+					<description><![CDATA[步骤目录： 步骤一：显示有哪些光纤号 步骤二：显示光纤号有哪些配置文件 步骤三：显示光纤号配置文件里对应 FC HBA 卡的 WWN 信息 步骤四：显示光纤的状态4.1 光纤正常在线的情况4.2 光纤不正常或者不在线的情况 具体的操作步骤： 步骤一：显示有哪些光纤号 步骤二：显示光纤号有哪些配置文件 步骤三：显示光纤号配置文件里对应 FC HBA 卡的 WWN 信息 步骤四：显示光纤的状态4.1 光纤正常在线的情况 4.2 光纤不正常或者不在线的情况]]></description>
+										<content:encoded><![CDATA[
+<h2 id="步骤目录">步骤目录：</h2>
+
+
+
+<h4 id="步骤一-查看有哪些光纤号">步骤一：显示有哪些光纤号</h4>
+
+
+
+<h4 id="步骤二-查看光纤号有哪些配置文件">步骤二：显示光纤号有哪些配置文件</h4>
+
+
+
+<h4 id="步骤三-查看光纤号配置文件里对应-fc-hba-卡的-wwn-信息">步骤三：显示光纤号配置文件里对应 FC HBA 卡的 WWN 信息</h4>
+
+
+
+<h4 id="步骤四-显示光纤的状态-4-1-光纤正常在线的情况-4-2-光纤不正常或者不在线的情况">步骤四：显示光纤的状态<br>4.1 光纤正常在线的情况<br>4.2 光纤不正常或者不在线的情况</h4>
+
+
+
+<h2 id="具体的操作步骤">具体的操作步骤：</h2>
+
+
+
+<h4 id="步骤一-查看有哪些光纤号">步骤一：显示有哪些光纤号</h4>
+
+
+
+<pre class="wp-block-code"><code># lspci | grep -i fibre</code></pre>
+
+
+
+<h4 id="步骤二-查看光纤号有哪些配置文件">步骤二：显示光纤号有哪些配置文件</h4>
+
+
+
+<pre class="wp-block-code"><code># ls /sys/class/fc_host/
+host1  host2  host3  host4</code></pre>
+
+
+
+<h4 id="步骤三-查看光纤号配置文件里对应-fc-hba-卡的-wwn-信息">步骤三：显示光纤号配置文件里对应 FC HBA 卡的 WWN 信息</h4>
+
+
+
+<pre class="wp-block-code"><code># cat /sys/class/fc_host/host&#91;1-4]/port_name</code></pre>
+
+
+
+<h4 id="步骤四-显示光纤的状态-4-1-光纤正常在线的情况">步骤四：显示光纤的状态<br>4.1 光纤正常在线的情况</h4>
+
+
+
+<pre class="wp-block-code"><code># cat /sys/class/fc_host/host5/port_state
+online</code></pre>
+
+
+
+<h4 id="4-2-光纤不正常或者不在线的情况">4.2 光纤不正常或者不在线的情况</h4>
+
+
+
+<pre class="wp-block-code"><code># cat /sys/class/fc_host/host7/port_state
+linkdown</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 nmcli （网络管理）</title>
+		<link>https://eternalcenter-2022-03.github.io/nmcli/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2020 16:30:03 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=9790</guid>
+
+					<description><![CDATA[内容目录： 内容一：整个网络的管理1.1 开启整个网络1.2 关闭整个网络 内容二：管理网络设备2.1 显示网络设备的信息2.1.1 显示所有网络设备2.1.2 显示被激活的网络设备2.2 显示某一个网络设备是否激活2.3 显示网络设备的联通状态2.4 添加网络设备2.5 删除网络设备2.6 激活一个网络设备2.7 取消激活一个网络设备 内容三：IP 地址管理3.1 设置 IP 地址3.1.1 设置 IP 地址的格式3.1.2 设置 IP 地址的案例3.2 让 IP 地址生效3.2.1 让 IP 地址生效的格式3.2.2 让 IP 地址生效的案例 内容四：路由管理4.1 添加路由4.1.1 添加路由的格式4.1.2 添加路由的案例4.2 让路由生效4.2.1 让路由生效的格式4.2.2 让路由生效的案例 具体的内容： 内容一：整个网络的管理1.1 开启整个网络 或者： 1.2 关闭整个网络 或者： 内容二：管理网络设备2.1 显示网络设备的信息2.1.1 显示所有网络设备 或者： 或者： 或者： 2.1.2 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/nmcli/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 命令 nmcli （网络管理）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-整个网络的管理1-1-开启整个网络1-2-关闭整个网络">内容一：整个网络的管理<br>1.1 开启整个网络<br>1.2 关闭整个网络</h4>
+
+
+
+<h4 id="内容二-管理网络设备2-1-显示网络设备的信息2-1-1-显示所有网络设备2-1-2-显示被激活的网络设备2-2-显示某一个网络设备是否激活2-3-显示网络设备的联通状态2-4-添加网络设备2-5-删除网络设备2-6-激活一个网络设备2-7-取消激活一个网络设备">内容二：管理网络设备<br>2.1 显示网络设备的信息<br>2.1.1 显示所有网络设备<br>2.1.2 显示被激活的网络设备<br>2.2 显示某一个网络设备是否激活<br>2.3 显示网络设备的联通状态<br>2.4 添加网络设备<br>2.5 删除网络设备<br>2.6 激活一个网络设备<br>2.7 取消激活一个网络设备</h4>
+
+
+
+<h4 id="内容三-ip-地址管理3-1-设置-ip-地址3-1-1-设置-ip-地址的格式3-1-2-设置-ip-地址的案例3-2-让-ip-地址生效3-2-1-让-ip-地址生效的格式3-2-2-让-ip-地址生效的案例">内容三：IP 地址管理<br>3.1 设置 IP 地址<br>3.1.1 设置 IP 地址的格式<br>3.1.2 设置 IP 地址的案例<br>3.2 让 IP 地址生效<br>3.2.1 让 IP 地址生效的格式<br>3.2.2 让 IP 地址生效的案例</h4>
+
+
+
+<h4 id="内容四-路由管理4-1-添加路由4-1-1-添加路由的格式4-1-2-添加路由的案例4-2-让路由生效4-2-1-让路由生效的格式4-2-2-让路由生效的案例">内容四：路由管理<br>4.1 添加路由<br>4.1.1 添加路由的格式<br>4.1.2 添加路由的案例<br>4.2 让路由生效<br>4.2.1 让路由生效的格式<br>4.2.2 让路由生效的案例</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-整个网络的管理1-1-开启整个网络">内容一：整个网络的管理<br>1.1 开启整个网络</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli network on</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli net on</code></pre>
+
+
+
+<h4 id="1-2-关闭整个网络">1.2 关闭整个网络</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli network off</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli net off</code></pre>
+
+
+
+<h4 id="内容二-管理网络设备2-1-显示网络设备的信息2-1-1-显示所有网络设备">内容二：管理网络设备<br>2.1 显示网络设备的信息<br>2.1.1 显示所有网络设备</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection show</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli conneciton</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli con show</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli con</code></pre>
+
+
+
+<h4 id="2-1-2-显示被激活的网络设备">2.1.2 显示被激活的网络设备</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection show --active</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli conneciton --active</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli con show --active</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli con --active</code></pre>
+
+
+
+<h4 id="2-2-显示某一个网络设备是否激活">2.2 显示某一个网络设备是否激活</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli device connect &lt;network device name&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli dev con &lt;network device name&gt;</code></pre>
+
+
+
+<h4 id="2-3-显示网络设备的联通状态">2.3 显示网络设备的联通状态</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli device status</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli dev status</code></pre>
+
+
+
+<h4 id="2-4-添加网络设备">2.4 添加网络设备</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection add con-name &lt;custom network card alias&gt; ifname &lt;network device name&gt; type ethernet</code></pre>
+
+
+
+<p>（补充：这里 con-name 是指要指定一个自定义的网卡别名，ifname 是指要指明网络设备名）</p>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli con add con-name &lt;custom network card alias&gt; ifname &lt;network device name&gt; type ethernet</code></pre>
+
+
+
+<p>（补充：这里 con-name 是指要指定一个自定义的网卡别名，ifname 是指要指明网络设备名）</p>
+
+
+
+<h4 id="2-5-删除网络设备">2.5 删除网络设备</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection delete &lt;custom network card alias&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli con del &lt;custom network card alias&gt;</code></pre>
+
+
+
+<h4 id="2-6-激活一个网络设备">2.6 激活一个网络设备</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli device connect &lt;network device name&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli dev con &lt;network device name&gt;</code></pre>
+
+
+
+<h4 id="2-7-取消激活一个网络设备">2.7 取消激活一个网络设备</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli device disconnect &lt;network device name&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># nmcli dev dis &lt;network device name&gt;</code></pre>
+
+
+
+<h4 id="内容三-ip-地址管理3-1-设置-ip-地址3-1-1-设置-ip-地址的格式">内容三：IP 地址管理<br>3.1 设置 IP 地址<br>3.1.1 设置 IP 地址的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection modify &lt;custom network card alias&gt; ipv4.address &lt;IP address&gt;/&lt;subnet mask&gt; ipv4.gateway &lt;gateway IP address&gt; ipv4.dns &lt;DNS IP address&gt; autoconnect yes</code></pre>
+
+
+
+<h4 id="3-1-2-设置-ip-地址的案例">3.1.2 设置 IP 地址的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection modify eth0 ipv4.address 192.168.1.1/24 ipv4.gateway 192.168.1.1 ipv4.dns 192.168.1.254 autoconnect yes</code></pre>
+
+
+
+<p>（补充：这里以添加给 eth0 添加 IP 地址 192.168.1.1/24，网关 192.168.1.1，DNS 192.168.1.254 为例）</p>
+
+
+
+<h4 id="3-2-让-ip-地址生效3-2-1-让-ip-地址生效的格式">3.2 让 IP 地址生效<br>3.2.1 让 IP 地址生效的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection up &lt;custom network card alias&gt;</code></pre>
+
+
+
+<h4 id="3-2-2-让-ip-地址生效的案例"> 3.2.2 让 IP 地址生效的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection down eth0</code></pre>
+
+
+
+<h4 id="内容四-路由管理4-1-添加路由4-1-1-添加路由的格式">内容四：路由管理<br>4.1 添加路由<br>4.1.1 添加路由的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli con mod &lt;custom network card alias&gt; ipv4.routes "&lt;network segment&gt; &lt;gateway IP address&gt;"</code></pre>
+
+
+
+<h4 id="4-1-2-添加路由的案例">4.1.2 添加路由的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli con mod eth0 ipv4.routes "192.168.2.0/24 192.168.3.1"</code></pre>
+
+
+
+<p>（补充：这里以给 eth0 网卡添加 192.168.2.0/24 通过 192.168.3.1 的网关为例）</p>
+
+
+
+<h4 id="4-2-让路由生效4-2-1-让路由生效的格式">4.2 让路由生效<br>4.2.1 让路由生效的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection up &lt;custom network card alias&gt;</code></pre>
+
+
+
+<h4 id="4-2-2-让路由生效的案例">4.2.2 让路由生效的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection up eth0</code></pre>
+
+
+
+<p>（补充：这里以让 eth0 生效为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 网卡速率的显示</title>
+		<link>https://eternalcenter-2022-03.github.io/network-speed/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 11 Jun 2020 08:53:07 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=9742</guid>
+
+					<description><![CDATA[方法一：通过网卡当前的工作状态得知 （补充：由上面的输出结果可以得知 ens192 网卡目前工作在 1000baseT/Full 状态） 方法二：通过网卡的型号得知 （补充：由上面的输出结果可以得知，网卡设备为 VMware VMXNET3 Ethernet Controller (rev 01) ，我们可以在网上搜索此设备名以得知此网卡的速率）]]></description>
+										<content:encoded><![CDATA[
+<h4 id="方法一-通过网卡当前的工作状态得知">方法一：通过网卡当前的工作状态得知</h4>
+
+
+
+<pre class="wp-block-code"><code># ethtool ens192
+Settings for ens192:
+        Supported ports: &#91; TP ]
+        Supported link modes:   1000baseT/Full 
+                                10000baseT/Full 
+        Supported pause frame use: No
+        Supports auto-negotiation: No
+        Supported FEC modes: Not reported
+        Advertised link modes:  Not reported
+        Advertised pause frame use: No
+        Advertised auto-negotiation: No
+        Advertised FEC modes: Not reported
+        Speed: 10000Mb/s
+        Duplex: Full
+        Port: Twisted Pair
+        PHYAD: 0
+        Transceiver: internal
+        Auto-negotiation: off
+        MDI-X: Unknown
+        Supports Wake-on: uag
+        Wake-on: d
+        Link detected: yes</code></pre>
+
+
+
+<p>（补充：由上面的输出结果可以得知 ens192 网卡目前工作在 1000baseT/Full 状态）</p>
+
+
+
+<h4 id="方法二-通过网卡的型号得知">方法二：通过网卡的型号得知</h4>
+
+
+
+<pre class="wp-block-code"><code># lspci -vvv | grep Ethernet
+0b:00.0 Ethernet controller: VMware VMXNET3 Ethernet Controller (rev 01)
+        Subsystem: VMware VMXNET3 Ethernet Controller</code></pre>
+
+
+
+<p>（补充：由上面的输出结果可以得知，网卡设备为 VMware VMXNET3 Ethernet Controller (rev 01) ，我们可以在网上搜索此设备名以得知此网卡的速率）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 iostat  （显示硬盘读写和处理器占用状况） （转载）</title>
+		<link>https://eternalcenter-2022-03.github.io/iostat/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 02 Mar 2020 05:48:56 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Storage (系统存储)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=8555</guid>
+
+					<description><![CDATA[注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code>iostat 介绍
+
+iostat用于查看存储设备的IO负载情况，输出信息是指定间隔时间内的平均数据，可以持续输出观察。
+通过iostat --help通常看不到直观的信息
+
+&#91;root@master ~]# iostat --help
+Usage: iostat &#91; options ] &#91; &lt;interval&gt; &#91; &lt;count&gt; ] ]
+Options are:
+&#91; -c ] &#91; -d ] &#91; -N ] &#91; -n ] &#91; -h ] &#91; -k | -m ] &#91; -t ] &#91; -V ] &#91; -x ] &#91; -y ] &#91; -z ]
+&#91; -j { ID | LABEL | PATH | UUID | ... } &#91; &lt;device&gt; &#91;...] | ALL ] ]
+&#91; &lt;device&gt; &#91;...] | ALL ] &#91; -p &#91; &lt;device&gt; &#91;,...] | ALL ] ]
+
+    1
+    2
+    3
+    4
+    5
+    6
+
+可以通过man iostat来查看该命令的具体解释
+man iostat|cat &gt; iostat_help.txt
+
+1.常用的选项
+
+OPTIONS
+       -c     展示CPU使用情况
+       -d     展示存储设备使用情况
+       -h     使输出信息更易看。
+       -k     使某些使用block为单位的列强制使用k为单位显示统计信息
+       -m     使某些使用block为单位的列强制使用m为单位显示统计信息
+       -N     显示任何已注册设备映射器名称, 用于查看LVM2统计
+       -n     展示NFS使用情况
+       -p &#91; { device &#91;,...] | ALL } ]
+              显示设备块及其分区统计信息，可以单独指定特定的设备
+       -t     打印显示的每个报表的时间, 时间戳格式可能取决于S_TIME_FORMAT环境变量
+       -V     显示iostat版本
+       -x     显示扩展统计信息
+       -y     如果指定了持续输出，那么忽略默认显示的第一次统计信息，即从系统启动直到执行命令的平均信息。
+       -z     省略在采样期间没有活动的任何设备的输出.
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+    13
+    14
+    15
+
+2.执行样例
+
+       iostat
+              展示从系统启动到执行命令期间的CPU和存储设备平均统计信息
+       iostat -d 2
+              以2秒间隔展示存储设备统计信息
+       iostat -d 2 6
+              以2秒间隔展示存储设备统计信息，共展示6次
+       iostat -x hda hdb 2 6
+              以2秒间隔展示存储设备hda和hdb的拓展统计信息，共展示6次
+       iostat -p sda 2 6
+              以2秒间隔展示存储设备sda及其分区的统计信息，共展示6次
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+
+3.输出信息解析
+
+# iostat -x -d -m -y -c 2 10
+Linux 3.10.0-229.el7.x86_64 (KYL-DB-MYSQL-SLAVE01)      05/09/2019      _x86_64_        (24 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.40    0.00    0.38    4.13    0.00   95.10
+
+Device:         rrqm/s   wrqm/s     r/s     w/s    rMB/s    wMB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util
+sda               0.00     0.00    0.00    0.00     0.00     0.00     0.00     0.00    0.00    0.00    0.00   0.00   0.00
+sdb               0.00     0.00   14.00  563.00     0.07    19.51    69.49     1.40    2.46    9.89    2.28   0.88  50.90
+dm-0              0.00     0.00    0.00    0.00     0.00     0.00     0.00     0.00    0.00    0.00    0.00   0.00   0.00
+dm-1              0.00     0.00    0.00    0.00     0.00     0.00     0.00     0.00    0.00    0.00    0.00   0.00   0.00
+dm-2              0.00     0.00   13.50  562.50     0.07    19.50    69.58     1.41    2.47   10.26    2.28   0.88  50.95
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+
+1.CPU信息
+%user:用户态CPU使用率
+%nice:优先级变化占用CPU的使用率
+%system:内核态CPU使用率
+%iowait:CPU等待IO的占比
+%steal:虚拟CPU等待实际CPU的时间的百分比
+%idle:CPU空闲率
+
+2.存储设备信息
+rrqm/s:每秒对该设备的读请求的合并次数
+wrqm/s:每秒对该设备的写请求的合并次数
+r/s:每秒读取的次数
+w/s:每秒写入的次数
+rMB/s:以m为单位计算每秒读取量
+wMB/s:以m为单位计算每秒写入量
+avgrq-sz:平均每次IO操作的数据量（扇区数为单位），包括读和写
+avgqu-sz:平均等待处理的IO请求队列长度
+await:平均IO等待时间（milliseconds），包括排队时间和IO执行时间
+r_await:平均读取等待时间（milliseconds），包括排队时间和IO执行时间
+w_await:平均写入等待时间（milliseconds），包括排队时间和IO执行时间
+svctm:平均IO服务时间（milliseconds），不准确
+%util:统计时间内，CPU处理IO的时间对于间隔时间的占比，例如间隔2秒，CPU处理IO占了1秒，那么就是50%，可以体现存储设备的繁忙程度
+————————————————
+版权声明：本文为CSDN博主「灯火觅阑珊」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_39004901/article/details/90022623</code></pre>
+
+
+
+<p>注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img loading="lazy" width="1012" height="233" src="https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/03/版权申明证明-iostat.png" alt="" class="wp-image-8556" srcset="https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/03/版权申明证明-iostat.png 1012w, https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/03/版权申明证明-iostat-300x69.png 300w, https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/03/版权申明证明-iostat-768x177.png 768w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" /><figcaption>CC 4.0 BY-SA 版权协议网址：https://creativecommons.org/licenses/by-sa/4.0/deed.z</figcaption></figure></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 硬件信息的显示 （CPU、内存、硬盘和其他硬件信息）</title>
+		<link>https://eternalcenter-2022-03.github.io/hardware-information/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 21 Aug 2019 15:19:33 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Storage (系统存储)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=5419</guid>
+
+					<description><![CDATA[内容目录： 内容一：显示 CPU 信息1.1 显示 CPU 个数（也就是处理的 socket 数）1.2 显示 CPU 核心数1.3 显示 CPU 的详细信息 内容二：显示内存大小2.1 显示内存大小2.2 显示内存详细信息 内容三：显示硬盘信息 内容四：显示其他硬件的方法4.1 显示其他所有硬件的方法4.2 显示某一个硬件的方法 具体的内容： 内容一：显示 CPU 信息1.1 显示 CPU 个数（也就是处理的 socket 数） 1.2 显示 CPU 核心数 1.3 显示 CPU 的详细信息 内容二：显示内存大小2.1 显示内存大小 2.2 显示内存详细信息 内容三：显示硬盘信息 内容四：显示其他硬件的信息4.1 显示其他所有硬件的信息 4.2 显示某一个硬件的信息 （补充：这里以显示鼠标信息的方法为例）]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-显示-cpu-信息1-1-显示-cpu-个数-也就是处理的-socket-数-1-2-显示-cpu-核心数1-3-显示-cpu-的详细信息">内容一：显示 CPU 信息<br>1.1 显示 CPU 个数（也就是处理的 socket 数）<br>1.2 显示 CPU 核心数<br>1.3 显示 CPU 的详细信息</h4>
+
+
+
+<h4 id="内容二-显示内存大小2-1-显示内存大小2-2-显示内存详细信息">内容二：显示内存大小<br>2.1 显示内存大小<br>2.2 显示内存详细信息</h4>
+
+
+
+<h4 id="内容三-查看硬盘信息">内容三：显示硬盘信息</h4>
+
+
+
+<h4 id="内容四-显示其他硬件的方法4-1-显示其他所有硬件的方法4-2-显示某一个硬件的方法">内容四：显示其他硬件的方法<br>4.1 显示其他所有硬件的方法<br>4.2 显示某一个硬件的方法</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-显示-cpu-信息1-1-显示-cpu-个数-也就是处理的-socket-数">内容一：显示 CPU 信息<br>1.1 显示 CPU 个数（也就是处理的 socket 数）</h4>
+
+
+
+<pre class="wp-block-code"><code># cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l</code></pre>
+
+
+
+<h4 id="1-2-显示-cpu-核心数">1.2 显示 CPU 核心数</h4>
+
+
+
+<pre class="wp-block-code"><code># cat /proc/cpuinfo | egrep "core id|physical id" | tr -d "\n" | sed s/physical/\\nphysical/g | grep -v ^$ | sort | uniq | wc -l</code></pre>
+
+
+
+<h4 id="1-3-显示-cpu-的详细信息">1.3 显示 CPU 的详细信息</h4>
+
+
+
+<pre class="wp-block-code"><code># lscpu</code></pre>
+
+
+
+<h4 id="内容二-显示内存大小2-1-显示内存大小">内容二：显示内存大小<br>2.1 显示内存大小</h4>
+
+
+
+<pre class="wp-block-code"><code># free -m</code></pre>
+
+
+
+<h4 id="2-2-显示内存详细信息">2.2 显示内存详细信息</h4>
+
+
+
+<pre class="wp-block-code"><code># cat /proc/meminfo </code></pre>
+
+
+
+<h4 id="内容三-查看硬盘信息">内容三：显示硬盘信息</h4>
+
+
+
+<pre class="wp-block-code"><code># lsblk</code></pre>
+
+
+
+<h4 id="内容四-显示其他硬件的信息4-1-显示其他所有硬件的信息">内容四：显示其他硬件的信息<br>4.1 显示其他所有硬件的信息</h4>
+
+
+
+<pre class="wp-block-code"><code># dmesg</code></pre>
+
+
+
+<h4 id="4-2-显示某一个硬件的信息">4.2 显示某一个硬件的信息</h4>
+
+
+
+<pre class="wp-block-code"><code># dmesg | grep -i mouse</code></pre>
+
+
+
+<p>（补充：这里以显示鼠标信息的方法为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 检测性能指标 （例如：剩余硬盘空间、内存空间等）</title>
+		<link>https://eternalcenter-2022-03.github.io/shell-performance-check/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 01 Aug 2019 07:59:50 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Monitor (监控)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Storage (系统存储)]]></category>
+		<category><![CDATA[System Storage & System Directory & System File (系统存储 & 系统目录 & 系统文件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=4930</guid>
+
+					<description><![CDATA[介绍： #名称: 检测性能指标（例如：剩余硬盘空间、内存空间等）#作用: 检测性能指标（例如：剩余硬盘空间、内存空间等） #使用方法：#1. 给此脚本添加执行权限#2. 执行此脚本 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>#名称: 检测性能指标（例如：剩余硬盘空间、内存空间等）<br>#作用: 检测性能指标（例如：剩余硬盘空间、内存空间等）</p>
+
+
+
+<p>#使用方法：<br>#1. 给此脚本添加执行权限<br>#2. 执行此脚本</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+ip=`ip a s | awk '/noprefixroute ens33/{print $2}'`
+host=`hostname`
+disk=`df -h | awk '/\/$/{print $5}'`
+mem=`free -m | awk '/Mem/{print $4}'`
+cpu=`top -bn 1 | awk -F',' '/^%Cpu/{print $4 }' | awk '{print $1}'`
+soft=`rpm -qa | wc -l`
+port=`ss -ntulap | wc -l`
+
+echo "$ip $host disk $disk"
+echo "$ip $host mem $mem"
+echo "$ip $host cpu $cpu"
+echo "$ip $host soft $soft"
+echo "$ip $host port $port"
+echo</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 top （显示资源和进程）</title>
+		<link>https://eternalcenter-2022-03.github.io/top/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 06 May 2019 10:42:20 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Hardware (系统硬件)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=4676</guid>
+
+					<description><![CDATA[内容目录： 内容一：top 命令解析1.1 top 命令输出结果1.2 top 命令输出结果简介1.2.1 top 命令输出结果分类1.2.2 统计信息说明1.2.2.1 第 1 行信息1.2.2.2 第 2 行信息1.2.2.3 第 3 行信息1.2.2.4 第 4 行信息1.2.2.5 第 5 行信息1.2.3 进程信息说明 内容二：top 非交互式命令选项 内容三：top 交互式命令 （即是在键入了 top 命令之后再键入以下命令）3.1 基础操作3.2 面板隐藏显示3.3 进程列表排序 内容四：top 命令使用案例 具体的内容： 内容一：top 命令解析1.1 top 命令输出结果 1.2 top 命令输出结果简介1.2.1 top 命令输出结果分类 1) 前 5 行是整体的统计信息2) 后面的是具体的进程信息 1.2.2 统计信息说明1.2.2.1 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/top/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 命令 top （显示资源和进程）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-top-命令解析1-1-top-命令输出结果1-2-top-命令输出结果简介1-2-1-top-命令输出结果分类1-2-2-统计信息说明1-2-2-1-第-1-行信息1-2-2-2-第-2-行信息1-2-2-3-第-3-行信息1-2-2-4-第-4-行信息1-2-2-5-第-5-行信息1-2-3-进程信息说明">内容一：top 命令解析<br>1.1 top 命令输出结果<br>1.2 top 命令输出结果简介<br>1.2.1 top 命令输出结果分类<br>1.2.2 统计信息说明<br>1.2.2.1 第 1 行信息<br>1.2.2.2 第 2 行信息<br>1.2.2.3 第 3 行信息<br>1.2.2.4 第 4 行信息<br>1.2.2.5 第 5 行信息<br>1.2.3 进程信息说明</h4>
+
+
+
+<h4 id="内容二-top-非交互式命令选项">内容二：top 非交互式命令选项</h4>
+
+
+
+<h4 id="内容三-top-交互式命令-即是在键入了-top-命令之后再键入以下命令-3-1-基础操作3-2-面板隐藏显示3-3-进程列表排序">内容三：top 交互式命令 （即是在键入了 top 命令之后再键入以下命令）<br>3.1 基础操作<br>3.2 面板隐藏显示<br>3.3 进程列表排序</h4>
+
+
+
+<h4 id="内容四-top-命令使用案例">内容四：top 命令使用案例</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-top-命令解析1-1-top-命令输出结果">内容一：top 命令解析<br>1.1 top 命令输出结果</h4>
+
+
+
+<pre class="wp-block-code"><code># top
+top - 14:16:16 up 6 days, 20:52,  4 users,  load average: 0.00, 0.00, 0.00
+Tasks: 393 total,   1 running, 392 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem:   5848752 total,  5709944 used,   138808 free,     4960 buffers
+KiB Swap:  2103292 total,        0 used,  2103292 free.  4507072 cached Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S   %CPU  %MEM     TIME+ COMMAND                                      
+    8 root      20   0       0      0      0 S  0.332 0.000   2:12.60 rcu_sched                                    
+  716 z0042h2+  20   0   15484   2840   2132 R  0.332 0.049   0:00.09 top                                          
+31993 root      20   0       0      0      0 S  0.332 0.000   0:00.08 kworker/u32:2                                
+    1 root      20   0  189604   5892   4120 S  0.000 0.101   2:35.86 systemd                                      
+    2 root      20   0       0      0      0 S  0.000 0.000   0:00.72 kthreadd                                     
+    4 root       0 -20       0      0      0 S  0.000 0.000   0:00.00 kworker/0:0H</code></pre>
+
+
+
+<h4 id="1-2-top-命令输出结果简介1-2-1-top-命令输出结果分类">1.2 top 命令输出结果简介<br>1.2.1 top 命令输出结果分类</h4>
+
+
+
+<p>1) 前 5 行是整体的统计信息<br>2) 后面的是具体的进程信息</p>
+
+
+
+<h4 id="1-2-2-统计信息说明1-2-2-1-第-1-行信息">1.2.2 统计信息说明<br>1.2.2.1 第 1 行信息</h4>
+
+
+
+<p>1) 14:16:16 系统当前时间<br>2) 20:52 系统运行了多久<br>3) 4 users 系统当前登陆用户数<br>4) load average: 0.00, 0.00, 0.00 系统平均负载</p>
+
+
+
+<p>（<br>补充：<br>其中的三个数值分别代表：1，5，15 分钟的系统平均负载<br>单核处理器的情况下：0.00 代表 0 负载，1.00 代表满载，超过 1 代表超负荷<br>理想情况是：处理器的核心数 * 0.7 = 整个系统的理想负载<br>）</p>
+
+
+
+<h4 id="1-2-2-2-第-2-行信息">1.2.2.2 第 2 行信息</h4>
+
+
+
+<p>1) Tasks: 393 total 总进程数<br>2) 1 running 正在运行的进程数<br>3) 392 sleeping 睡眠进程数<br>4) 0 stopped 停止进程数<br>5) 0 zombie 僵尸进程数</p>
+
+
+
+<h4 id="1-2-2-3-第-3-行信息">1.2.2.3 第 3 行信息</h4>
+
+
+
+<p>（<br>注意：<br>这一行默认是所有处理器核心加在一起的平均值，如果有 1 个核心那满值就是 100%，如果有 5 个核心那总值就是 500%<br>如果此时输入数字 1 ，则可以切换至每个单核处理器的负载情况<br>再输入数字 1，则可以再切换回来<br>）</p>
+
+
+
+<p>1) 0.0 us 用户空间占用处理器的百分比<br>2) 0.0 sy 内核空间占用处理器的百分比<br>3) 0.0 ni 非实时的进程的优先级，取值范围为从 -20 到 19，数值越小优先级越高<br>4) 100.0 id 空闲的处理器的百分比<br>5) 0.0 wa 处理器等待输入输出的时间百分比<br>6) 0.0 hi 服务因硬件中断所消耗的时间百分比<br>7) 0.0 si 服务因软件中断所消耗的时间百分比<br>8) 0.0 st 虚拟机被物理机偷去的处理器时间百分比</p>
+
+
+
+<h4 id="1-2-2-4-第-4-行信息">1.2.2.4 第 4 行信息</h4>
+
+
+
+<p>1) 5848752 total 总物理内存量<br>2) 5709944 used 已经使用的物理内存量<br>3) 138808 free 剩余的物理内存量<br>4) 4960 buffers 用作内核缓存的内存量</p>
+
+
+
+<h4 id="1-2-2-5-第-5-行信息">1.2.2.5 第 5 行信息</h4>
+
+
+
+<p>1) 2103292 total 总交换分区量<br>2) 0 used 已经使用的交换分区量<br>3) 2103292 free 剩余交换分区量<br>4) 4507072 cached Mem 用作缓存的交换分区量</p>
+
+
+
+<h4 id="1-2-3-进程信息说明">1.2.3 进程信息说明</h4>
+
+
+
+<p>（<br>补充：<br>1) 此时输入 f 可以选择要显示的信息<br>2) 将光标移动到对应信息<br>3) 此时输入 s 可以开启显示这一信息<br>4) 此时输入 d 可以关闭显示这一信息<br>4) 带 * 号的是已经选择要显示的信息<br>）</p>
+
+
+
+<p>1) PID（Process Id） 进程的 id<br>2) USER（User Name） 进程所有者的用户<br>3) PR（Priority） 优先级<br>4) NI（Nice value） nice 值（负值表示高优先级，正值表示低优先级）<br>5) VIRT（Virtual Image （kb）） 进程使用的虚拟内存量，单位 kb<br>6) RES（Resident size （kb）） 进程使用的、未被换出的物理内存大小，单位 kb<br>7) SHR（Shared Mem size （kb）） 共享内存大小，单位 kb<br>8) S（Process Status） 进程状态，可以为 D R S T 和 Z</p>
+
+
+
+<p>（补充：D 表示不可中断的睡眠状态，R 表示运行，S 表示睡眠，T 表示跟踪/停止，Z 表示僵尸进程）</p>
+
+
+
+<p>9) %CPU（CPU usage） 上上次更新到上次更新时进程处理器占用平均百分比</p>
+
+
+
+<p>（注意：此值可能会超过 100% ，但不会超过：处理器总核心数 * 100% ）</p>
+
+
+
+<p>10) %MEM（Memory usage （RES）） 上上次更新到上次更新时进程使用的物理内存百分比<br>11) TIME+（CPU Time, hundredths） 进上上次更新到上次更新时进程使用处理器的总时间，单位 1/100 秒<br>12) COMMAND（Command name/line） 命令名|命令行</p>
+
+
+
+<h4 id="内容二-top-非交互式命令选项">内容二：top 非交互式命令选项</h4>
+
+
+
+<p>1) -b 以批处理模式执行命令<br>2) -c &lt;command&gt; 在执行了 top 命令之后再直接执行交互命令<br>3) -d &lt;time&gt; 屏幕刷新间隔时间<br>4) -i 忽略僵尸进程<br>5) -s 以安全模式执行命令<br>6) -S 以累积模式执行命令<br>7) -i &lt;时间&gt; 设置间隔时间<br>8) -u &lt;用户&gt; 指定只显示某个用户的进程<br>9) -p &lt;进程号&gt; 指定只显示某个 PID 的进程<br>10) -n &lt;次数&gt; 指定显示循环的次数</p>
+
+
+
+<h4 id="内容三-top-交互命令-即是在键入了-top-命令之后再键入以下命令-3-1-基础操作">内容三：top 交互命令 （即是在键入了 top 命令之后再键入以下命令）<br>3.1 基础操作</h4>
+
+
+
+<p>1) 按 “1” 显示处理器所有核心的信息，每核显示一行，再按 “1” 则会取消<br>2) 按 “d/s” 修改刷新频率，单位为秒<br>3) 按 “h” 可显示帮助界面<br>4) 按 “n” 指定进程列表显示行数，默认显示能满屏的行数<br>5) 按 “q” 退出 top<br>6) 按 “f” 可以选择要显示的信息<br>7) 按 “k” 再按 再按 可以以某种方式删除某个 pid 的进程<br>8) 按 “r” 再按 再按 可以修改某个 pid 的 ni，取值范围为从 -20 到 19，数值越小优先级越高</p>
+
+
+
+<p>（注意：只有 root 的取值范围才是 -20 到 19 ，普通用户的取值范围是 0 到 19）</p>
+
+
+
+<p>9) 按 “esc” 退出 top 命令当前的子状态，如果没有子状态则不退出</p>
+
+
+
+<h4 id="3-2-面板隐藏显示">3.2 面板隐藏显示</h4>
+
+
+
+<p>1) 按 “l” 隐藏/显示第 1 行总负载信息<br>2) 按 “t” 隐藏/显示第 2~3 行处理器信息<br>3) 按 “m” 隐藏/显示第 4~5 行内存信息</p>
+
+
+
+<h4 id="3-3-进程列表排序">3.3 进程列表排序</h4>
+
+
+
+<p>1) 按 “M” 根据使用内存的大小进行排序<br>2) 按 “P” 根据使用处理器的大小进行排序<br>3) 按 “T” 根据开启的时间进行排序</p>
+
+
+
+<h4 id="内容四-top-命令使用案例">内容四：top 命令使用案例</h4>
+
+
+
+<pre class="wp-block-code"><code># top -bn 1 #静态截取 CPU 的占用率</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

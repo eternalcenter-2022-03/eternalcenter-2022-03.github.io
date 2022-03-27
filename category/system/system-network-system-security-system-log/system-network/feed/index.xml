@@ -1,0 +1,2499 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>System Network (系统网络) &#8211; Eternal Center</title>
+	<atom:link href="https://eternalcenter-2022-03.github.io/category/system/system-network-system-security-system-log/system-network/feed/" rel="self" type="application/rss+xml" />
+	<link>https://eternalcenter-2022-03.github.io/</link>
+	<description></description>
+	<lastBuildDate>Sat, 12 Feb 2022 09:14:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+	<item>
+		<title>[命令] Rocky Linux 8 &#038; RHEL 8 命令 update-crypto-policies</title>
+		<link>https://eternalcenter-2022-03.github.io/update-crypto-policies/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 12 Feb 2022 09:12:59 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21893</guid>
+
+					<description><![CDATA[内容一：update-crypto-policies 参数的意义 1) DEFAULT 不严格的安全等级，可以让系统使用 TLSv1.22) FUTURE 严格的安全等级，只能让系统使用 TLSv1.2 不能使用 TLSv1.3 内容二：查看当前的 update-crypto-policies 参数 （补充：从这里可以看出目前的 update-crypto-policies 参数是 DEFAULT） 内容三：设置 update-crypto-policies 参数 （补充：这里以将 update-crypto-policies 参数设置为 FUTURE 为例）]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-update-crypto-policies-参数的意义">内容一：update-crypto-policies 参数的意义</h4>
+
+
+
+<p>1) DEFAULT 不严格的安全等级，可以让系统使用 TLSv1.2<br>2) FUTURE 严格的安全等级，只能让系统使用 TLSv1.2 不能使用 TLSv1.3</p>
+
+
+
+<h4 id="内容二-查看当前的-update-crypto-policies-参数">内容二：查看当前的 update-crypto-policies 参数</h4>
+
+
+
+<pre class="wp-block-code"><code># update-crypto-policies --show
+DEFAULT</code></pre>
+
+
+
+<p>（补充：从这里可以看出目前的 update-crypto-policies 参数是 DEFAULT）</p>
+
+
+
+<h4 id="内容三-设置-update-crypto-policies-参数">内容三：设置 update-crypto-policies 参数</h4>
+
+
+
+<pre class="wp-block-code"><code># update-crypto-policies --set=FUTURE</code></pre>
+
+
+
+<p>（补充：这里以将 update-crypto-policies 参数设置为 FUTURE 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[排错] Linux 执行 curl 命令时报错 “curl: (35) error:14094410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure”</title>
+		<link>https://eternalcenter-2022-03.github.io/curl-35-error14094410ssl-routinesssl3_read_bytessslv3-alert-handshake-failure/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 12 Feb 2022 09:03:09 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21890</guid>
+
+					<description><![CDATA[报错代码： 分析： Rocky Linux 8 &#38; RHEL 8 已经默认废弃 TLSv1.2可以使用 TLSv1.3 替代 TLSv1.2 或者将 update-crypto-policies 参数设置为 DEFAULT 以解决此报错 解决方法： 步骤一：查看当前的 update-crypto-policies 参数 （补充：从这里可以看出目前的 update-crypto-policies 参数是 FUTURE） 步骤二：将 update-crypto-policies 参数设置为 DEFAULT （补充：这里以将 update-crypto-policies 参数设置为 DEFAULT 为例）]]></description>
+										<content:encoded><![CDATA[
+<h2 id="报错代码">报错代码：</h2>
+
+
+
+<pre class="wp-block-code"><code>curl: (35) error:14094410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure</code></pre>
+
+
+
+<h2 id="分析">分析：</h2>
+
+
+
+<p>Rocky Linux 8 &amp; RHEL 8 已经默认废弃 TLSv1.2<br>可以使用 TLSv1.3 替代 TLSv1.2 或者将 update-crypto-policies 参数设置为 DEFAULT 以解决此报错</p>
+
+
+
+<h2 id="解决方法">解决方法：</h2>
+
+
+
+<h4 id="步骤一-查看当前的-update-crypto-policies-参数">步骤一：查看当前的 update-crypto-policies 参数</h4>
+
+
+
+<pre class="wp-block-code"><code># update-crypto-policies --show
+FUTURE</code></pre>
+
+
+
+<p>（补充：从这里可以看出目前的 update-crypto-policies 参数是 FUTURE）</p>
+
+
+
+<h4 id="步骤二-将-update-crypto-policies-参数设置为-default">步骤二：将 update-crypto-policies 参数设置为 DEFAULT</h4>
+
+
+
+<pre class="wp-block-code"><code># update-crypto-policies --set=DEFAULT</code></pre>
+
+
+
+<p>（补充：这里以将 update-crypto-policies 参数设置为 DEFAULT 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 iftop （显示系统联通状态）</title>
+		<link>https://eternalcenter-2022-03.github.io/iftop/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 15 Jan 2022 14:06:51 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21213</guid>
+
+					<description><![CDATA[（补充：此时会不停地显示系统联通状态，按下 “q” 后退出）]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code># iftop</code></pre>
+
+
+
+<p>（补充：此时会不停地显示系统联通状态，按下 “q” 后退出）</p>
+
+
+
+<pre class="wp-block-code"><code># iftop
+interface: eth0
+IP address is: 10.10.10.129
+IPv6 address is: fdb2:2c26:f4e4:0:5940:b748:da58:4f3
+MAC address is: 00:1c:42:c9:3c:81</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 ping （检测网络联通性）</title>
+		<link>https://eternalcenter-2022-03.github.io/ping/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 11 Nov 2021 11:18:11 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=18283</guid>
+
+					<description><![CDATA[内容一：ping 命令选项 1) -c 设置 ping 的次数 （默认会一直 ping）2) -d 开启 Socket 的 SO_DEBUG 功能3) -f 进行极限测试4) -i 设置间隔时间，建议值为 0.45) -I 指定去 ping 的硬件设备或者 IP 地址6) -m 设置标记7) -l 设置发送不等待回复的数据包8) -n 只显示数值9) -q 只显示结果10) -r 忽略路由表（可以用于检查本地网络接口是否有问题）11) -R 记录路由的过程12) -s 指定包的大小13) -S 指定源 IP 地址14) -t 设置 ping 包的生存时间 （TLL）15) -v 输出详细信息16) -w 设置 deadline，建议值为 0.8 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/ping/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 命令 ping （检测网络联通性）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-ping-命令选项">内容一：ping 命令选项</h4>
+
+
+
+<p>1) -c 设置 ping 的次数 （默认会一直 ping）<br>2) -d 开启 Socket 的 SO_DEBUG 功能<br>3) -f 进行极限测试<br>4) -i 设置间隔时间，建议值为 0.4<br>5) -I 指定去 ping 的硬件设备或者 IP 地址<br>6) -m 设置标记<br>7) -l 设置发送不等待回复的数据包<br>8) -n 只显示数值<br>9) -q 只显示结果<br>10) -r 忽略路由表（可以用于检查本地网络接口是否有问题）<br>11) -R 记录路由的过程<br>12) -s 指定包的大小<br>13) -S 指定源 IP 地址<br>14) -t 设置 ping 包的生存时间 （TLL）<br>15) -v 输出详细信息<br>16) -w 设置 deadline，建议值为 0.8</p>
+
+
+
+<h4 id="内容二-ping-命令案例2-1-案例一-让本地的某一个-ip-地址-ping-目标-ip-地址">内容二：ping 命令案例<br>2.1 案例一：让本地的某一个 IP 地址 ping 目标 IP 地址</h4>
+
+
+
+<pre class="wp-block-code"><code># ping -I &lt;IP address of this server&gt; &lt;target IP address&gt;</code></pre>
+
+
+
+<h4 id="2-2-案例二-让本地的某一个网卡-ping-目标-ip-地址">2.2  案例二：让本地的某一个网卡 ping 目标 IP 地址 </h4>
+
+
+
+<pre class="wp-block-code"><code>
+# ping -I &lt;IP address of local server&gt; &lt;target IP address&gt;</code></pre>
+
+
+
+<h4 id="2-3-案例三-快速检测网络联通行">2.3 案例三：快速检测网络联通行</h4>
+
+
+
+<pre class="wp-block-code"><code># ping -c 3 -i 0.4 -w 0.8 &lt;target IP address&gt;</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 ifconfig （管理网卡）</title>
+		<link>https://eternalcenter-2022-03.github.io/ifconfig/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 31 Jul 2021 13:24:06 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17197</guid>
+
+					<description><![CDATA[内容一：显示所有网卡 内容二：临时添加 IP 地址]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-显示所有网卡">内容一：显示所有网卡</h4>
+
+
+
+<pre class="wp-block-code"><code># ifconfig -a</code></pre>
+
+
+
+<h4 id="内容二-临时添加-ip-地址">内容二：临时添加 IP 地址</h4>
+
+
+
+<pre class="wp-block-code"><code># ifconfig eth0 192.168.1.1/24</code></pre>
+
+
+
+<pre class="wp-block-code"><code>（补充：这里以临时给名为 eth0 的网卡添加 192.168.1.1/24 IP 地址为例）</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] Linux 全局加密 SSL 的设置 （CentOS Linux 8 &#038; RHEL 8 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/global-ssl-centos-linux-8-rhel-8/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 31 Jul 2021 10:11:21 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Patch (系统补丁)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17184</guid>
+
+					<description><![CDATA[步骤一：显示当前 SSL 全局加密 SSL 的状况 （补充：这里的 DEFAULT 表示可以使用 2048 位及以上位数的 SSL） 步骤二：切换当前 SSL 全局加密 SSL （补充：1) 这里以将全局加密 SSL 切换到 FUTURE 状态为例2) 此时只能使用 4096 位及以上位数的 SSL）]]></description>
+										<content:encoded><![CDATA[
+<h4 id="步骤一-显示当前-ssl-全局加密-ssl-的状况">步骤一：显示当前 SSL 全局加密 SSL 的状况</h4>
+
+
+
+<pre class="wp-block-code"><code># update-crypto-policies --show
+DEFAULT</code></pre>
+
+
+
+<p>（补充：这里的 DEFAULT 表示可以使用 2048 位及以上位数的 SSL）</p>
+
+
+
+<h4 id="步骤二-切换当前-ssl-全局加密-ssl">步骤二：切换当前 SSL 全局加密 SSL</h4>
+
+
+
+<pre class="wp-block-code"><code># update-crypto-policies --set FUTURE</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以将全局加密 SSL 切换到 FUTURE 状态为例<br>2) 此时只能使用 4096 位及以上位数的 SSL<br>）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 curl （测试网页访问）</title>
+		<link>https://eternalcenter-2022-03.github.io/curl/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 28 Jul 2021 08:00:30 +0000</pubDate>
+				<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Django Service (服务)]]></category>
+		<category><![CDATA[Nginx]]></category>
+		<category><![CDATA[Nginx Monitor (监控)]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[Tomcat]]></category>
+		<category><![CDATA[Website Services (网站服务)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17159</guid>
+
+					<description><![CDATA[内容一：测试网页可以被访问的案例 （补充：这里以直接访问 https://eternalcenter-2022-03.github.io/ 网页为例） 内容二：测试网页访问速度的案例2.1 案例一：显示测试过程 （补充：这里以访问并测试 https://eternalcenter-2022-03.github.io，并显示测试过程为例）/ 2.2 案例二：不显示测试过程 （补充：这里以访问并测试 https://eternalcenter-2022-03.github.io，并不显示测试过程为例）/ 内容三：测试使用代理访问网页的案例3.1 案例一：使用代理 （补充：这里以通过 proxy.example.com:8080 代理访问 https://eternalcenter-2022-03.github.io/ 网页为例） 3.2 案例二：使用代理并使用用户进行验证 （补充：这里以通过 proxy.example.com:8080 代理并使用 proxy user 和 password 进行验证访问 https://eternalcenter-2022-03.github.io/ 网页为例） 内容四： 测试使用证书访问网页的案例 （补充：这里以通过 eternalcenter.com.pem 证书访问 https://eternalcenter-2022-03.github.io/ 网页为例） 内容五：其他测试访问网页的案例5.1 案例一：将网页下载后另存为别的文件 （补充：这里以下载 https://eternalcenter-2022-03.github.io/ 并另存为 eternalcentre.com 为例） 5.2 案例二：不使用安全策略下载的案例 （补充：这里以不使用安全策略下载 https://eternalcenter-2022-03.github.io）/ 5.3 案例三：静默下载的案例 （补充：这里以静默下载 https://eternalcenter-2022-03.github.io/ 为例）]]></description>
+										<content:encoded><![CDATA[
+<h4> 内容一：测试网页可以被访问的案例 </h4>
+
+
+
+<pre class="wp-block-code"><code># curl -v -k https://eternalcenter-2022-03.github.io/</code></pre>
+
+
+
+<p> （补充：这里以直接访问 https://eternalcenter-2022-03.github.io/ 网页为例） </p>
+
+
+
+<h4>内容二：测试网页访问速度的案例<br>2.1 案例一：显示测试过程</h4>
+
+
+
+<pre class="wp-block-code"><code># curl -o /dev/null -s -w %{http_code}:%{http_connect}:%{content_type}:%{time_namelookup}:%{time_redirect}:%{time_pretransfer}:%{time_connect}:%{time_starttransfer}:%{time_total}:%{speed_download} https://eternalcenter-2022-03.github.io/</code></pre>
+
+
+
+<p>（补充：这里以访问并测试  https://eternalcenter-2022-03.github.io，并显示测试过程为例）/</p>
+
+
+
+<h4>2.2 案例二：不显示测试过程</h4>
+
+
+
+<pre class="wp-block-code"><code># curl -o /dev/null -w %{http_code}:%{http_connect}:%{content_type}:%{time_namelookup}:%{time_redirect}:%{time_pretransfer}:%{time_connect}:%{time_starttransfer}:%{time_total}:%{speed_download} https://
+eternalcenter.com</code></pre>
+
+
+
+<p> （补充：这里以访问并测试   https://eternalcenter-2022-03.github.io，并不显示测试过程为例）/ </p>
+
+
+
+<h4>内容三：测试使用代理访问网页的案例<br>3.1 案例一：使用代理</h4>
+
+
+
+<pre class="wp-block-code"><code># curl -v --proxy proxy.example.com:8080 https://eternalcenter-2022-03.github.io/</code></pre>
+
+
+
+<p>（补充：这里以通过 proxy.example.com:8080 代理访问 https://eternalcenter-2022-03.github.io/ 网页为例）</p>
+
+
+
+<h4>3.2 案例二：使用代理并使用用户进行验证</h4>
+
+
+
+<pre class="wp-block-code"><code># curl -v --&lt;proxy user&gt; user:&lt;password&gt; --proxy proxy.example.com:8080 https://eternalcenter-2022-03.github.io/</code></pre>
+
+
+
+<p>（补充：这里以通过 proxy.example.com:8080 代理并使用 proxy user 和 password 进行验证访问 https://eternalcenter-2022-03.github.io/ 网页为例）</p>
+
+
+
+<h4>内容四： 测试使用证书访问网页的案例 </h4>
+
+
+
+<pre class="wp-block-code"><code># curl -v -k https://eternalcenter-2022-03.github.io/ --cacert /eternalcenter.com.pem</code></pre>
+
+
+
+<p>（补充：这里以通过 eternalcenter.com.pem 证书访问 https://eternalcenter-2022-03.github.io/ 网页为例）</p>
+
+
+
+<h4>内容五：其他测试访问网页的案例<br>5.1 案例一：将网页下载后另存为别的文件</h4>
+
+
+
+<pre class="wp-block-code"><code># curl -v -k https://eternalcenter-2022-03.github.io/ -o eternalcentre.com</code></pre>
+
+
+
+<p>（补充：这里以下载 https://eternalcenter-2022-03.github.io/ 并另存为 eternalcentre.com 为例）</p>
+
+
+
+<h4>5.2 案例二：不使用安全策略下载的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># curl -v -k https://eternalcenter-2022-03.github.io/ --insecure</code></pre>
+
+
+
+<p>（补充：这里以不使用安全策略下载 https://eternalcenter-2022-03.github.io）/</p>
+
+
+
+<h4>5.3 案例三：静默下载的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># curl -v -k https://eternalcenter-2022-03.github.io/ --silent</code></pre>
+
+
+
+<p>（补充：这里以静默下载 https://eternalcenter-2022-03.github.io/ 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 ifstat （显示网速）</title>
+		<link>https://eternalcenter-2022-03.github.io/ifstat/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 15 Jul 2021 02:35:37 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=16732</guid>
+
+					<description><![CDATA[内容一：显示当前一瞬间的网速 内容二：持续显示网速]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-显示当前一瞬间的网速">内容一：显示当前一瞬间的网速</h4>
+
+
+
+<pre class="wp-block-code"><code># ifstat</code></pre>
+
+
+
+<h4 id="内容二-持续显示网速">内容二：持续显示网速</h4>
+
+
+
+<pre class="wp-block-code"><code># watch ifstat</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 网卡物理 （MAC） 地址的显示</title>
+		<link>https://eternalcenter-2022-03.github.io/mac-view/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 27 May 2021 09:18:36 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=14431</guid>
+
+					<description><![CDATA[内容一：显示本服务器的网卡物理（MAC）地址 内容二：显示本地网络的网卡物理（MAC）地址]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-显示本服务器的网卡物理-mac-地址">内容一：显示本服务器的网卡物理（MAC）地址</h4>
+
+
+
+<pre class="wp-block-code"><code># ifconfig | grep HW</code></pre>
+
+
+
+<h4 id="内容二-显示本地网络的网卡物理-mac-地址">内容二：显示本地网络的网卡物理（MAC）地址</h4>
+
+
+
+<pre class="wp-block-code"><code># arp -n</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 检测服务器某个端口有没有启动</title>
+		<link>https://eternalcenter-2022-03.github.io/shell-port-check/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 18 May 2021 06:23:57 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Monitor (监控)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=14314</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：检测服务器某个端口有没有启动作用：检测服务器某个端口有没有启动 使用方法：1. 在此脚本的分割线内写入相应的内容2. 给此脚本添加执行权限3. 执行此脚本4. 如果被检测的端口被启动则会被记录在指定文件里 脚本分割线里的变量：1. checkport=&#8217;7111&#8242; #被检测的端口2. logfile=&#8217;checkportlog.txt&#8217; #记录文件 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：检测服务器某个端口有没有启动<br>作用：检测服务器某个端口有没有启动</p>
+
+
+
+<p>使用方法：<br>1. 在此脚本的分割线内写入相应的内容<br>2. 给此脚本添加执行权限<br>3. 执行此脚本<br>4. 如果被检测的端口被启动则会被记录在指定文件里</p>
+
+
+
+<p>脚本分割线里的变量：<br>1. checkport=&#8217;7111&#8242; #被检测的端口<br>2. logfile=&#8217;checkportlog.txt&#8217; #记录文件</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+####################### Separator ########################
+checkport='7111'
+logfile='checkportlog.txt'
+####################### Separator ########################
+
+a=`/sbin/ss -ntulap | grep udp | grep $checkport | awk '{print $7}' | awk -F'"' '{print $2}'`
+
+if &#91; -n "$a" ];then
+       echo `date` >> $logfile
+       echo $checkport >> $logfile
+       echo `/sbin/ss -ntulap | grep udp | grep $checkport | awk '{print $7}' | awk -F'"' '{print $2}'` >> $logfile
+       echo >> $logfile
+fi</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 route （管理临时路由表）</title>
+		<link>https://eternalcenter-2022-03.github.io/route/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 02 Apr 2021 09:12:55 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=13907</guid>
+
+					<description><![CDATA[案例一：添加某一个 IP 地址的路由表 （补充：这里以指向 192.168.2.1 IP 地址的流量需要通过 eth0 网卡和 192.168.1.1 网关为例） 案例二：删除某一个 IP 地址的路由表 （补充：这里删除 192.168.2.1 IP 地址的路由表为例） 案例三：添加某一个网段的路由表 （补充：这里以指向 192.168.2.0/24 网段的流量需要通过 192.168.1.1 网关为例） 案例四：删除某一个网段的路由表 （补充：这里删除 192.168.2.0/24 网段的路由表为例） 案例五：显示现有的路由表]]></description>
+										<content:encoded><![CDATA[
+<h4 id="案例一-添加某一个-ip-地址的路由表">案例一：添加某一个 IP 地址的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route add -host 192.168.2.1 netmask 255.255.255.255 gw 192.168.1.1 dev eth0</code></pre>
+
+
+
+<p>（补充：这里以指向 192.168.2.1 IP 地址的流量需要通过 eth0 网卡和 192.168.1.1 网关为例）</p>
+
+
+
+<h4 id="案例二-删除某一个-ip-地址的路由表">案例二：删除某一个 IP 地址的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route del -host 192.168.2.1</code></pre>
+
+
+
+<p>（补充：这里删除 192.168.2.1 IP 地址的路由表为例）</p>
+
+
+
+<h4 id="案例三-添加某一个网段的路由表">案例三：添加某一个网段的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.1</code></pre>
+
+
+
+<p>（补充：这里以指向 192.168.2.0/24 网段的流量需要通过 192.168.1.1 网关为例）</p>
+
+
+
+<h4 id="案例四-删除某一个网段的路由表">案例四：删除某一个网段的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route del -net 192.168.2.0/24</code></pre>
+
+
+
+<p>（补充：这里删除 192.168.2.0/24 网段的路由表为例）</p>
+
+
+
+<h4 id="案例五-显示现有的路由表">案例五：显示现有的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route -n</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 批量检测服务器 TCP 端口的联通状态 （nc 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/shell-tcp-check-nc/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 25 Jan 2021 10:34:16 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Monitor (监控)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=13243</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：批量检测服务器 TCP 端口的联通状态作用：批量检测服务器 TCP 端口的联通状态 使用方法：1. 端口清单 $portlist 每一个端口占用一行，格式为：&#60;要联通端口号对应的 IP 地址&#62;:&#60;要联通的端口号&#62;:&#60;端口功能&#62;2. 在此脚本的分割线内写入相应的内容，并和此脚本放在同一目录下3. 给此脚本添加执行权限4. 执行此脚本，并将要测试的服务器 IP 地址跟在脚本的后面，例：. &#60;脚本名&#62; &#60;服务器 IP 地址 1&#62; &#60;服务器 IP 地址 2&#62; &#8230;&#8230; 脚本分割线里的变量：portlist=tcp_ports.txt #存放要测试的 TCP 端口的文件 注意：1. 此脚本执行前必须要先保证执行本脚本的用户能无密码 ssh 远程这些远程服务器2. 执行此脚本前确保 nc 命令已经安装 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：批量检测服务器 TCP 端口的联通状态<br>作用：批量检测服务器 TCP 端口的联通状态</p>
+
+
+
+<p>使用方法：<br>1. 端口清单 $portlist 每一个端口占用一行，格式为：&lt;要联通端口号对应的 IP 地址&gt;:&lt;要联通的端口号&gt;:&lt;端口功能&gt;<br>2. 在此脚本的分割线内写入相应的内容，并和此脚本放在同一目录下<br>3. 给此脚本添加执行权限<br>4. 执行此脚本，并将要测试的服务器 IP 地址跟在脚本的后面，例：. &lt;脚本名&gt; &lt;服务器 IP 地址 1&gt; &lt;服务器 IP 地址 2&gt; &#8230;&#8230;</p>
+
+
+
+<p>脚本分割线里的变量：<br>portlist=tcp_ports.txt #存放要测试的 TCP 端口的文件</p>
+
+
+
+<p>注意：<br>1. 此脚本执行前必须要先保证执行本脚本的用户能无密码 ssh 远程这些远程服务器<br>2. 执行此脚本前确保 nc 命令已经安装</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+####################### Separator ########################
+
+portlist=tcp_ports.txt
+
+####################### Separator ########################
+
+for hosts in $*
+do
+
+        echo $hosts
+        ssh $hosts "which nc" &amp;> /dev/null
+
+        if &#91; $? -ne 0 ];then
+                echo -e "\033&#91;31m$hosts can not use nc !!!!!!!!!!\033&#91;0m"
+                continue
+        fi
+
+        for line in `cat $portlist`
+        do
+                ips=`echo $line | awk -F':' '{print $1}'`
+                ports=`echo $line | awk -F':' '{print $2}'`
+                remarks=`echo $line | awk -F':' '{print $3}'`
+
+                ssh $hosts "nc -z -w 3 $ips $ports"
+
+                if &#91; $? -ne 0 ];then
+                        echo -e "\033&#91;31m$ips $ports $remarks can not be connected !!!!!!!!!!\033&#91;0m"
+                else
+                        echo -e "\033&#91;32m$ips $ports $remarks can be connected\033&#91;0m"
+                fi
+
+        done
+
+done</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 ovs （管理网桥） （转载）</title>
+		<link>https://eternalcenter-2022-03.github.io/ovs/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 23 Oct 2020 15:14:44 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=11612</guid>
+
+					<description><![CDATA[注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code>OVS常用命令与使用总结
+
+OVS常用命令与使用总结
+说明
+
+在平时使用ovs中，经常用到的ovs命令，参数，与举例总结，持续更新中…
+进程启动
+
+1.先准备ovs的工作目录，数据库存储路径等
+
+mkdir -p /etc/openvswitch
+mkdir -p /var/run/openvswitch
+
+    1
+    2
+
+2.先启动ovsdb-server
+
+ovsdb-server /etc/openvswitch/conf.db \
+-vconsole:emer -vsyslog:err -vfile:info \
+--remote=punix:/var/run/openvswitch/db.sock \
+--private-key=db:Open_vSwitch,SSL,private_key \
+--certificate=db:Open_vSwitch,SSL,certificate \
+--bootstrap-ca-cert=db:Open_vSwitch,SSL,ca_cert --no-chdir \
+--log-file=/var/log/openvswitch/ovsdb-server.log \
+--pidfile=/var/run/openvswitch/ovsdb-server.pid \
+--detach --monitor
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+
+ps: 如果想清除配置，可以先删除/etc/openvswitch/*，然后再手动创建一个数据库：
+
+ovsdb-tool create /etc/openvswitch/conf.db /usr/share/openvswitch/vswitch.ovsschema
+
+    1
+
+3.初始化ovsdb
+针对于新创建的数据库才需要初始化
+
+ovs-vsctl --no-wait init
+
+    1
+
+4.启动vswitchd进程
+
+ovs-vswitchd unix:/var/run/openvswitch/db.sock \
+-vconsole:emer -vsyslog:err -vfile:info --mlockall --no-chdir \
+--log-file=/var/log/openvswitch/ovs-vswitchd.log \
+--pidfile=/var/run/openvswitch/ovs-vswitchd.pid \
+--detach --monitor
+
+    1
+    2
+    3
+    4
+    5
+
+ovs常用命令
+控制管理类
+
+1.查看网桥和端口
+
+ovs-vsctl show
+
+    1
+
+2.创建一个网桥
+
+ovs-vsctl add-br br0
+ovs-vsctl set bridge br0 datapath_type=netdev
+
+    1
+    2
+
+3.添加/删除一个端口
+
+# for system interfaces
+ovs-vsctl add-port br0 eth1
+ovs-vsctl del-port br0 eth1
+# for DPDK
+ovs-vsctl add-port br0 dpdk1 -- set interface dpdk1 type=dpdk options:dpdk-devargs=0000:01:00.0
+# for DPDK bonds
+ovs-vsctl add-bond br0 dpdkbond0 dpdk1 dpdk2 \
+    -- set interface dpdk1 type=dpdk options:dpdk-devargs=0000:01:00.0 \
+    -- set interface dpdk2 type=dpdk options:dpdk-devargs=0000:02:00.0
+# or new version
+ovs-vsctl add-port br0 dpdkbond0 \
+    -- set interface dpdkbond0 type=dpdk options:dpdk-devargs=0000:01:00.0,0000:02:00.0
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+
+4.设置/清除网桥的openflow协议版本
+
+ovs-vsctl set bridge br0 protocols=OpenFlow13
+ovs-vsctl clear bridge br0 protocols
+
+    1
+    2
+
+5.查看某网桥当前流表
+
+ovs-ofctl dump-flows br0
+ovs-ofctl -O OpenFlow13 dump-flows br0
+ovs-appctl bridge/dump-flows br0
+
+    1
+    2
+    3
+
+6.设置/删除控制器
+
+ovs-vsctl set-controller br0 tcp:1.2.3.4:6633
+ovs-vsctl del-controller br0
+
+    1
+    2
+
+7.查看控制器列表
+
+ovs-vsctl list controller
+
+    1
+
+8.设置/删除被动连接控制器
+
+ovs-vsctl set-manager tcp:1.2.3.4:6640
+ovs-vsctl get-manager
+ovs-vsctl del-manager
+
+    1
+    2
+    3
+
+9.设置/移除可选选项
+
+ovs-vsctl set Interface eth0 options:link_speed=1G
+ovs-vsctl remove Interface eth0 options link_speed
+
+    1
+    2
+
+10.设置fail模式，支持standalone或者secure
+standalone(default)：清除所有控制器下发的流表，ovs自己接管
+secure：按照原来流表继续转发
+
+ovs-vsctl del-fail-mode br0
+ovs-vsctl set-fail-mode br0 secure
+ovs-vsctl get-fail-mode br0
+
+    1
+    2
+    3
+
+11.查看接口id等
+
+ovs-appctl dpif/show
+
+    1
+
+12.查看接口统计
+
+ovs-ofctl dump-ports br0
+
+    1
+
+流表类
+流表操作
+
+1.添加普通流表
+
+ovs-ofctl add-flow br0 in_port=1,actions=output:2
+
+    1
+
+2.删除所有流表
+
+ovs-ofctl del-flows br0
+
+    1
+
+3.按匹配项来删除流表
+
+ovs-ofctl del-flows br0 "in_port=1"
+
+    1
+
+匹配项
+
+1.匹配vlan tag，范围为0-4095
+
+ovs-ofctl add-flow br0 priority=401,in_port=1,dl_vlan=777,actions=output:2
+
+    1
+
+2.匹配vlan pcp，范围为0-7
+
+ovs-ofctl add-flow br0 priority=401,in_port=1,dl_vlan_pcp=7,actions=output:2
+
+    1
+
+3.匹配源/目的MAC
+
+ovs-ofctl add-flow br0 in_port=1,dl_src=00:00:00:00:00:01/00:00:00:00:00:01,actions=output:2
+ovs-ofctl add-flow br0 in_port=1,dl_dst=00:00:00:00:00:01/00:00:00:00:00:01,actions=output:2
+
+    1
+    2
+
+4.匹配以太网类型，范围为0-65535
+
+ovs-ofctl add-flow br0 in_port=1,dl_type=0x0806,actions=output:2
+
+    1
+
+5.匹配源/目的IP
+条件：指定dl_type=0x0800，或者ip/tcp
+
+ovs-ofctl add-flow br0 ip,in_port=1,nw_src=10.10.0.0/16,actions=output:2
+ovs-ofctl add-flow br0 ip,in_port=1,nw_dst=10.20.0.0/16,actions=output:2
+
+    1
+    2
+
+6.匹配协议号，范围为0-255
+条件：指定dl_type=0x0800或者ip
+
+# ICMP
+ovs-ofctl add-flow br0 ip,in_port=1,nw_proto=1,actions=output:2
+
+    1
+    2
+
+7.匹配IP ToS/DSCP，tos范围为0-255，DSCP范围为0-63
+条件：指定dl_type=0x0800/0x86dd，并且ToS低2位会被忽略(DSCP值为ToS的高6位，并且低2位为预留位)
+
+ovs-ofctl add-flow br0 ip,in_port=1,nw_tos=68,actions=output:2
+ovs-ofctl add-flow br0 ip,in_port=1,ip_dscp=62,actions=output:2
+
+    1
+    2
+
+8.匹配IP ecn位，范围为0-3
+条件：指定dl_type=0x0800/0x86dd
+
+ovs-ofctl add-flow br0 ip,in_port=1,ip_ecn=2,actions=output:2
+
+    1
+
+9.匹配IP TTL，范围为0-255
+
+ovs-ofctl add-flow br0 ip,in_port=1,nw_ttl=128,actions=output:2
+
+    1
+
+10.匹配tcp/udp，源/目的端口，范围为0-65535
+
+# 匹配源tcp端口179
+ovs-ofctl add-flow br0 tcp,tcp_src=179/0xfff0,actions=output:2
+# 匹配目的tcp端口179
+ovs-ofctl add-flow br0 tcp,tcp_dst=179/0xfff0,actions=output:2
+# 匹配源udp端口1234
+ovs-ofctl add-flow br0 udp,udp_src=1234/0xfff0,actions=output:2
+# 匹配目的udp端口1234
+ovs-ofctl add-flow br0 udp,udp_dst=1234/0xfff0,actions=output:2
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+
+11.匹配tcp flags
+tcp flags=fin，syn，rst，psh，ack，urg，ece，cwr，ns
+
+ovs-ofctl add-flow br0 tcp,tcp_flags=ack,actions=output:2
+
+    1
+
+12.匹配icmp code，范围为0-255
+条件：指定icmp
+
+ovs-ofctl add-flow br0 icmp,icmp_code=2,actions=output:2
+
+    1
+
+13.匹配vlan TCI
+TCI低12位为vlan id，高3位为priority，例如tci=0xf123则vlan_id为0x123和vlan_pcp=7
+
+ovs-ofctl add-flow br0 in_port=1,vlan_tci=0xf123,actions=output:2
+
+    1
+
+14.匹配mpls label
+条件：指定dl_type=0x8847/0x8848
+
+ovs-ofctl add-flow br0 mpls,in_port=1,mpls_label=7,actions=output:2
+
+    1
+
+15.匹配mpls tc，范围为0-7
+条件：指定dl_type=0x8847/0x8848
+
+ovs-ofctl add-flow br0 mpls,in_port=1,mpls_tc=7,actions=output:2
+
+    1
+
+16.匹配tunnel id，源/目的IP
+
+# 匹配tunnel id
+ovs-ofctl add-flow br0 in_port=1,tun_id=0x7/0xf,actions=output:2
+# 匹配tunnel源IP
+ovs-ofctl add-flow br0 in_port=1,tun_src=192.168.1.0/255.255.255.0,actions=output:2
+# 匹配tunnel目的IP
+ovs-ofctl add-flow br0 in_port=1,tun_dst=192.168.1.0/255.255.255.0,actions=output:2
+
+    1
+    2
+    3
+    4
+    5
+    6
+
+一些匹配项的速记符
+速记符	匹配项
+ip	dl_type=0x800
+ipv6	dl_type=0x86dd
+icmp	dl_type=0x0800,nw_proto=1
+icmp6	dl_type=0x86dd,nw_proto=58
+tcp	dl_type=0x0800,nw_proto=6
+tcp6	dl_type=0x86dd,nw_proto=6
+udp	dl_type=0x0800,nw_proto=17
+udp6	dl_type=0x86dd,nw_proto=17
+sctp	dl_type=0x0800,nw_proto=132
+sctp6	dl_type=0x86dd,nw_proto=132
+arp	dl_type=0x0806
+rarp	dl_type=0x8035
+mpls	dl_type=0x8847
+mplsm	dl_type=0x8848
+指令动作
+
+1.动作为出接口
+从指定接口转发出去
+
+ovs-ofctl add-flow br0 in_port=1,actions=output:2
+
+    1
+
+2.动作为指定group
+group id为已创建的group table
+
+ovs-ofctl add-flow br0 in_port=1,actions=group:666
+
+    1
+
+3.动作为normal
+转为L2/L3处理流程
+
+ovs-ofctl add-flow br0 in_port=1,actions=normal
+
+    1
+
+4.动作为flood
+从所有物理接口转发出去，除了入接口和已关闭flooding的接口
+
+ovs-ofctl add-flow br0 in_port=1,actions=flood
+
+    1
+
+5.动作为all
+从所有物理接口转发出去，除了入接口
+
+ovs-ofctl add-flow br0 in_port=1,actions=all
+
+    1
+
+6.动作为local
+一般是转发给本地网桥
+
+ovs-ofctl add-flow br0 in_port=1,actions=local
+
+    1
+
+7.动作为in_port
+从入接口转发回去
+
+ovs-ofctl add-flow br0 in_port=1,actions=in_port
+
+    1
+
+8.动作为controller
+以packet-in消息上送给控制器
+
+ovs-ofctl add-flow br0 in_port=1,actions=controller
+
+    1
+
+9.动作为drop
+丢弃数据包操作
+
+ovs-ofctl add-flow br0 in_port=1,actions=drop
+
+    1
+
+10.动作为mod_vlan_vid
+修改报文的vlan id，该选项会使vlan_pcp置为0
+
+ovs-ofctl add-flow br0 in_port=1,actions=mod_vlan_vid:8,output:2
+
+    1
+
+11.动作为mod_vlan_pcp
+修改报文的vlan优先级，该选项会使vlan_id置为0
+
+ovs-ofctl add-flow br0 in_port=1,actions=mod_vlan_pcp:7,output:2
+
+    1
+
+12.动作为strip_vlan
+剥掉报文内外层vlan tag
+
+ovs-ofctl add-flow br0 in_port=1,actions=strip_vlan,output:2
+
+    1
+
+13.动作为push_vlan
+在报文外层压入一层vlan tag，需要使用openflow1.1以上版本兼容
+
+ovs-ofctl add-flow -O OpenFlow13 br0 in_port=1,actions=push_vlan:0x8100,set_field:4097-\>vlan_vid,output:2
+
+    1
+
+ps: set field值为4096+vlan_id，并且vlan优先级为0，即4096-8191，对应的vlan_id为0-4095
+
+14.动作为push_mpls
+修改报文的ethertype，并且压入一个MPLS LSE
+
+ovs-ofctl add-flow br0 in_port=1,actions=push_mpls:0x8847,set_field:10-\>mpls_label,output:2
+
+    1
+
+15.动作为pop_mpls
+剥掉最外层mpls标签，并且修改ethertype为非mpls类型
+
+ovs-ofctl add-flow br0 mpls,in_port=1,mpls_label=20,actions=pop_mpls:0x0800,output:2
+
+    1
+
+16.动作为修改源/目的MAC，修改源/目的IP
+
+# 修改源MAC
+ovs-ofctl add-flow br0 in_port=1,actions=mod_dl_src:00:00:00:00:00:01,output:2
+# 修改目的MAC
+ovs-ofctl add-flow br0 in_port=1,actions=mod_dl_dst:00:00:00:00:00:01,output:2
+# 修改源IP
+ovs-ofctl add-flow br0 in_port=1,actions=mod_nw_src:192.168.1.1,output:2
+# 修改目的IP
+ovs-ofctl add-flow br0 in_port=1,actions=mod_nw_dst:192.168.1.1,output:2
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+
+17.动作为修改TCP/UDP/SCTP源目的端口
+
+# 修改TCP源端口
+ovs-ofctl add-flow br0 tcp,in_port=1,actions=mod_tp_src:67,output:2
+# 修改TCP目的端口
+ovs-ofctl add-flow br0 tcp,in_port=1,actions=mod_tp_dst:68,output:2
+# 修改UDP源端口
+ovs-ofctl add-flow br0 udp,in_port=1,actions=mod_tp_src:67,output:2
+# 修改UDP目的端口
+ovs-ofctl add-flow br0 udp,in_port=1,actions=mod_tp_dst:68,output:2
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+
+18.动作为mod_nw_tos
+条件：指定dl_type=0x0800
+修改ToS字段的高6位，范围为0-255，值必须为4的倍数，并且不会去修改ToS低2位ecn值
+
+ovs-ofctl add-flow br0 ip,in_port=1,actions=mod_nw_tos:68,output:2
+
+    1
+
+19.动作为mod_nw_ecn
+条件：指定dl_type=0x0800，需要使用openflow1.1以上版本兼容
+修改ToS字段的低2位，范围为0-3，并且不会去修改ToS高6位的DSCP值
+
+ovs-ofctl add-flow br0 ip,in_port=1,actions=mod_nw_ecn:2,output:2
+
+    1
+
+20.动作为mod_nw_ttl
+修改IP报文ttl值，需要使用openflow1.1以上版本兼容
+
+ovs-ofctl add-flow -O OpenFlow13 br0 in_port=1,actions=mod_nw_ttl:6,output:2
+
+    1
+
+21.动作为dec_ttl
+对IP报文进行ttl自减操作
+
+ovs-ofctl add-flow br0 in_port=1,actions=dec_ttl,output:2
+
+    1
+
+22.动作为set_mpls_label
+对报文最外层mpls标签进行修改，范围为20bit值
+
+ovs-ofctl add-flow br0 in_port=1,actions=set_mpls_label:666,output:2
+
+    1
+
+23.动作为set_mpls_tc
+对报文最外层mpls tc进行修改，范围为0-7
+
+ovs-ofctl add-flow br0 in_port=1,actions=set_mpls_tc:7,output:2
+
+    1
+
+24.动作为set_mpls_ttl
+对报文最外层mpls ttl进行修改，范围为0-255
+
+ovs-ofctl add-flow br0 in_port=1,actions=set_mpls_ttl:255,output:2
+
+    1
+
+25.动作为dec_mpls_ttl
+对报文最外层mpls ttl进行自减操作
+
+ovs-ofctl add-flow br0 in_port=1,actions=dec_mpls_ttl,output:2
+
+    1
+
+26.动作为move NXM字段
+使用move参数对NXM字段进行操作
+
+# 将报文源MAC复制到目的MAC字段，并且将源MAC改为00:00:00:00:00:01
+ovs-ofctl add-flow br0 in_port=1,actions=move:NXM_OF_ETH_SRC&#91;]-\>NXM_OF_ETH_DST&#91;],mod_dl_src:00:00:00:00:00:01,output:2
+
+    1
+    2
+
+ps: 常用NXM字段参照表
+NXM字段	报文字段
+NXM_OF_ETH_SRC	源MAC
+NXM_OF_ETH_DST	目的MAC
+NXM_OF_ETH_TYPE	以太网类型
+NXM_OF_VLAN_TCI	vid
+NXM_OF_IP_PROTO	IP协议号
+NXM_OF_IP_TOS	IP ToS值
+NXM_NX_IP_ECN	IP ToS ECN
+NXM_OF_IP_SRC	源IP
+NXM_OF_IP_DST	目的IP
+NXM_OF_TCP_SRC	TCP源端口
+NXM_OF_TCP_DST	TCP目的端口
+NXM_OF_UDP_SRC	UDP源端口
+NXM_OF_UDP_DST	UDP目的端口
+NXM_OF_SCTP_SRC	SCTP源端口
+NXM_OF_SCTP_DST	SCTP目的端口
+
+27.动作为load NXM字段
+使用load参数对NXM字段进行赋值操作
+
+# push mpls label，并且把10(0xa)赋值给mpls label
+ovs-ofctl add-flow br0 in_port=1,actions=push_mpls:0x8847,load:0xa-\>OXM_OF_MPLS_LABEL&#91;],output:2
+# 对目的MAC进行赋值
+ovs-ofctl add-flow br0 in_port=1,actions=load:0x001122334455-\>OXM_OF_ETH_DST&#91;],output:2
+
+    1
+    2
+    3
+    4
+
+28.动作为pop_vlan
+弹出报文最外层vlan tag
+
+ovs-ofctl add-flow br0 in_port=1,dl_type=0x8100,dl_vlan=777,actions=pop_vlan,output:2
+
+    1
+
+meter表
+常用操作
+
+由于meter表是openflow1.3版本以后才支持，所以所有命令需要指定OpenFlow1.3版本以上
+ps: 在openvswitch-v2.8之前的版本中，还不支持meter
+在v2.8版本之后已经实现，要正常使用的话，需要注意的是datapath类型要指定为netdev，band type暂时只支持drop，还不支持DSCP REMARK
+
+1.查看当前设备对meter的支持
+
+ovs-ofctl -O OpenFlow13 meter-features br0
+
+    1
+
+2.查看meter表
+
+ovs-ofctl -O OpenFlow13 dump-meters br0
+
+    1
+
+3.查看meter统计
+
+ovs-ofctl -O OpenFlow13 meter-stats br0
+
+    1
+
+4.创建meter表
+
+# 限速类型以kbps(kilobits per second)计算，超过20kb/s则丢弃
+ovs-ofctl -O OpenFlow13 add-meter br0 meter=1,kbps,band=type=drop,rate=20
+# 同上，增加burst size参数
+ovs-ofctl -O OpenFlow13 add-meter br0 meter=2,kbps,burst,band=type=drop,rate=20,burst_size=256
+# 同上，增加stats参数,对meter进行计数统计
+ovs-ofctl -O OpenFlow13 add-meter br0 meter=3,kbps,burst,stats,band=type=drop,rate=20,burst_size=256
+# 限速类型以pktps(packets per second)计算，超过1000pkt/s则丢弃
+ovs-ofctl -O OpenFlow13 add-meter br0 meter=4,pktps,band=type=drop,rate=1000
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+
+5.删除meter表
+
+# 删除全部meter表
+ovs-ofctl -O OpenFlow13 del-meters br0
+# 删除meter id=1
+ovs-ofctl -O OpenFlow13 del-meter br0 meter=1
+
+    1
+    2
+    3
+    4
+
+6.创建流表
+
+ovs-ofctl -O OpenFlow13 add-flow br0 in_port=1,actions=meter:1,output:2
+
+    1
+
+group表
+
+由于group表是openflow1.1版本以后才支持，所以所有命令需要指定OpenFlow1.1版本以上
+常用操作
+
+group table支持4种类型
+
+    all：所有buckets都执行一遍
+    select： 每次选择其中一个bucket执行，常用于负载均衡应用
+    ff(FAST FAILOVER)：快速故障修复，用于检测解决接口等故障
+    indirect：间接执行，类似于一个函数方法，被另一个group来调用
+
+1.查看当前设备对group的支持
+
+ovs-ofctl -O OpenFlow13 dump-group-features br0
+
+    1
+
+2.查看group表
+
+ovs-ofctl -O OpenFlow13 dump-groups br0
+
+    1
+
+3.创建group表
+
+# 类型为all
+ovs-ofctl -O OpenFlow13 add-group br0 group_id=1,type=all,bucket=output:1,bucket=output:2,bucket=output:3
+# 类型为select
+ovs-ofctl -O OpenFlow13 add-group br0 group_id=2,type=select,bucket=output:1,bucket=output:2,bucket=output:3
+# 类型为select，指定hash方法(5元组，OpenFlow1.5+)
+ovs-ofctl -O OpenFlow15 add-group br0 group_id=3,type=select,selection_method=hash,fields=ip_src,bucket=output:2,bucket=output:3
+
+    1
+    2
+    3
+    4
+    5
+    6
+
+4.删除group表
+
+ovs-ofctl -O OpenFlow13 del-groups br0 group_id=2
+
+    1
+
+5.创建流表
+
+ovs-ofctl -O OpenFlow13 add-flow br0 in_port=1,actions=group:2
+
+    1
+
+goto table配置
+
+数据流先从table0开始匹配，如actions有goto_table，再进行后续table的匹配，实现多级流水线，如需使用goto table，则创建流表时，指定table id，范围为0-255，不指定则默认为table0
+1.在table0中添加一条流表条目
+
+ovs-ofctl add-flow br0 table=0,in_port=1,actions=goto_table=1
+
+    1
+
+2.在table1中添加一条流表条目
+
+ovs-ofctl add-flow br0 table=1,ip,nw_dst=10.10.0.0/16,actions=output:2
+
+    1
+
+tunnel配置
+
+如需配置tunnel，必需确保当前系统对各tunnel的remote ip网络可达
+gre
+
+1.创建一个gre接口，并且指定端口id=1001
+
+ovs-vsctl add-port br0 gre1 -- set Interface gre1 type=gre options:remote_ip=1.1.1.1 ofport_request=1001
+
+    1
+
+2.可选选项
+将tos或者ttl在隧道上继承，并将tunnel id设置成123
+
+ovs-vsctl set Interface gre1 options:tos=inherit options:ttl=inherit options:key=123
+
+    1
+
+3.创建关于gre流表
+
+# 封装gre转发
+ovs-ofctl add-flow br0 ip,in_port=1,nw_dst=10.10.0.0/16,actions=output:1001
+# 解封gre转发
+ovs-ofctl add-flow br0 in_port=1001,actions=output:1
+
+    1
+    2
+    3
+    4
+
+vxlan
+
+1.创建一个vxlan接口，并且指定端口id=2001
+
+ovs-vsctl add-port br0 vxlan1 -- set Interface vxlan1 type=vxlan options:remote_ip=1.1.1.1 ofport_request=2001
+
+    1
+
+2.可选选项
+将tos或者ttl在隧道上继承，将vni设置成123，UDP目的端为设置成8472(默认为4789)
+
+ovs-vsctl set Interface vxlan1 options:tos=inherit options:ttl=inherit options:key=123 options:dst_port=8472
+
+    1
+
+3.创建关于vxlan流表
+
+# 封装vxlan转发
+ovs-ofctl add-flow br0 ip,in_port=1,nw_dst=10.10.0.0/16,actions=output:2001
+# 解封vxlan转发
+ovs-ofctl add-flow br0 in_port=2001,actions=output:1
+
+    1
+    2
+    3
+    4
+
+sflow配置
+
+1.对网桥br0进行sflow监控
+
+    agent: 与collector通信所在的网口名，通常为管理口
+    target: collector监听的IP地址和端口，端口默认为6343
+    header: sFlow在采样时截取报文头的长度
+    polling: 采样时间间隔，单位为秒
+
+ovs-vsctl -- --id=@sflow create sflow agent=eth0 target=\"10.0.0.1:6343\" header=128 sampling=64 polling=10 -- set bridge br0 sflow=@sflow
+
+    1
+
+2.查看创建的sflow
+
+ovs-vsctl list sflow
+
+    1
+
+3.删除对应的网桥sflow配置，参数为sFlow UUID
+
+ovs-vsctl remove bridge br0 sflow 7b9b962e-fe09-407c-b224-5d37d9c1f2b3
+
+    1
+
+4.删除网桥下所有sflow配置
+
+ovs-vsctl -- clear bridge br0 sflow
+
+    1
+
+QoS配置
+ingress policing
+
+1.配置ingress policing，对接口eth0入流限速10Mbps
+
+ovs-vsctl set interface eth0 ingress_policing_rate=10000
+ovs-vsctl set interface eth0 ingress_policing_burst=8000
+
+    1
+    2
+
+2.清除相应接口的ingress policer配置
+
+ovs-vsctl set interface eth0 ingress_policing_rate=0
+ovs-vsctl set interface eth0 ingress_policing_burst=0
+
+    1
+    2
+
+3.查看接口ingress policer配置
+
+ovs-vsctl list interface eth0
+
+    1
+
+4.查看网桥支持的Qos类型
+
+ovs-appctl qos/show-types br0
+
+    1
+
+端口镜像配置
+
+1.配置eth0收到/发送的数据包镜像到eth1
+
+ovs-vsctl -- set bridge br0 mirrors=@m \
+-- --id=@eth0 get port eth0 \
+-- --id=@eth1 get port eth1 \
+-- --id=@m create mirror name=mymirror select-dst-port=@eth0 select-src-port=@eth0 output-port=@eth1
+
+    1
+    2
+    3
+    4
+
+2.删除端口镜像配置
+
+ovs-vsctl -- --id=@m get mirror mymirror -- remove bridge br0 mirrors @m
+
+    1
+
+3.清除网桥下所有端口镜像配置
+
+ovs-vsctl clear bridge br0 mirrors
+
+    1
+
+4.查看端口镜像配置
+
+ovs-vsctl get bridge br0 mirrors
+
+    1
+
+聚合口配置
+
+1.创建一个聚合口
+
+ovs-vsctl add-port br0 dpdkbond0 \
+    -- set interface dpdkbond0 type=dpdk options:dpdk-devargs=0000:01:00.0,0000:02:00.0
+
+    1
+    2
+
+2.设置聚合口模式
+
+# mode=1
+ovs-vsctl set port dpdkbond0 bond_mode=active-backup
+
+# mode=2
+ovs-vsctl set port dpdkbond0 bond_mode=balance-slb
+
+# mode=4
+ovs-vsctl set port dpdkbond0 bond_mode=balance-tcp
+ovs-vsctl set port dpdkbond0 lacp=active
+ovs-vsctl set port dpdkbond0 lacp=off
+ovs-vsctl set port dpdkbond0 lacp=passive
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+
+3.查看mode=4 lacp协商状态
+
+ovs-appctl lacp/show
+————————————————
+版权声明：本文为CSDN博主「云云生息」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/rocson001/article/details/73163041/</code></pre>
+
+
+
+<p>注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img width="1011" height="190" src="https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-ovs.png" alt="" class="wp-image-11613" srcset="https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-ovs.png 1011w, https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-ovs-300x56.png 300w, https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-ovs-768x144.png 768w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" /><figcaption>CC 4.0 BY-SA 版权协议网址：https://creativecommons.org/licenses/by-sa/4.0/deed.z</figcaption></figure></div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 虚拟网桥的设置 （Bridge 版） （转载）</title>
+		<link>https://eternalcenter-2022-03.github.io/bridge/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 23 Oct 2020 14:46:08 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=11609</guid>
+
+					<description><![CDATA[注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code>Linux 网桥（br）配置
+
+1、brctl命令安装
+yum -y install bridge-utils
+2、临时配置步骤
+临时配置机器重启后配置失效。多网口配置网桥需开启转发。
+临时转发生效：
+echo “1” > /proc/sys/net/ipv4/ip_forward
+永久配置：
+将文件/etc/sysctl.conf里面的net.ipv4.ip_forward=1的注释去除
+sysctl -p (重新加载)
+（1）查看系统是否存在网桥配置
+brctl show
+
+（2）添加一个新的逻辑网桥接口br0
+brctl addbr br0
+
+（3）将eth1加入逻辑网桥br0
+brctl addif br0 eth1/eth2
+
+（4）网口配置混杂模式
+ifconfig eth1/eth2 down
+ifconfig eth1/eth2 0.0.0.0 up
+或者ifconfig eth0 promisc / -promisc
+（5）配置网桥地址并启动
+ifconfig br0 172.168.0.1 up
+
+注：
+网卡工作模式：
+A、广播方式：该模式下，网卡能够接收网络中的广播信息。
+B、组播方式：该模式下，网卡能够接收组播数据。
+C、直接方式：该模式下，只有目的网卡才能接收该数据。
+D、混杂模式：该模式下，网卡能够接收一切通过它的数据。
+3、永久配置
+（1）修改eth1/et2网卡配置
+vim /etc/sysconfig/network-scripts/ifcfg-eth1/eth2
+DEVICE=eth1/eth2
+TYPE=Ethernet
+ONBOOT=yes
+BOOTPROTO=static
+BRIDGE=br0
+（2）修改br0配置
+cp /etc/sysconfig/network-scripts/ifcfg-eth0 /etc/sysconfig/network-scripts/ifcfg-br0
+vim /etc/sysconfig/network-scripts/ifcfg-br0
+DEVICE=br0
+TYPE=Bridge
+ONBOOT=yes
+BOOTPROTO=static
+NETMASK=255.255.255.0
+IPADDR=172.168.0.2
+GATEWAY=172.168.0.1
+（3）重启网卡
+service network restart
+（4）开机激活
+echo “modprobe bridge”>>/etc/rc.local
+4、brctl命令拓展
+addbr
+#添加bridge
+delbr
+#删除bridge
+addif
+#添加接口到bridge
+delif
+#从bridge中删除接口
+setageing
+#设置老化时间，即生存周期
+setbridgeprio
+#设置bridge的优先级
+setfd
+#设置bridge转发延迟时间
+sethello
+#设置hello时间
+setmaxage
+#设置消息的最大生命周期
+setpathcost
+#设置路径的权值
+setportprio
+#设置端口的优先级
+show
+#显示bridge列表
+showmacs
+#显示MAC地址
+showstp
+#显示bridge的stp信息
+stp bridge {on|off}
+#开/关stp
+————————————————
+版权声明：本文为CSDN博主「linux言叙」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_34493319/article/details/104486641</code></pre>
+
+
+
+<p>注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img loading="lazy" width="1011" height="191" src="https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-bridge.png" alt="" class="wp-image-11610" srcset="https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-bridge.png 1011w, https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-bridge-300x57.png 300w, https://eternalcenter-2022-03.github.io/wp-content/uploads/2020/10/版权申明证明-bridge-768x145.png 768w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" /><figcaption>CC 4.0 BY-SA 版权协议网址：https://creativecommons.org/licenses/by-sa/4.0/deed.z</figcaption></figure></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux ping 的禁用 （通过禁用 arp 协议实现）</title>
+		<link>https://eternalcenter-2022-03.github.io/ping-disable/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 20 Jul 2020 07:10:08 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10134</guid>
+
+					<description><![CDATA[内容一：临时关闭 arp 协议1.1 临时关闭 arp 协议的格式 1.2 临时关闭 arp 协议的案例 （补充：这里以关闭 eth0 的 arp 协议为例） 内容二：临时开启 arp 协议2.1 临时关闭 arp 协议的格式 2.2 临时关闭 arp 协议的案例 （补充：这里以开启 eth0 的 arp 协议为例）]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：临时关闭 arp 协议<br>1.1 临时关闭 arp 协议的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># ifconfig &lt;network card name> -arp</code></pre>
+
+
+
+<h4>1.2 临时关闭 arp 协议的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># ifconfig eth0 -arp</code></pre>
+
+
+
+<p>（补充：这里以关闭 eth0 的 arp 协议为例）</p>
+
+
+
+<h4>内容二：临时开启 arp 协议<br>2.1 临时关闭 arp 协议的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># ifconfig &lt;network card name> arp</code></pre>
+
+
+
+<h4>2.2 临时关闭 arp 协议的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># ifconfig eth0 arp</code></pre>
+
+
+
+<p>（补充：这里以开启 eth0 的 arp 协议为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 网卡的设置 （临时管理）</title>
+		<link>https://eternalcenter-2022-03.github.io/network-card-temporary/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 20 Jul 2020 07:03:41 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10123</guid>
+
+					<description><![CDATA[内容目录： 内容一：使用 ifconfig 命令1.1 使用 ifcofnig 命令临时启动网卡1.1.1 使用 ifconfig 命令临时启动网卡的格式1.1.2 使用 ifconfig 命令临时启动网卡的案例1.2 使用 ifconfig 命令临时关闭网卡1.2.1 使用 ifconfig 命令临时关闭网卡的格式1.2.2 使用 ifconfig 命令临时关闭网卡的案例 内容二：使用 ip link 命令2.1 使用 ip link 命令临时启动网卡2.1.1 使用 ip link 命令临时启动网卡的格式2.1.2 使用 ip link 命令临时启动网卡的案例2.2 使用 ip link 命令临时关闭网卡2.2.1 使用 ip link 命令临时关闭网卡的格式2.2.2 使用 ip link 命令临时关闭网卡的案例 具体的内容： 内容一：使用 ifconfig 命令1.1 使用 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/network-card-temporary/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] Linux 网卡的设置 （临时管理）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2>内容目录：</h2>
+
+
+
+<h4>内容一：使用 ifconfig 命令<br>1.1 使用 ifcofnig 命令临时启动网卡<br>1.1.1 使用 ifconfig 命令临时启动网卡的格式<br>1.1.2 使用 ifconfig 命令临时启动网卡的案例<br>1.2 使用 ifconfig 命令临时关闭网卡<br>1.2.1 使用 ifconfig 命令临时关闭网卡的格式<br>1.2.2 使用 ifconfig 命令临时关闭网卡的案例</h4>
+
+
+
+<h4>内容二：使用 ip link 命令<br>2.1 使用 ip link 命令临时启动网卡<br>2.1.1 使用 ip link 命令临时启动网卡的格式<br>2.1.2 使用 ip link 命令临时启动网卡的案例<br>2.2 使用 ip link 命令临时关闭网卡<br>2.2.1 使用 ip link 命令临时关闭网卡的格式<br>2.2.2 使用 ip link 命令临时关闭网卡的案例</h4>
+
+
+
+<h2>具体的内容：</h2>
+
+
+
+<h4>内容一：使用 ifconfig 命令<br>1.1 使用 ifcofnig 命令临时启动网卡<br>1.1.1 使用 ifconfig 命令临时启动网卡的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># ifup &lt;network card name></code></pre>
+
+
+
+<h4>1.1.2 使用 ifconfig 命令临时启动网卡的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># ifup eth0</code></pre>
+
+
+
+<p>（补充：这里以启动 eth0 网卡为例）</p>
+
+
+
+<h4>1.2 使用 ifconfig 命令临时关闭网卡<br>1.2.1 使用 ifconfig 命令临时关闭网卡的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># ifdown &lt;network card name></code></pre>
+
+
+
+<h4>1.2.2 使用 ifconfig 命令临时关闭网卡的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># ifdown eth0</code></pre>
+
+
+
+<p>（补充：这里以关闭 eth0 网卡为例）</p>
+
+
+
+<h4>内容二：使用 ip link 命令<br>2.1 使用 ip link 命令临时启动网卡<br>2.1.1 使用 ip link 命令临时启动网卡的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># ip link set &lt;network card name> up</code></pre>
+
+
+
+<h4>2.1.2 使用 ip link 命令临时启动网卡的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># ip link set eth0 up</code></pre>
+
+
+
+<p>（补充：这里以启动 eth0 网卡为例）</p>
+
+
+
+<h4>2.2 使用 ip link 命令临时关闭网卡<br>2.2.1 使用 ip link 命令临时关闭网卡的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># ip link set &lt;network card name> down</code></pre>
+
+
+
+<h4>2.2.2 使用 ip link 命令临时关闭网卡的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># ip link set eth0 down</code></pre>
+
+
+
+<p>（补充：这里以关闭 eth0 网卡为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] DNS 客户端的设置 （Linux 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/dns-client/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 16 Jul 2020 12:14:07 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[DNS]]></category>
+		<category><![CDATA[Other Services (其他服务)]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10066</guid>
+
+					<description><![CDATA[内容一：设置 DNS 客户端1.1 直接在本地指定域名1.1.1 直接在本地指定域名的方法 添加以下内容： （注意：/etc/hosts 里记录的 DNS 优先级要比 /etc/resolv.conf 里的高） 1.1.2 直接在本地指定域名的案例 添加以下内容： （补充：这里以将 192.154.240.64 解析为 eternalcenter.com 为例） （注意：/etc/hosts 里记录的 DNS 优先级要比 /etc/resolv.conf 里的高） 1.2 使用远程的 DNS 服务器解析域名1.2.1 使用远程的 DNS 服务器解析域名1.2.1.1 使用远程的 DNS 服务器解析域名的方法1.2.1.1.1 直接修改 /etc/resolv.conf 文件 添加以下内容： （注意：/etc/hosts 里记录的 DNS 优先级要比 /etc/resolv.conf 里的高） 1.2.1.1.2 使用 nmcli 命令1.2.1.1.2.1 使用 nmcli 命令配置一个 DNS 服务器的 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/dns-client/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] DNS 客户端的设置 （Linux 版）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-设置-dns-客户端1-1-直接在本地指定域名1-1-1-直接在本地指定域名的方法">内容一：设置 DNS 客户端<br>1.1 直接在本地指定域名<br>1.1.1 直接在本地指定域名的方法</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/hosts</code></pre>
+
+
+
+<p>添加以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+&lt;IP address&gt; &lt;domain name&gt;</code></pre>
+
+
+
+<p>（注意：/etc/hosts 里记录的 DNS 优先级要比 /etc/resolv.conf 里的高）</p>
+
+
+
+<h4 id="1-1-2-直接在本地指定域名的案例">1.1.2 直接在本地指定域名的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/hosts</code></pre>
+
+
+
+<p>添加以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+192.154.240.64 eternalcenter.com</code></pre>
+
+
+
+<p>（补充：这里以将 192.154.240.64 解析为 eternalcenter.com 为例）</p>
+
+
+
+<p>（注意：/etc/hosts 里记录的 DNS 优先级要比 /etc/resolv.conf 里的高）</p>
+
+
+
+<h4 id="1-2-使用远程的-dns-服务器解析域名1-2-1-使用远程的-dns-服务器解析域名1-2-1-1-使用远程的-dns-服务器解析域名的方法1-2-1-1-1-直接修改-etc-resolv-conf-文件">1.2 使用远程的 DNS 服务器解析域名<br>1.2.1 使用远程的 DNS 服务器解析域名<br>1.2.1.1 使用远程的 DNS 服务器解析域名的方法<br>1.2.1.1.1 直接修改 /etc/resolv.conf 文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/resolv.conf</code></pre>
+
+
+
+<p>添加以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+nameserver &lt;IP address of DNS server&gt;</code></pre>
+
+
+
+<p>（注意：/etc/hosts 里记录的 DNS 优先级要比 /etc/resolv.conf 里的高）</p>
+
+
+
+<h4 id="1-2-1-1-2-使用-nmcli-命令1-2-1-1-2-1-使用-nmcli-命令配置一个-dns-服务器的-ip-地址">1.2.1.1.2 使用 nmcli 命令<br>1.2.1.1.2.1 使用 nmcli 命令配置一个 DNS 服务器的 IP 地址</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection modify &lt;network card name&gt; ipv4.dns &lt;IP address of DNS server&gt;</code></pre>
+
+
+
+<p>（补充：不将 /etc/NetworkManager/NetworkManager.conf 里的 [main] dns=none 参数修改为 none 的话，此参数会覆盖 /etc/resolv.conf 里的设置）</p>
+
+
+
+<p>（<br>注意：<br>1) 此方法只对 CentOS8&amp;RHEL8 适用<br>2) /etc/hosts 里记录的 DNS 优先级要比使用 nmcli 命令的高<br>）</p>
+
+
+
+<h4 id="1-2-1-1-2-2-使用-nmcli-命令配置多个-dns-服务器的-ip-地址">1.2.1.1.2.2 使用 nmcli 命令配置多个 DNS 服务器的 IP 地址</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection modify &lt;network card name&gt; ipv4.dns "&lt;first IP address of DNS server&gt;,&lt;second IP address of DNS server&gt;,&lt;third IP address of DNS server&gt;......"</code></pre>
+
+
+
+<p>（补充：不将 /etc/NetworkManager/NetworkManager.conf 里的 [main] dns=none 参数修改为 none 的话，此参数会覆盖 /etc/resolv.conf 里的设置）</p>
+
+
+
+<p>（<br>注意：<br>1) 此方法只对 CentOS8&amp;RHEL8 适用<br>2) /etc/hosts 里记录的 DNS 优先级要比使用 nmcli 命令的高<br>）</p>
+
+
+
+<h4 id="1-2-1-2-使用远程的-dns-服务器解析域名的案例1-2-1-2-1-直接修改-etc-resolv-conf-文件">1.2.1.2 使用远程的 DNS 服务器解析域名的案例<br>1.2.1.2.1 直接修改 /etc/resolv.conf 文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/resolv.conf</code></pre>
+
+
+
+<p>添加以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+nameserver 8.8.8.8</code></pre>
+
+
+
+<p>（补充：这里以使用 8.8.8.8 DNS 服务器为例）</p>
+
+
+
+<p>（注意：/etc/hosts 里记录的 DNS 优先级要比 /etc/resolv.conf 里的高）</p>
+
+
+
+<h4 id="1-2-1-2-2-使用-nmcli-命令">1.2.1.2.2 使用 nmcli 命令</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection modify eth0 ipv4.dns 8.8.8.8</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以给 eth0 网卡添加 8.8.8.8 DNS 服务器为例<br>2) 不将 /etc/NetworkManager/NetworkManager.conf 里的 [main] dns=none 参数修改为 none 的话，此参数会覆盖 /etc/resolv.conf 里的设置<br>）</p>
+
+
+
+<p>（注意：/etc/hosts 里记录的 DNS 优先级要比使用 nmcli 命令的高）</p>
+
+
+
+<h4 id="1-2-2-显示正在使用远程的-dns-服务器解析的域名">1.2.2 显示正在使用远程的 DNS 服务器解析的域名</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection show | grep -i ipv4.dns</code></pre>
+
+
+
+<h4 id="内容二-检查-dns-域名解析2-1-使用-ping-命令解析域名2-1-1-使用-ping-命令解析域名的格式">内容二：检查 DNS 域名解析<br>2.1 使用 ping 命令解析域名<br>2.1.1 使用 ping 命令解析域名的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># ping &lt;domain name&gt;</code></pre>
+
+
+
+<h4 id="2-1-2-使用-ping-命令解析域名的案例">2.1.2 使用 ping 命令解析域名的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># ping eternalcenter.com
+PING eternalcenter.com (192.154.240.64) 56(84) bytes of data.
+64 bytes from v144-48-142.ap-east.sugarhosts.net (192.154.240.64): icmp_seq=1 ttl=50 time=144 ms
+64 bytes from v144-48-142.ap-east.sugarhosts.net (192.154.240.64): icmp_seq=3 ttl=50 time=70.8 ms
+64 bytes from v144-48-142.ap-east.sugarhosts.net (192.154.240.64): icmp_seq=4 ttl=50 time=81.3 ms
+64 bytes from v144-48-142.ap-east.sugarhosts.net (192.154.240.64): icmp_seq=5 ttl=50 time=103 ms
+......</code></pre>
+
+
+
+<h4 id="2-2-使用-host-命令解析域名2-2-1-使用-host-命令解析域名的格式">2.2 使用 host 命令解析域名<br>2.2.1 使用 host 命令解析域名的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># host &lt;domain name&gt;</code></pre>
+
+
+
+<h4 id="2-2-2-使用-host-命令解析域名的案例">2.2.2 使用 host 命令解析域名的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># host eternalcenter.com
+eternalcenter.com has address 192.154.240.64</code></pre>
+
+
+
+<p>（补充：这里以解析 etenalcenter.com 域名为例）</p>
+
+
+
+<h4 id="2-3-使用-nslookup-命令解析域名2-3-1-使用-nslookup-命令解析域名的格式">2.3 使用 nslookup 命令解析域名<br>2.3.1 使用 nslookup 命令解析域名的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># nslookup &lt;domain name&gt;</code></pre>
+
+
+
+<h4 id="2-3-2-使用-nslookup-命令解析域名的案例">2.3.2 使用 nslookup 命令解析域名的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># nslookup eternalcenter.com
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	eternalcenter.com
+Address: 192.154.240.64</code></pre>
+
+
+
+<p>（补充：这里以解析 etenalcenter.com 域名为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 只对某一个 IP 地址开放 TCP 22 端口 （iptables 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/shell-iptables-22-port-add/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 15 Jul 2020 02:29:00 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Deployment (部署)]]></category>
+		<category><![CDATA[Shell Network (网络)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Firewall (系统防火墙)]]></category>
+		<category><![CDATA[System Login Security (系统登录安全)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=9996</guid>
+
+					<description><![CDATA[介绍： 名称：只对某一个 IP 地址开放 TCP 22 端口作用：只对某一个 IP 地址开放 TCP 22 端口 使用方法：1. 给此脚本添加执行权限2. 执行此脚本 脚本分割线里的变量：ipaddress=192.168.1.1 #要开放 TCP 22 端口的 IP 地址 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>名称：只对某一个 IP 地址开放 TCP 22 端口<br>作用：只对某一个 IP 地址开放 TCP 22 端口</p>
+
+
+
+<p>使用方法：<br>1. 给此脚本添加执行权限<br>2. 执行此脚本</p>
+
+
+
+<p>脚本分割线里的变量：<br>ipaddress=192.168.1.1 #要开放 TCP 22 端口的 IP 地址</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+####################### Separator ########################
+ipaddress=192.168.1.1
+####################### Separator ########################
+
+systemctl stop firewalld
+systemctl disable firewalld
+
+yum -y install iptables-services
+zypper -n install iptables
+
+systemctl enable iptables
+systemctl start iptables
+
+sysctl -w net.ipv4.ip_forward=1
+iptables -t filter -F
+iptables -t nat -F
+
+iptables -P OUTPUT ACCEPT
+#iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT
+
+iptables -t filter -A INPUT -j ACCEPT -s $ipaddress -p tcp --destination-port 22
+iptables -t filter -A INPUT -j DROP -p tcp --destination-port 22
+
+service iptables save
+systemctl restart iptables</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] 静态路由表的添加（CentOS Linux &#038; RHEL 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/static-routing-centos-rhel/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 06 Jul 2020 07:57:39 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=9979</guid>
+
+					<description><![CDATA[内容目录： 内容一：添加临时路由器表1.1 案例一：添加某一个 IP 地址的路由表1.2 案例二：删除某一个 IP 地址的路由表1.3 案例三：添加某一个网段的路由表1.4 案例四：删除某一个网段的路由表 内容二：添加永久路由表2.1 添加永久路由表2.1.1 案例一2.1.2 案例二2.2 重启要添加路由表的网卡2.2.1 重启要添加路由表的网卡的格式2.2.2 重启要添加路由表的网卡的案例 具体的内容： 内容一：临时路由器表到管理1.1 案例一：添加某一个 IP 地址的路由表 （补充：这里以指向 192.168.2.1 IP 地址的流量需要通过 eth0 网卡和 192.168.1.1 网关为例） 1.2 案例二：删除某一个 IP 地址的路由表 （补充：这里删除 192.168.2.1 IP 地址的路由表为例） 1.3 案例三：添加某一个网段的路由表 （补充：这里以指向 192.168.2.0/24 网段的流量需要通过 192.168.1.1 网关为例） 1.4 案例四：删除某一个网段的路由表 （补充：这里删除 192.168.2.0/24 网段的路由表为例） 内容二：添加永久路由表2.1 添加永久路由表2.1.1 案例一 （补充：这里以给 eth0 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/static-routing-centos-rhel/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] 静态路由表的添加（CentOS Linux &#038; RHEL 版）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2>内容目录：</h2>
+
+
+
+<h4>内容一：添加临时路由器表<br>1.1 案例一：添加某一个 IP 地址的路由表<br>1.2 案例二：删除某一个 IP 地址的路由表<br>1.3 案例三：添加某一个网段的路由表<br>1.4 案例四：删除某一个网段的路由表</h4>
+
+
+
+<h4>内容二：添加永久路由表<br>2.1 添加永久路由表<br>2.1.1 案例一<br>2.1.2 案例二<br>2.2 重启要添加路由表的网卡<br>2.2.1 重启要添加路由表的网卡的格式<br>2.2.2 重启要添加路由表的网卡的案例</h4>
+
+
+
+<h2>具体的内容：</h2>
+
+
+
+<h4>内容一：临时路由器表到管理<br>1.1 案例一：添加某一个 IP 地址的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route add -host 192.168.2.1 netmask 255.255.255.255 gw 192.168.1.1 dev eth0</code></pre>
+
+
+
+<p>（补充：这里以指向 192.168.2.1 IP 地址的流量需要通过 eth0 网卡和 192.168.1.1 网关为例）</p>
+
+
+
+<h4>1.2 案例二：删除某一个 IP 地址的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route del -host 192.168.2.1</code></pre>
+
+
+
+<p>（补充：这里删除 192.168.2.1 IP 地址的路由表为例）</p>
+
+
+
+<h4>1.3 案例三：添加某一个网段的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.1</code></pre>
+
+
+
+<p>（补充：这里以指向 192.168.2.0/24 网段的流量需要通过 192.168.1.1 网关为例）</p>
+
+
+
+<h4>1.4 案例四：删除某一个网段的路由表</h4>
+
+
+
+<pre class="wp-block-code"><code># route del -net 192.168.2.0/24</code></pre>
+
+
+
+<p>（补充：这里删除 192.168.2.0/24 网段的路由表为例）</p>
+
+
+
+<h4>内容二：添加永久路由表<br>2.1 添加永久路由表<br>2.1.1 案例一</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli con mod eth0 ipv4.routes "192.168.2.0/24 192.168.3.1"</code></pre>
+
+
+
+<p>（补充：这里以给 eth0 网卡添加 192.168.2.0/24 通过 192.168.3.1 的网关为例）</p>
+
+
+
+<h4>2.1.2 案例二</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/sysconfig/network-scripts/route-enp1s0</code></pre>
+
+
+
+<p>创建以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>192.168.100.3/32 via 192.168.101.101 dev enp1s0</code></pre>
+
+
+
+<p>（补充：这里以添加 192.168.100.3 通向 192.168.101.101 网关的永久路由为例）</p>
+
+
+
+<h4>2.2 重启要添加路由表的网卡<br>2.2.1 重启要添加路由表的网卡的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection down &lt;the name of the network card to add the routing table to&gt;
+# nmcli connection up &lt;the name of the network card to add the routing table to&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<h4>2.2.2 重启要添加路由表的网卡的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># nmcli connection down enp1s0
+# nmcli connection up enp1s0</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<p>（补充：这里以重启名为 enp1s0 网卡为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 取消所有已开放的端口策略 （firewalld 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/shell-firewalld-all-number-ports-remove/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 26 Jun 2020 08:49:55 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Deployment (部署)]]></category>
+		<category><![CDATA[Shell Network (网络)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=9954</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：取消所有已开放的端口策略作用：取消所有已开放的端口策略 使用方法：1. 给此脚本添加执行权限2. 执行此脚本 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：取消所有已开放的端口策略<br>作用：取消所有已开放的端口策略</p>
+
+
+
+<p>使用方法：<br>1. 给此脚本添加执行权限<br>2. 执行此脚本</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+systemctl start firewalld
+systemctl enable firewalld
+
+for i in `firewall-cmd --list-all | grep ports | egrep &#91;0-9] | awk -F':' '{print $2}'`
+do
+        pports=`echo $i | awk -F'/' '{print $1}'`
+        ptus=`echo $i | awk -F'/' '{print $2}'`
+
+        firewall-cmd --remove-port=$pports/$ptus --permanent
+
+done
+
+firewall-cmd --add-service=ssh --permanent
+firewall-cmd --reload</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

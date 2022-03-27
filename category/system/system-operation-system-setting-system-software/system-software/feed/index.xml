@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>System Software (系统软件) &#8211; Eternal Center</title>
+	<atom:link href="https://eternalcenter-2022-03.github.io/category/system/system-operation-system-setting-system-software/system-software/feed/" rel="self" type="application/rss+xml" />
+	<link>https://eternalcenter-2022-03.github.io/</link>
+	<description></description>
+	<lastBuildDate>Fri, 25 Mar 2022 07:47:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+	<item>
+		<title>[命令] SUSE 命令 SUSEConnect （注册客户端到 SUSE Repository Mirroring Tool (RMT)）</title>
+		<link>https://eternalcenter-2022-03.github.io/suseconnect/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 15 Feb 2022 13:27:33 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Other Services (其他服务)]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[SUSE Repository Mirroring Tool (RMT)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21968</guid>
+
+					<description><![CDATA[如果是 HTTP 协议： 如果是 HTTPS 协议：]]></description>
+										<content:encoded><![CDATA[
+<p>如果是 HTTP 协议：</p>
+
+
+
+<pre class="wp-block-code"><code># SUSEConnect -u http://&lt;/<span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-size: medium; white-space: normal;">SUSE Repository Mirroring Tool (RMT</span>) Server's IP address or FQDN&gt;</code></pre>
+
+
+
+<p>如果是 HTTPS 协议：</p>
+
+
+
+<pre class="wp-block-code"><code># SUSEConnect -u https://&lt;/<span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-size: medium; white-space: normal;">SUSE Repository Mirroring Tool (RMT</span>) Server's IP address or FQDN&gt;</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 官方软件包单独下载</title>
+		<link>https://eternalcenter-2022-03.github.io/separate-software-package/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 28 Jan 2022 13:08:43 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21419</guid>
+
+					<description><![CDATA[openSUSE 官方软件包单独下载网址 https://software.opensuse.org]]>/</description>
+										<content:encoded><![CDATA[
+<p>openSUSE 官方软件包单独下载网址</p>
+
+
+
+<p>https://software.opensuse.org/</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] CentOS Linux &#038; RHEL 命令 yum （管理软件和软件库）</title>
+		<link>https://eternalcenter-2022-03.github.io/yum/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 26 Jan 2022 15:03:57 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=21413</guid>
+
+					<description><![CDATA[内容一：缓存管理1.1 清除所有缓存 1.2 保存所有缓存 内容二：软件库管理 刷新所有软件库 内容三：软件包管理3.1 显示所有软件包 3.2 显示某一个软件包 3.3 显示某一个软件包的信息 3.4 安装某一个软件包3.4.1 非交互式安装某一个软件包 或者： 3.4.2 交互式安装某一个软件包 3.5 删除某一个软件包3.5.1 非交互式删除某一个软件包 或者： 3.5.2 交互式删除某一个软件包 3.6 升级某一个软件包3.6.1 非交互式升级某一个软件包 或者： 3.6.2 交互式升级某一个软件包 3.7 升级所有软件包3.7.1 非交互式升级所有软件包 或者： 3.7.1 交互式升级所有软件包]]></description>
+										<content:encoded><![CDATA[
+<h4 id="内容一-缓存管理1-1-清除所有缓存">内容一：缓存管理<br>1.1 清除所有缓存</h4>
+
+
+
+<pre class="wp-block-code"><code># yum clean all</code></pre>
+
+
+
+<h4 id="1-2-保存所有缓存">1.2 保存所有缓存</h4>
+
+
+
+<pre class="wp-block-code"><code># yum makecache</code></pre>
+
+
+
+<h4 id="内容二-软件库管理">内容二：软件库管理</h4>
+
+
+
+<p>刷新所有软件库</p>
+
+
+
+<pre class="wp-block-code"><code># yum repolist </code></pre>
+
+
+
+<h4 id="内容三-软件包管理3-1-查看所有软件包">内容三：软件包管理<br>3.1 显示所有软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum list all</code></pre>
+
+
+
+<h4 id="3-2-显示某一个软件包">3.2 显示某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum list all | grep &lt;software package&gt;</code></pre>
+
+
+
+<h4 id="3-3-显示某一个软件包的信息">3.3 显示某一个软件包的信息</h4>
+
+
+
+<pre class="wp-block-code"><code># yum info | grep &lt;software package&gt;</code></pre>
+
+
+
+<h4 id="3-4-安装某一个软件包3-4-1-非交互式安装某一个软件包">3.4 安装某一个软件包<br>3.4.1 非交互式安装某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum -y install &lt;software package&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># yum install &lt;software package&gt; -y</code></pre>
+
+
+
+<h4 id="3-4-2-交互式安装某一个软件包">3.4.2 交互式安装某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum install &lt;software package&gt;</code></pre>
+
+
+
+<h4 id="3-5-删除某一个软件包3-5-1-非交互式删除某一个软件包">3.5 删除某一个软件包<br>3.5.1 非交互式删除某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum -y remove &lt;software package&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># yum remove &lt;software package&gt; -y</code></pre>
+
+
+
+<h4 id="3-5-2-交互式删除某一个软件包">3.5.2 交互式删除某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum remove &lt;software package&gt;</code></pre>
+
+
+
+<h4 id="3-6-升级某一个软件包3-6-1-非交互式升级某一个软件包">3.6 升级某一个软件包<br>3.6.1 非交互式升级某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum -y update &lt;software package&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># yum update &lt;software package&gt; -y</code></pre>
+
+
+
+<h4 id="3-6-2-交互式升级某一个软件包">3.6.2 交互式升级某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum update &lt;software package&gt;</code></pre>
+
+
+
+<h4 id="3-7-升级所有软件包3-7-1-非交互式升级所有软件包">3.7 升级所有软件包<br>3.7.1 非交互式升级所有软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum -y update</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># yum update -y</code></pre>
+
+
+
+<h4 id="3-7-1-交互式升级所有软件包">3.7.1 交互式升级所有软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># yum update</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] Linux 全局加密 SSL 的设置 （CentOS Linux 8 &#038; RHEL 8 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/global-ssl-centos-linux-8-rhel-8/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 31 Jul 2021 10:11:21 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Patch (系统补丁)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=17184</guid>
+
+					<description><![CDATA[步骤一：显示当前 SSL 全局加密 SSL 的状况 （补充：这里的 DEFAULT 表示可以使用 2048 位及以上位数的 SSL） 步骤二：切换当前 SSL 全局加密 SSL （补充：1) 这里以将全局加密 SSL 切换到 FUTURE 状态为例2) 此时只能使用 4096 位及以上位数的 SSL）]]></description>
+										<content:encoded><![CDATA[
+<h4 id="步骤一-显示当前-ssl-全局加密-ssl-的状况">步骤一：显示当前 SSL 全局加密 SSL 的状况</h4>
+
+
+
+<pre class="wp-block-code"><code># update-crypto-policies --show
+DEFAULT</code></pre>
+
+
+
+<p>（补充：这里的 DEFAULT 表示可以使用 2048 位及以上位数的 SSL）</p>
+
+
+
+<h4 id="步骤二-切换当前-ssl-全局加密-ssl">步骤二：切换当前 SSL 全局加密 SSL</h4>
+
+
+
+<pre class="wp-block-code"><code># update-crypto-policies --set FUTURE</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以将全局加密 SSL 切换到 FUTURE 状态为例<br>2) 此时只能使用 4096 位及以上位数的 SSL<br>）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 官方软件库链接列表 （CentOS Linux 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/official-repo-list-centos-linux/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 27 Apr 2021 08:03:20 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<category><![CDATA[System Upgradation (系统升级)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=14151</guid>
+
+					<description><![CDATA[内容一：CentOS 7 基础库列表1.1 CentOS 7 基础库官方链接列表1.1.1 CentOS-7 &#8211; Base http://mirror.centos.org/centos/7/os/x86_64/ 1.1.2 CentOS-7 &#8211; Updates http://mirror.centos.org/centos/7/updates/x86_64/ 1.1.3 CentOS-7 &#8211; Extras http://mirror.centos.org/centos/7/extras/x86_64/ 1.1.4 CentOS-7 &#8211; Plus http://mirror.centos.org/centos/7/centosplus/x86_64/ 1.2 CentOS 7 基础库官方推荐列表1.2.1 CentOS-7 &#8211; Base http://mirrorlist.centos.org/?release=7&#038;arch=x86_64&#038;repo=os&#038;infra=$infra 1.2.2 CentOS-7 &#8211; Updates http://mirrorlist.centos.org/?release=7&#038;arch=x86_64&#038;repo=updates&#038;infra=$infra 1.2.3 CentOS-7 &#8211; Extras http://mirrorlist.centos.org/?release=7&#038;arch=x86_64&#038;repo=extras&#038;infra=$infra 1.2.4 CentOS-7 &#8211; Plus http://mirrorlist.centos.org/?release=7&#038;arch=x86_64&#038;repo=centosplus&#038;infra=$infra 内容二：CentOS 8 基础库列表2.1 CentOS 8 基础库官方链接列表2.1.1 CentOS &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/official-repo-list-centos-linux/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] Linux 官方软件库链接列表 （CentOS Linux 版）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：CentOS 7 基础库列表<br>1.1 CentOS 7 基础库官方链接列表<br>1.1.1 CentOS-7 &#8211; Base</h4>
+
+
+
+<p>http://mirror.centos.org/centos/7/os/x86_64/</p>
+
+
+
+<h4>1.1.2 CentOS-7 &#8211; Updates</h4>
+
+
+
+<p>http://mirror.centos.org/centos/7/updates/x86_64/</p>
+
+
+
+<h4>1.1.3 CentOS-7 &#8211; Extras</h4>
+
+
+
+<p>http://mirror.centos.org/centos/7/extras/x86_64/</p>
+
+
+
+<h4>1.1.4 CentOS-7 &#8211; Plus</h4>
+
+
+
+<p>http://mirror.centos.org/centos/7/centosplus/x86_64/</p>
+
+
+
+<h4>1.2 CentOS 7 基础库官方推荐列表<br>1.2.1 CentOS-7 &#8211; Base</h4>
+
+
+
+<p>http://mirrorlist.centos.org/?release=7&#038;arch=x86_64&#038;repo=os&#038;infra=$infra</p>
+
+
+
+<h4>1.2.2 CentOS-7 &#8211; Updates</h4>
+
+
+
+<p>http://mirrorlist.centos.org/?release=7&#038;arch=x86_64&#038;repo=updates&#038;infra=$infra</p>
+
+
+
+<h4>1.2.3 CentOS-7 &#8211; Extras</h4>
+
+
+
+<p>http://mirrorlist.centos.org/?release=7&#038;arch=x86_64&#038;repo=extras&#038;infra=$infra</p>
+
+
+
+<h4>1.2.4 CentOS-7 &#8211; Plus</h4>
+
+
+
+<p>http://mirrorlist.centos.org/?release=7&#038;arch=x86_64&#038;repo=centosplus&#038;infra=$infra</p>
+
+
+
+<h4>内容二：CentOS 8 基础库列表<br>2.1 CentOS 8 基础库官方链接列表<br>2.1.1 CentOS Linux 8 &#8211; BaseOS</h4>
+
+
+
+<p>http://mirror.centos.org/centos/8/BaseOS/x86_64/os/</p>
+
+
+
+<h4>2.1.2 CentOS-8 &#8211; Updates</h4>
+
+
+
+<p>http://mirror.centos.org/centos/8/AppStream/x86_64/os/</p>
+
+
+
+<h4>2.2 CentOS 8 基础库官方推荐列表<br>2.2.1 CentOS Linux 8 &#8211; BaseOS</h4>
+
+
+
+<p>http://mirrorlist.centos.org/?release=8&#038;arch=x86_64&#038;repo=BaseOS&#038;infra=$infra</p>
+
+
+
+<h4>2.2.2 CentOS Linux 8 &#8211; AppStream</h4>
+
+
+
+<p>http://mirrorlist.centos.org/?release=8&#038;arch=x86_64&#038;repo=AppStream&#038;infra=$infra</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 批量设置官方软件源 （openSUSE  Leap 15.2 版）</title>
+		<link>https://eternalcenter-2022-03.github.io/shell-official-repo-opensuse/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 06 Feb 2021 06:21:52 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Deployment (部署)]]></category>
+		<category><![CDATA[Shell Others (其他)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<category><![CDATA[System Upgradation (系统升级)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=13277</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：批量设置官方软件源（openSUSE 版）作用：批量设置官方软件源（openSUSE 版） 使用方法：1. 服务器清单 $add_repo_servers_list.txt 每一个服务器名占用一行，并和此脚本放在同一目录下2. 在此脚本的分割线内写入相应的内容3. 给此脚本添加执行权限4. 执行此脚本 脚本分割线里的变量：add_repo_servers_list.txt #指定存放要设置官方软件源的文件 注意：1. 此脚本执行前必须要先保证执行此脚本的用户能无密码 ssh 远程这些远程服务器2. 服务器的系统需要是 openSUSE 15.2 版本3. 服务器系统要配置好可用的软件源（最好是软件数量最多的官方版本）4. 这些远程服务器要能够连接外网 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：批量设置官方软件源（openSUSE 版）<br>作用：批量设置官方软件源（openSUSE 版）</p>
+
+
+
+<p>使用方法：<br>1. 服务器清单 $add_repo_servers_list.txt 每一个服务器名占用一行，并和此脚本放在同一目录下<br>2. 在此脚本的分割线内写入相应的内容<br>3. 给此脚本添加执行权限<br>4. 执行此脚本</p>
+
+
+
+<p>脚本分割线里的变量：<br>add_repo_servers_list.txt #指定存放要设置官方软件源的文件</p>
+
+
+
+<p>注意：<br>1. 此脚本执行前必须要先保证执行此脚本的用户能无密码 ssh 远程这些远程服务器<br>2. 服务器的系统需要是 openSUSE 15.2 版本<br>3. 服务器系统要配置好可用的软件源（最好是软件数量最多的官方版本）<br>4. 这些远程服务器要能够连接外网</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+####################### Separator ########################
+
+add_repo_servers_list.txt
+
+####################### Separator ########################
+
+cat add_repo_servers_list.txt
+read -p "will add opensuse_leap_15.2 repo please input y " a
+echo $a
+
+if &#91; "$a" != "y" ];then
+        echo "you don't agree so exit now"
+        exit
+fi
+
+for i in `awk '{print $1}' add_repo_servers_list.txt`
+do
+        ssh $i '
+        sudo -u root su - root -c "zypper mr -da"
+        sudo -u root su - root -c "zypper ar -fcg http://download.opensuse.org/distribution/leap/15.2/repo/oss/ OpenSUSE_Leap_152_x64_update-oss"
+        sudo -u root su - root -c "zypper ar -fcg http://download.opensuse.org/distribution/leap/15.2/repo/non-oss/ OpenSUSE_Leap_152_x64_update-non-oss"
+        sudo -u root su - root -c "zypper ar -fcg http://download.opensuse.org/update/leap/15.2/oss/ OpenSUSE_Leap_152_x64_oss"
+        sudo -u root su - root -c "zypper ar -fcg http://download.opensuse.org/update/leap/15.2/non-oss/ OpenSUSE_Leap_152_x64_non-oss"
+        sudo -u root su - root -c "zypper ref"
+done</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] openSUSE 软件库的使用 （通过本地镜像实现）</title>
+		<link>https://eternalcenter-2022-03.github.io/zypper-local/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 04 Feb 2021 06:08:43 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Computer & System Hardware & System Installation & System Upgradation (系统电脑 & 系统硬件 & 系统安装 & 系统升级)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Patch (系统补丁)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<category><![CDATA[System Upgradation (系统升级)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=13269</guid>
+
+					<description><![CDATA[步骤一：挂载本地镜像 （补充：这里以挂载 /dev/sr1 到 /mnt 目录为例） 步骤二：添加本地镜里的软件源 （补充：这里以将 file:///mnt/Module-Basesystem 添加到软件源并命名为 local 为例）]]></description>
+										<content:encoded><![CDATA[
+<h4>步骤一：挂载本地镜像</h4>
+
+
+
+<pre class="wp-block-code"><code># mount /dev/sr1 /mnt</code></pre>
+
+
+
+<p>（补充：这里以挂载 /dev/sr1 到 /mnt 目录为例）</p>
+
+
+
+<h4>步骤二：添加本地镜里的软件源</h4>
+
+
+
+<pre class="wp-block-code"><code># zypper ar file:///mnt/Module-Basesystem local</code></pre>
+
+
+
+<p>（补充：这里以将 file:///mnt/Module-Basesystem 添加到软件源并命名为 local 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 dnf （管理软件包）</title>
+		<link>https://eternalcenter-2022-03.github.io/dnf/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 18 Dec 2020 06:09:53 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=13089</guid>
+
+					<description><![CDATA[案例一： 安装某个软件包1.1 交互式安装某个软件包 （补充：这里以安装名为 Nginx 软件包为例） 1.2 非交互式安装某个软件包 （补充：这里以安装名为 Nginx 软件包为例） 案例二：删除某一个软件包2.1 交互式安装某个软件包 （补充：这里以删除名为 Nginx 软件包为例） 2.2 非交互式安装某个软件包 （补充：这里以删除名为 Nginx 软件包为例） 案例三：升级所有安全补丁3.1 查看所有可升级的安全补丁 3.2 升级所有安全补丁 案例四：升级所有软件包和内核4.1 非交互式升级所有软件包和内核 4.2 交互式升级所有软件包和内核 4.3 交互式升级除了某一个软件包或内核外的所有内容 （补充：这里以升级除了以 kernel 开头以外的所有软件包和内核为例） 案例五：查找提供某个命令的软件包 （补充：这里以查找提供 yum 命令的软件包为例） 案例六：显示所有已安装的软件包 案例七：显示某一个软件包的具体信息 （补充：这里以显示名为 Nginx 软件包为例） 案例八：显示 dnf 的历史命令 案例九：显示 dnf 安装包的记录]]></description>
+										<content:encoded><![CDATA[
+<h4 id="案例一-安装某个软件包1-1-交互式安装某个软件包">案例一： 安装某个软件包<br>1.1 交互式安装某个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf install nginx</code></pre>
+
+
+
+<p>（补充：这里以安装名为 Nginx 软件包为例）</p>
+
+
+
+<h4 id="1-2-非交互式安装某个软件包">1.2 非交互式安装某个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf -y install nginx</code></pre>
+
+
+
+<p>（补充：这里以安装名为 Nginx 软件包为例）</p>
+
+
+
+<h4 id="案例二-删除某一个软件包2-1-交互式安装某个软件包">案例二：删除某一个软件包<br>2.1 交互式安装某个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf remove nginx</code></pre>
+
+
+
+<p>（补充：这里以删除名为 Nginx 软件包为例）</p>
+
+
+
+<h4 id="2-2-非交互式安装某个软件包">2.2 非交互式安装某个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf -y remove nginx</code></pre>
+
+
+
+<p>（补充：这里以删除名为 Nginx 软件包为例）</p>
+
+
+
+<h4>案例三：升级所有安全补丁<br>3.1 查看所有可升级的安全补丁</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf check-update --security</code></pre>
+
+
+
+<h4>3.2 升级所有安全补丁</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf update --security</code></pre>
+
+
+
+<h4 id="案例三-升级所有软件包和内核3-1-非交互式升级所有软件包和内核">案例四：升级所有软件包和内核<br>4.1 非交互式升级所有软件包和内核</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf update</code></pre>
+
+
+
+<h4 id="3-2-交互式升级所有软件包和内核"> 4.2 交互式升级所有软件包和内核</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf -y update</code></pre>
+
+
+
+<h4 id="3-3-交互式升级除了某一个软件包或内核外的所有内容">4.3 交互式升级除了某一个软件包或内核外的所有内容</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf update --exclude=kernel*</code></pre>
+
+
+
+<p>（补充：这里以升级除了以 kernel 开头以外的所有软件包和内核为例）</p>
+
+
+
+<h4 id="案例四-查找提供某个命令的软件包">案例五：查找提供某个命令的软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf provides yum</code></pre>
+
+
+
+<p>（补充：这里以查找提供 yum 命令的软件包为例）</p>
+
+
+
+<h4 id="案例五-显示所有已安装的软件包">案例六：显示所有已安装的软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf list all</code></pre>
+
+
+
+<h4 id="案例六-显示某一个软件包的具体信息">案例七：显示某一个软件包的具体信息</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf list all | grep nginx</code></pre>
+
+
+
+<p>（补充：这里以显示名为 Nginx 软件包为例）</p>
+
+
+
+<h4 id="案例七-显示-dnf-的历史命令">案例八：显示 dnf 的历史命令</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf history</code></pre>
+
+
+
+<h4 id="案例八-显示-dnf-安装包的记录">案例九：显示 dnf 安装包的记录</h4>
+
+
+
+<pre class="wp-block-code"><code># dnf history info</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] Linux 脚本的管理 （通过 systemd 实现）</title>
+		<link>https://eternalcenter-2022-03.github.io/systemctl-script/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 04 Nov 2020 10:17:39 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=11652</guid>
+
+					<description><![CDATA[步骤一：要被管理的脚本 创建以下内容： （补充：这里以创建 /etc/root/for.sh 脚本为例） 步骤二：创建 systemctl 的管理文件 创建以下内容： （补充：这里以创建 /etc/systemd/system/12456.service 来管理 ExecStart=/root/12456.sh 为例） 步骤三：加载刚刚创建的 systemctl 管理文件 步骤四：通过 systemd 管理脚本4.1 启动脚本 4.2 关闭脚本 4.3 重启脚本 4.4 让脚本开机自启]]></description>
+										<content:encoded><![CDATA[
+<h4>步骤一：要被管理的脚本</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /root/12456.sh</code></pre>
+
+
+
+<p>创建以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+for i in {1..5}
+do
+echo $i
+done</code></pre>
+
+
+
+<p>（补充：这里以创建 /etc/root/for.sh 脚本为例）</p>
+
+
+
+<h4>步骤二：创建 systemctl 的管理文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/systemd/system/12456.service</code></pre>
+
+
+
+<p>创建以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;Unit]
+Description=12345
+After=default.target
+
+&#91;Service]
+Type=oneshot
+ExecStart=/root/12456.sh
+
+&#91;Install]
+WantedBy=default.target</code></pre>
+
+
+
+<p>（补充：这里以创建 /etc/systemd/system/12456.service 来管理 ExecStart=/root/12456.sh 为例）</p>
+
+
+
+<h4>步骤三：加载刚刚创建的 systemctl 管理文件</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl daemon-reload</code></pre>
+
+
+
+<h4>步骤四：通过 systemd 管理脚本<br>4.1 启动脚本</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl start 12456.service</code></pre>
+
+
+
+<h4>4.2 关闭脚本</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl stop 12456.service</code></pre>
+
+
+
+<h4>4.3 重启脚本</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl restart 12456.service</code></pre>
+
+
+
+<h4>4.4 让脚本开机自启</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl enable 12456.service</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[排错] Linux 解决运行时程序突然停止</title>
+		<link>https://eternalcenter-2022-03.github.io/break-debug/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 12 Oct 2020 13:25:35 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=11527</guid>
+
+					<description><![CDATA[解决方法： 通过系统日志显示程序被关闭的原因 或者： 或者： （补充：这里的 -T 代表要显示时间）]]></description>
+										<content:encoded><![CDATA[
+<h2 id="解决方法">解决方法：</h2>
+
+
+
+<p>通过系统日志显示程序被关闭的原因</p>
+
+
+
+<pre class="wp-block-code"><code># vim /var/log/message</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># journalctl</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># dmesg –T</code></pre>
+
+
+
+<p>（补充：这里的 -T 代表要显示时间）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] TeamViewer 的安装 （CentOS Linux &#038; RHEL）</title>
+		<link>https://eternalcenter-2022-03.github.io/teamviewer-install-centos-linux-rhel/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 19 Sep 2020 06:39:15 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10561</guid>
+
+					<description><![CDATA[软件准备： 在 TeamViewer 的官网上下载软件 TeamViewer： https://www.teamviewer.cn/cn/download/linux/ 正文： 步骤一：系统环境要求 服服务器系统要配置好可用的软件源 步骤二：安装 epel 软件库 步骤三：安装图形系统桌面3.1 安装图形系统桌面 3.2 禁止图形系统桌面以 Wayland 的方式启动 将以下内容： 修改为： （补充：此步骤是为了避免让 TeamViewer 连接时出现黑屏） 3.3 设置系统开机进入图形系统桌面 步骤四：安装 TeamViewer （补充：这里以安装 15.9.5.x86_64 版本的 teamviewer 为例） 步骤四：重启系统]]></description>
+										<content:encoded><![CDATA[
+<h2>软件准备：</h2>
+
+
+
+<p>在 TeamViewer 的官网上下载软件 TeamViewer：</p>
+
+
+
+<p class="has-text-align-center"><a href="https://www.teamviewer.cn/cn/download/linux/" target="_blank" rel="noreferrer noopener">https://www.teamviewer.cn/cn/download/linux/</a></p>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>正文：</h2>
+
+
+
+<h4>步骤一：系统环境要求</h4>
+
+
+
+<p>服服务器系统要配置好可用的软件源</p>
+
+
+
+<h4>步骤二：安装 epel 软件库</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -Uvh https://dl.fedoraproject.org/pub/epel/8/Everything/x86_64/Packages/e/epel-release-8-8.el8.noarch.rpm</code></pre>
+
+
+
+<h4>步骤三：安装图形系统桌面<br>3.1 安装图形系统桌面</h4>
+
+
+
+<pre class="wp-block-code"><code># yum groupinstall -y "Server with GUI"</code></pre>
+
+
+
+<h4>3.2 禁止图形系统桌面以 Wayland 的方式启动</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/gdm/custom.conf</code></pre>
+
+
+
+<p>将以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>#WaylandEnable=false</code></pre>
+
+
+
+<p>修改为：</p>
+
+
+
+<pre class="wp-block-code"><code>WaylandEnable=false</code></pre>
+
+
+
+<p>（补充：此步骤是为了避免让 TeamViewer 连接时出现黑屏）</p>
+
+
+
+<h4>3.3 设置系统开机进入图形系统桌面</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl set-default graphical.target</code></pre>
+
+
+
+<h4>步骤四：安装 TeamViewer</h4>
+
+
+
+<pre class="wp-block-code"><code># yum -y localinstall teamviewer_15.9.5.x86_64.rpm</code></pre>
+
+
+
+<p>（补充：这里以安装 15.9.5.x86_64 版本的 teamviewer 为例）</p>
+
+
+
+<h4>步骤四：重启系统</h4>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] openSUSE 官方认可的第三方软件源列表网址</title>
+		<link>https://eternalcenter-2022-03.github.io/opensuse-additional-repositories/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 22 Jul 2020 06:36:28 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10230</guid>
+
+					<description><![CDATA[https://zh.opensuse.org/%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6%E6%BA%90]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://zh.opensuse.org/%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6%E6%BA%90">https://zh.opensuse.org/%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6%E6%BA%90</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 service （管理程序单元）</title>
+		<link>https://eternalcenter-2022-03.github.io/service-command/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 21 Jul 2020 09:14:32 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10158</guid>
+
+					<description><![CDATA[内容一：列出所有受 systemctl 管理的单元 内容二：启动某一个单元 内容三：停止某一个单元]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：列出所有受 systemctl 管理的单元</h4>
+
+
+
+<pre class="wp-block-code"><code># service -–status-all</code></pre>
+
+
+
+<h4>内容二：启动某一个单元</h4>
+
+
+
+<pre class="wp-block-code"><code># service &lt;unit&gt; start</code></pre>
+
+
+
+<h4>内容三：停止某一个单元</h4>
+
+
+
+<pre class="wp-block-code"><code># service &lt;unit&gt; stop</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[排错] CentOS Linux &#038; RHEL 解决使用 yum 时报错 “rpmdb BDB0113 Thread/process” 或者被卡住</title>
+		<link>https://eternalcenter-2022-03.github.io/yum-bdb0113-debug/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 20 Jul 2020 08:36:54 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10148</guid>
+
+					<description><![CDATA[报错代码： 解决方法： 步骤一：删除 yum 的数据库 步骤二：重建 yum 软件 步骤三：清除 yum 缓存 步骤四：显示 yum 是否恢复正常]]></description>
+										<content:encoded><![CDATA[
+<h2 id="报错代码">报错代码：</h2>
+
+
+
+<pre class="wp-block-code"><code>rpmdb BDB0113 Thread/process</code></pre>
+
+
+
+<h2 id="解决方法">解决方法：</h2>
+
+
+
+<h4 id="步骤一-删除-yum-的数据库">步骤一：删除 yum 的数据库</h4>
+
+
+
+<pre class="wp-block-code"><code># rm -rf /var/lib/rpm/_db*</code></pre>
+
+
+
+<h4 id="步骤二-重建-yum-软件">步骤二：重建 yum 软件</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm --rebuilddb</code></pre>
+
+
+
+<h4 id="步骤三-清除-yum-缓存">步骤三：清除 yum 缓存</h4>
+
+
+
+<pre class="wp-block-code"><code># yum clean all</code></pre>
+
+
+
+<h4 id="步骤四-显示-yum-是否恢复正常">步骤四：显示 yum 是否恢复正常</h4>
+
+
+
+<pre class="wp-block-code"><code># yum repolist</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] CentOS Linux &#038; RHEL 命令 yum-config-manager （管理软件库）</title>
+		<link>https://eternalcenter-2022-03.github.io/yum-config-manager/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 16 Jul 2020 15:14:05 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10076</guid>
+
+					<description><![CDATA[案例一：添加某个软件源 （补充：这里以添加 http://192.168.101.254/CentOS7/ 为例） 案例二：禁用某个软件源 （补充：这里以禁用 192.168.101.254_CentOS7_ 为例） 案例三：启用某个软件源 （补充：这里以启用 192.168.101.254_CentOS7_ 为例）]]></description>
+										<content:encoded><![CDATA[
+<h4>案例一：添加某个软件源</h4>
+
+
+
+<pre class="wp-block-code"><code># yum-config-manager --add-repo=http://192.168.101.254/CentOS7/
+已加载插件：fastestmirror
+adding repo from: http://192.168.101.254/CentOS7/
+
+&#91;192.168.101.254_CentOS7_]
+name=added from: http://192.168.101.254/CentOS7/
+baseurl=http://192.168.101.254/CentOS7/
+enabled=1</code></pre>
+
+
+
+<p>（补充：这里以添加 http://192.168.101.254/CentOS7/ 为例）</p>
+
+
+
+<h4>案例二：禁用某个软件源</h4>
+
+
+
+<pre class="wp-block-code"><code># yum-config-manager --disable 192.168.101.254_CentOS7_</code></pre>
+
+
+
+<p>（补充：这里以禁用 192.168.101.254_CentOS7_ 为例）</p>
+
+
+
+<h4>案例三：启用某个软件源</h4>
+
+
+
+<pre class="wp-block-code"><code># yum-config-manager --enable 192.168.101.254_CentOS7_</code></pre>
+
+
+
+<p>（补充：这里以启用 192.168.101.254_CentOS7_ 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 rpm （管理软件包）</title>
+		<link>https://eternalcenter-2022-03.github.io/rpm/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 16 Jul 2020 12:42:12 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=10072</guid>
+
+					<description><![CDATA[案例一： 安装某个软件 （补充：这里以安装 Nginx 为例） 案例二：删除某一个软件 （补充：这里以卸载 Nginx 为例） 案例三：显示所有已安装的软件包 案例四：显示所有已安装的软件的安装时间 案例五：显示某一个软件包的全部信息 （包括安装时间、大小等等） （补充：这里以显示 log4j-1.2.17-18.el7_4.noarch 软件包的信息为例） 案例六：显示某一个软件包的所有文件 （补充：这里以显示 log4j-1.2.17-18.el7_4.noarch 软件包的信息为例） 案例七：显示某一个软件包的配置文件 （补充：这里以显示 log4j-1.2.17-18.el7_4.noarch 软件包的信息为例） 案例八：显示某一个文件属于某一个软件包 （补充：这里以显示 /usr/share/java/log4j.jar 文件属于某一个软件包为例） 案例九：测试安装某一个软件包 （补充：这里以测试安装 proxychains 为例） 案例十：测试删除某一个软件包 （补充：1) 这里以测试删除 proxychains 为例2) 这里会显示 proxychains 被哪些软件依赖） 案例十一：确认某一个软件包现在的版本是否修复某一个 CVE 漏洞 （补充：这里以确认 redis-6.0.14-6.8.1.x86_64.rpm 软件包是否已修复 CVE-2021-32675 为例）]]></description>
+										<content:encoded><![CDATA[
+<h4 id="案例一-安装某个软件">案例一： 安装某个软件</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -ivh nginx</code></pre>
+
+
+
+<p>（补充：这里以安装 Nginx 为例）</p>
+
+
+
+<h4 id="案例二-删除某一个软件">案例二：删除某一个软件</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -e nginx</code></pre>
+
+
+
+<p>（补充：这里以卸载 Nginx 为例）</p>
+
+
+
+<h4 id="案例三-显示所有已安装的软件包">案例三：显示所有已安装的软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -qa</code></pre>
+
+
+
+<h4 id="案例四-显示所有已安装的软件的安装时间">案例四：显示所有已安装的软件的安装时间</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -qa --last</code></pre>
+
+
+
+<h4 id="案例五-显示某一个软件包的全部信息-包括安装时间-大小等等">案例五：显示某一个软件包的全部信息 （包括安装时间、大小等等）</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -qi log4j-1.2.17-18.el7_4.noarch</code></pre>
+
+
+
+<p>（补充：这里以显示 log4j-1.2.17-18.el7_4.noarch 软件包的信息为例）</p>
+
+
+
+<h4 id="案例六-显示某一个软件包的所有文件">案例六：显示某一个软件包的所有文件</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -ql log4j-1.2.17-18.el7_4.noarch</code></pre>
+
+
+
+<p>（补充：这里以显示 log4j-1.2.17-18.el7_4.noarch 软件包的信息为例）</p>
+
+
+
+<h4 id="案例七-显示某一个软件包的配置文件">案例七：显示某一个软件包的配置文件</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -qc log4j-1.2.17-18.el7_4.noarch</code></pre>
+
+
+
+<p>（补充：这里以显示 log4j-1.2.17-18.el7_4.noarch 软件包的信息为例）</p>
+
+
+
+<h4 id="案例八-显示某一个文件属于某一个软件包">案例八：显示某一个文件属于某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -qf /usr/share/java/log4j.jar</code></pre>
+
+
+
+<p>（补充：这里以显示 /usr/share/java/log4j.jar 文件属于某一个软件包为例）</p>
+
+
+
+<h4 id="案例九-测试安装某一个软件包">案例九：测试安装某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -ivh --test proxychains</code></pre>
+
+
+
+<p>（补充：这里以测试安装 proxychains 为例）</p>
+
+
+
+<h4 id="案例十-测试删除某一个软件包">案例十：测试删除某一个软件包</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -e --test proxychains</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以测试删除 proxychains 为例<br>2) 这里会显示 proxychains 被哪些软件依赖<br>）</p>
+
+
+
+<h4 id="案例十一-确认某一个软件包现在的版本是否修复某一个-cve-漏洞">案例十一：确认某一个软件包现在的版本是否修复某一个 CVE 漏洞</h4>
+
+
+
+<pre class="wp-block-code"><code># rpm -qpi --changelog redis-6.0.14-6.8.1.x86_64.rpm |grep -E '32675'
+- Fix CVE-2021-32675, Denial Of Service when processing RESP request
+  (CVE-2021-32675, bsc#1191303)
+  * cve-2021-32675.patch</code></pre>
+
+
+
+<p>（补充：这里以确认 redis-6.0.14-6.8.1.x86_64.rpm 软件包是否已修复 CVE-2021-32675 为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] CentOS Linux &#038; RHEL 网页图形化管理工具 cockpit</title>
+		<link>https://eternalcenter-2022-03.github.io/cockpit/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 06 Jun 2020 09:07:39 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Firewall (系统防火墙)]]></category>
+		<category><![CDATA[System General Log (系统普通日志)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Login Security (系统登录安全)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Security Log (系统安全日志)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<category><![CDATA[System Statistic Log (系统统计日志)]]></category>
+		<category><![CDATA[System User (系统用户)]]></category>
+		<category><![CDATA[System User & System Privilege (系统用户 & 系统权限)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=9718</guid>
+
+					<description><![CDATA[步骤一：系统环境要求 服务器系统配置好可用的软件源 步骤二：安装 cockpit （补充：cockpit 是管理单台主机的程序，cockpit-dashaboard 是管理多台主机的程序） 步骤三：启动 cockpit 步骤四：登录 cockpit 使用浏览器登录：https://&/#60;服务器的 IP 地址&#62;:9090]]></description>
+										<content:encoded><![CDATA[
+<h4>步骤一：系统环境要求</h4>
+
+
+
+<p>服务器系统配置好可用的软件源</p>
+
+
+
+<h4>步骤二：安装 cockpit</h4>
+
+
+
+<pre class="wp-block-code"><code># yum -y install cockpit cockpit-dashaboard</code></pre>
+
+
+
+<p>（补充：cockpit 是管理单台主机的程序，cockpit-dashaboard 是管理多台主机的程序）</p>
+
+
+
+<h4>步骤三：启动 cockpit</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl start cockpit</code></pre>
+
+
+
+<h4>步骤四：登录 cockpit</h4>
+
+
+
+<p>使用浏览器登录：https://&lt;服务器的/ IP 地址&gt;:9090</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 kill （进程杀死）</title>
+		<link>https://eternalcenter-2022-03.github.io/kill/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 30 May 2020 05:19:38 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=9614</guid>
+
+					<description><![CDATA[内容目录： 内容一：显示 kill 所有可用的选项 内容二：kill 的常用案例2.1 案例一：强杀某一个 pid 号2.2 案例二：正常退出某一个 pid 号2.3 案例三：杀死某一个进程名称下的所有 pid 号 具体的内容： 内容一：显示 kill 所有可用的选项 内容二：kill 的常用案例2.1 案例一：强杀某一个 pid 号 或者： 2.2 案例二：正常退出某一个 pid 号 2.3 案例三：杀死某一个进程名称下的所有 pid 号]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-查看-kill-所有可用的选项">内容一：显示 kill 所有可用的选项</h4>
+
+
+
+<h4 id="内容二-kill-的常用案例2-1-案例一-强杀某一个-pid-号2-2-案例二-正常退出某一个-pid-号2-3-案例三-杀死某一个进程名称下的所有-pid-号">内容二：kill 的常用案例<br>2.1 案例一：强杀某一个 pid 号<br>2.2 案例二：正常退出某一个 pid 号<br>2.3 案例三：杀死某一个进程名称下的所有 pid 号</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-查看-kill-所有可用的选项">内容一：显示 kill 所有可用的选项</h4>
+
+
+
+<h4 id="内容二-kill-的常用案例2-1-案例一-强杀某一个-pid-号">内容二：kill 的常用案例<br>2.1 案例一：强杀某一个 pid 号</h4>
+
+
+
+<pre class="wp-block-code"><code># kill -9 &lt;pid number&gt;</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># kill -&lt;kill option&gt; &lt;pid number&gt;</code></pre>
+
+
+
+<h4 id="2-2-案例二-正常退出某一个-pid-号">2.2 案例二：正常退出某一个 pid 号</h4>
+
+
+
+<pre class="wp-block-code"><code># kill -15 &lt;pid number&gt;</code></pre>
+
+
+
+<h4 id="2-3-案例三-杀死某一个进程名称下的所有-pid-号">2.3 案例三：杀死某一个进程名称下的所有 pid 号</h4>
+
+
+
+<pre class="wp-block-code"><code># killall &lt;process name&gt;</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 后台进程的管理</title>
+		<link>https://eternalcenter-2022-03.github.io/background-process/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 30 May 2020 04:01:08 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=9608</guid>
+
+					<description><![CDATA[内容目录： 内容一：将进程放入后台1.1 直接将一个进程放到后台1.2 将一个目前正在前台运行的进程放到后台 内容二：显示放入后台的进程2.1 显示所有放入后台的进程2.2 显示某一个放入后台的进程 内容三：管理放入后台的进程3.1 在后台启动放入后台的进程3.1.1 在后台启动放入后台的进程（通过后台进程号）3.1.2 在后台启动放入后台的进程（通过后台进程名）3.2 在前台启动放入后台的进程3.2.1 在前台启动放入后台的进程（通过后台进程号）3.2.2 在前台启动放入后台的进程（通过后台进程名）3.3 杀死放入后台的进程3.3.1 杀死放入后台的进程（通过后台进程号）3.3.2 杀死放入后台的进程（通过后台进程名） 具体的内容： 内容一：将进程放入后台1.1 直接将一个进程放到后台 1.2 将一个目前正在前台运行的进程放到后台 按下 “ctrl” 和 “z” 内容二：显示放入后台的进程2.1 显示所有放入后台的进程 2.2 显示某一个放入后台的进程2.2.1 显示某一个放入后台进程（通过后台进程号） 2.2.2 显示某一个放入后台进程（通过后台进程名） （注意：只有后台进程名唯一时此操作才有效） 内容三：管理放入后台的进程3.1 在后台启动放入后台的进程3.1.1 在后台启动放入后台的进程（通过后台进程号） （注意：只有可以在后台启动的进程才能在后台启动） 3.1.2 在后台启动放入后台的进程（通过后台进程名） （注意：只有可以在后台启动的进程才能在后台启动，且只有后台进程名唯一时此操作才有效） 3.2 在前台启动放入后台的进程3.2.1 在前台启动放入后台的进程（通过后台进程号） 3.2.2 在前台启动放入后台的进程（通过后台进程名） （注意：只有后台进程名唯一时此操作才有效） 3.3 杀死放入后台的进程3.3.1 杀死放入后台的进程（通过后台进程号） （补充：这里可以配合各种 kill 选项进行操作，例如 kill -9） &#8230; <p class="link-more"><a href="https://eternalcenter-2022-03.github.io/background-process/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] Linux 后台进程的管理"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-将进程放入后台1-1-直接将一个进程放到后台1-2-将一个目前正在前台运行的进程放到后台">内容一：将进程放入后台<br>1.1 直接将一个进程放到后台<br>1.2 将一个目前正在前台运行的进程放到后台</h4>
+
+
+
+<h4 id="内容二-显示放入后台的进程2-1-显示所有放入后台的进程2-2-显示某一个放入后台的进程">内容二：显示放入后台的进程<br>2.1 显示所有放入后台的进程<br>2.2 显示某一个放入后台的进程</h4>
+
+
+
+<h4 id="内容三-管理放入后台的进程3-1-在后台启动放入后台的进程3-1-1-在后台启动放入后台的进程-通过后台进程号-3-1-2-在后台启动放入后台的进程-通过后台进程名-3-2-在前台启动放入后台的进程3-2-1-在前台启动放入后台的进程-通过后台进程号-3-2-2-在前台启动放入后台的进程-通过后台进程名-3-3-杀死放入后台的进程3-3-1-杀死放入后台的进程-通过后台进程号-3-3-2-杀死放入后台的进程-通过后台进程名">内容三：管理放入后台的进程<br>3.1 在后台启动放入后台的进程<br>3.1.1 在后台启动放入后台的进程（通过后台进程号）<br>3.1.2 在后台启动放入后台的进程（通过后台进程名）<br>3.2 在前台启动放入后台的进程<br>3.2.1 在前台启动放入后台的进程（通过后台进程号）<br>3.2.2 在前台启动放入后台的进程（通过后台进程名）<br>3.3 杀死放入后台的进程<br>3.3.1 杀死放入后台的进程（通过后台进程号）<br>3.3.2 杀死放入后台的进程（通过后台进程名）</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-将进程放入后台1-1-直接将一个进程放到后台">内容一：将进程放入后台<br>1.1 直接将一个进程放到后台</h4>
+
+
+
+<pre class="wp-block-code"><code># firefox&amp;</code></pre>
+
+
+
+<h4 id="1-2-将一个目前正在前台运行的进程放到后台">1.2 将一个目前正在前台运行的进程放到后台</h4>
+
+
+
+<p>按下 “ctrl” 和 “z”</p>
+
+
+
+<h4 id="内容二-显示放入后台的进程2-1-显示所有放入后台的进程">内容二：显示放入后台的进程<br>2.1 显示所有放入后台的进程</h4>
+
+
+
+<pre class="wp-block-code"><code># jobs</code></pre>
+
+
+
+<h4 id="2-2-显示某一个放入后台的进程2-2-1-显示某一个放入后台进程-通过后台进程号">2.2 显示某一个放入后台的进程<br>2.2.1 显示某一个放入后台进程（通过后台进程号）</h4>
+
+
+
+<pre class="wp-block-code"><code># jobs %&lt;background process number&gt;</code></pre>
+
+
+
+<h4 id="2-2-2-显示某一个放入后台进程-通过后台进程名">2.2.2 显示某一个放入后台进程（通过后台进程名）</h4>
+
+
+
+<pre class="wp-block-code"><code># jobs %&lt;background process name&gt;</code></pre>
+
+
+
+<p>（注意：只有后台进程名唯一时此操作才有效）</p>
+
+
+
+<h4 id="内容三-管理放入后台的进程3-1-在后台启动放入后台的进程3-1-1-在后台启动放入后台的进程-通过后台进程号">内容三：管理放入后台的进程<br>3.1 在后台启动放入后台的进程<br>3.1.1 在后台启动放入后台的进程（通过后台进程号）</h4>
+
+
+
+<pre class="wp-block-code"><code># bg %&lt;background process number&gt;</code></pre>
+
+
+
+<p>（注意：只有可以在后台启动的进程才能在后台启动）</p>
+
+
+
+<h4 id="3-1-2-在后台启动放入后台的进程-通过后台进程名">3.1.2 在后台启动放入后台的进程（通过后台进程名）</h4>
+
+
+
+<pre class="wp-block-code"><code># bg %&lt;background process name&gt;</code></pre>
+
+
+
+<p>（注意：只有可以在后台启动的进程才能在后台启动，且只有后台进程名唯一时此操作才有效）</p>
+
+
+
+<h4 id="3-2-在前台启动放入后台的进程3-2-1-在前台启动放入后台的进程-通过后台进程号">3.2 在前台启动放入后台的进程<br>3.2.1 在前台启动放入后台的进程（通过后台进程号）</h4>
+
+
+
+<pre class="wp-block-code"><code># fg %&lt;background process number&gt;</code></pre>
+
+
+
+<h4 id="3-2-2-在前台启动放入后台的进程-通过后台进程名">3.2.2 在前台启动放入后台的进程（通过后台进程名）</h4>
+
+
+
+<pre class="wp-block-code"><code># fg %&lt;background process name&gt;</code></pre>
+
+
+
+<p>（注意：只有后台进程名唯一时此操作才有效）</p>
+
+
+
+<h4 id="3-3-杀死放入后台的进程3-3-1-杀死放入后台的进程-通过后台进程号">3.3 杀死放入后台的进程<br>3.3.1 杀死放入后台的进程（通过后台进程号）</h4>
+
+
+
+<pre class="wp-block-code"><code># kill %&lt;background process number&gt;</code></pre>
+
+
+
+<p>（补充：这里可以配合各种 kill 选项进行操作，例如 kill -9）</p>
+
+
+
+<h4 id="3-3-2-杀死放入后台的进程-通过后台进程名">3.3.2 杀死放入后台的进程（通过后台进程名）</h4>
+
+
+
+<pre class="wp-block-code"><code># kill %&lt;background process name&gt;</code></pre>
+
+
+
+<p>（注意：只有后台进程名唯一时此操作才有效）</p>
+
+
+
+<p>（补充：这里可以配合各种 kill 选项进行操作，例如 kill -9）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] Linux core dump 的开启 （临时）</title>
+		<link>https://eternalcenter-2022-03.github.io/log-core/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 04 May 2020 05:51:05 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System General Log (系统普通日志)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-03.github.io/?p=8923</guid>
+
+					<description><![CDATA[步骤一：理解 core dump 的作用 开启 core dump 之后，如果出现了 C 语言程序的 crash，则会将 crash 的结果记录到一个文件里 步骤二：临时开启 core dump2.1 设置可生成 core dump 大小的参数2.1.1 显示当前允许生成 core dump 的大小 2.1.2 将允许生成 core dump 大小的参数设置为无限大 2.1.3 确认修改结果 2.2 设置 core dump 生成的位置 步骤三：此时如果有 C 语言的程序 crash 了，则会被自动记录]]></description>
+										<content:encoded><![CDATA[
+<h4 id="步骤一-理解-core-dump-的作用">步骤一：理解 core dump 的作用</h4>
+
+
+
+<p>开启 core dump 之后，如果出现了 C 语言程序的 crash，则会将 crash 的结果记录到一个文件里</p>
+
+
+
+<h4 id="步骤二-临时开启-core-dump2-1-设置可生成-core-dump-大小的参数2-1-1-显示当前允许生成-core-dump-的大小">步骤二：临时开启 core dump<br>2.1 设置可生成 core dump 大小的参数<br>2.1.1 显示当前允许生成 core dump 的大小</h4>
+
+
+
+<pre class="wp-block-code"><code># ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 31722
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 31722
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited</code></pre>
+
+
+
+<h4 id="2-1-2-将允许生成-core-dump-大小的参数设置为无限大">2.1.2 将允许生成 core dump 大小的参数设置为无限大</h4>
+
+
+
+<pre class="wp-block-code"><code># ulimit -c unlimited</code></pre>
+
+
+
+<h4 id="2-1-3-确认修改结果">2.1.3 确认修改结果</h4>
+
+
+
+<pre class="wp-block-code"><code># ulimit -a
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 31722
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 31722
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited</code></pre>
+
+
+
+<h4 id="2-2-设置-core-dump-生成的位置">2.2 设置 core dump 生成的位置</h4>
+
+
+
+<pre class="wp-block-code"><code># sysctl -w kernel.core_pattern=/tmp/corefile/core-%e-%p</code></pre>
+
+
+
+<h4 id="步骤三-此时如果有-c-语言的程序-crash-了-则会被自动记录">步骤三：此时如果有 C 语言的程序 crash 了，则会被自动记录</h4>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
